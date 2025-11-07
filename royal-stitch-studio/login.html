@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login — Royal Stitch Studio</title>
+    <meta name="description" content="Login to Royal Stitch Studio — Premium Tailoring & Couture" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <style>
+        /* Login Page Specific Styles - Moderate UI Mode */
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: stretch;
+            background: linear-gradient(160deg, var(--black) 0%, #0e0e10 40%, #0a0a0c 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Pattern */
+        .login-container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255, 255, 255, 0.015) 50px,
+                    rgba(255, 255, 255, 0.015) 100px
+                );
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Left Side - Branding */
+        .login-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            position: relative;
+            background: 
+                radial-gradient(1400px 700px at 20% 50%, rgba(212,175,55,0.12), transparent 70%),
+                linear-gradient(180deg, var(--black) 0%, #0e0e10 100%);
+            z-index: 1;
+        }
+
+        .login-left-content {
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .login-brand {
+            margin-bottom: 3rem;
+        }
+
+        .login-brand-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.1));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 20px rgba(212,175,55,0.15);
+            position: relative;
+        }
+
+        .login-brand-icon::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 22px;
+            border: 1px dashed rgba(212,175,55,0.4);
+            pointer-events: none;
+        }
+
+        .login-brand-icon i {
+            font-size: 36px;
+            color: var(--gold);
+            background: linear-gradient(135deg, var(--gold), var(--gold-200));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .login-brand h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--white), var(--gold-200));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .login-brand p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Stitching Decorative Elements */
+        .stitch-decoration {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stitch-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+            position: relative;
+        }
+
+        .stitch-line::before,
+        .stitch-line::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 8px rgba(212,175,55,0.5);
+        }
+
+        .stitch-line::before {
+            left: 0;
+        }
+
+        .stitch-line::after {
+            right: 0;
+        }
+
+        .stitch-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+        }
+
+        /* Right Side - Login Form */
+        .login-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-form-wrapper {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .login-form-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5), transparent);
+        }
+
+        .login-form-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .login-form-header h2 {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--white), var(--gold-200));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .login-form-header p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Form Inputs */
+        .login-form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .login-form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .login-form-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login-form-input:focus {
+            outline: none;
+            background: rgba(255,255,255,0.08);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(212,175,55,0.1), 0 4px 16px rgba(212,175,55,0.15);
+            transform: translateY(-1px);
+        }
+
+        .login-form-input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+
+        .login-form-input-wrapper {
+            position: relative;
+        }
+
+        .login-form-input-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            pointer-events: none;
+        }
+
+        .login-form-input:focus ~ .login-form-input-icon {
+            color: var(--gold);
+        }
+
+        /* Remember Me & Forgot Password */
+        .login-form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .login-form-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .login-form-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold);
+            cursor: pointer;
+        }
+
+        .login-form-forgot {
+            color: var(--gold);
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .login-form-forgot:hover {
+            color: var(--gold-200);
+            text-decoration: underline;
+        }
+
+        /* Submit Button */
+        .login-form-submit {
+            width: 100%;
+            padding: 0.875rem 1.5rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-200) 100%);
+            color: #2a2109;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-gold);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-form-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .login-form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(212,175,55,0.35), 0 0 0 1px rgba(212,175,55,0.2);
+        }
+
+        .login-form-submit:hover::before {
+            left: 100%;
+        }
+
+        .login-form-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Divider */
+        .login-form-divider {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .login-form-divider::before,
+        .login-form-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+
+        .login-form-divider span {
+            padding: 0 1rem;
+        }
+
+        /* Social Login */
+        .login-form-social {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-social-btn {
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .login-social-btn:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--border-gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* Sign Up Link */
+        .login-form-signup {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .login-form-signup a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        .login-form-signup a:hover {
+            color: var(--gold-200);
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 991.98px) {
+            .login-container {
+                flex-direction: column;
+            }
+
+            .login-left {
+                min-height: 40vh;
+                padding: 2rem;
+            }
+
+            .login-right {
+                padding: 2rem;
+            }
+
+            .login-form-card {
+                padding: 2rem;
+            }
+
+            .login-brand h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .login-form-card {
+                padding: 1.5rem;
+            }
+
+            .login-form-social {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-left-content,
+        .login-form-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Side - Branding -->
+        <div class="login-left">
+            <div class="login-left-content">
+                <div class="login-brand">
+                    <div class="login-brand-icon">
+                        <i class="bi bi-scissors"></i>
+                    </div>
+                    <h1>Royal <span style="color: var(--gold)">Stitch</span> Studio</h1>
+                    <p>Premium tailoring, alterations, and bespoke couture. Crafted with precision, designed for perfection.</p>
+                </div>
+
+                <div class="stitch-decoration">
+                    <div class="stitch-line"></div>
+                    <div class="stitch-icon">
+                        <i class="bi bi-thread"></i>
+                    </div>
+                    <div class="stitch-line"></div>
+                </div>
+
+                <div class="d-flex flex-column gap-3 mt-4">
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                        <i class="bi bi-shield-check" style="color: var(--gold); font-size: 1.2rem;"></i>
+                        <span class="muted">Secure & Trusted</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                        <i class="bi bi-star-fill" style="color: var(--gold); font-size: 1.2rem;"></i>
+                        <span class="muted">Premium Experience</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                        <i class="bi bi-heart-fill" style="color: var(--gold); font-size: 1.2rem;"></i>
+                        <span class="muted">Crafted with Care</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="login-right">
+            <div class="login-form-wrapper">
+                <div class="login-form-card">
+                    <div class="login-form-header">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to your account to continue</p>
+                    </div>
+
+                    <form id="loginForm" onsubmit="event.preventDefault(); handleLogin();">
+                        <div class="login-form-group">
+                            <label class="login-form-label" for="email">
+                                <i class="bi bi-envelope me-2"></i>Email Address
+                            </label>
+                            <div class="login-form-input-wrapper">
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    class="login-form-input" 
+                                    placeholder="name@example.com" 
+                                    required 
+                                />
+                                <i class="bi bi-envelope login-form-input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="login-form-group">
+                            <label class="login-form-label" for="password">
+                                <i class="bi bi-lock me-2"></i>Password
+                            </label>
+                            <div class="login-form-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    class="login-form-input" 
+                                    placeholder="Enter your password" 
+                                    required 
+                                />
+                                <i class="bi bi-lock login-form-input-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="login-form-options">
+                            <label class="login-form-checkbox">
+                                <input type="checkbox" id="remember" />
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="login-form-forgot">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="login-form-submit">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
+                        </button>
+
+                        <div class="login-form-divider">
+                            <span>or continue with</span>
+                        </div>
+
+                        <div class="login-form-social">
+                            <a href="#" class="login-social-btn">
+                                <i class="bi bi-google"></i>
+                                <span>Google</span>
+                            </a>
+                            <a href="#" class="login-social-btn">
+                                <i class="bi bi-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+
+                        <div class="login-form-signup">
+                            Don't have an account? <a href="signup.html">Sign up here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Login Form Handler
+        function handleLogin() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const remember = document.getElementById('remember').checked;
+
+            // Demo login - replace with your backend API
+            console.log('Login attempt:', { email, remember });
+            
+            // Simulate login process
+            const submitBtn = document.querySelector('.login-form-submit');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="bi bi-arrow-repeat spin me-2"></i>Signing in...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                alert('Login successful! Redirecting...');
+                // window.location.href = 'index.html'; // Uncomment to redirect
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        }
+
+        // Add spin animation for loading state
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            .spin {
+                animation: spin 1s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
+
