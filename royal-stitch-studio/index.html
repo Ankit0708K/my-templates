@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Royal Stitch Studio — Tailoring & Couture</title>
+    <meta name="description" content="Premium stitching, alterations, and bespoke couture with elegant craftsmanship." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+                <span class="icon-pill"><i class="bi bi-scissors"></i></span>
+                <span class="brand-mark">Royal <span class="brand-em">Stitch</span> Studio</span>
+            </a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div id="mainNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-gold btn-quote btn-sm px-3 pulse" href="#contact"><i class="bi bi-chat-dots me-1"></i>Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Home -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="hero-card p-4 p-md-5">
+                        <span class="badge text-bg-dark border border-warning-subtle mb-3" style="background: rgba(212,175,55,0.1); color: var(--gold);">Premium Tailoring • Alterations • Bespoke</span>
+                        <h1 class="display-5 mb-3">Elevate Your Wardrobe with Elegant <span style="color: var(--gold)">Craftsmanship</span></h1>
+                        <p class="mb-4">We design, stitch, and tailor garments with a perfect fit and a touch of luxury. From everyday alterations to bespoke couture—crafted with precision and care.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#contact" class="btn btn-gold btn-lg px-4"><i class="bi bi-envelope-open me-2"></i>Request a Quote</a>
+                            <a href="#services" class="btn btn-ghost btn-lg px-4"><i class="bi bi-card-checklist me-2"></i>Our Services</a>
+                        </div>
+                        <div class="d-flex align-items-center gap-4 mt-4 pt-2">
+                            <div class="d-flex align-items-center gap-2"><i class="bi bi-star-fill" style="color: var(--gold)"></i><span class="muted">4.9/5 rating</span></div>
+                            <div class="d-flex align-items-center gap-2"><i class="bi bi-clock-history" style="color: var(--gold)"></i><span class="muted">48h quick fixes</span></div>
+                            <div class="d-flex align-items-center gap-2"><i class="bi bi-shield-check" style="color: var(--gold)"></i><span class="muted">Fit guarantee</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative rounded-18 overflow-hidden" style="border:1px solid var(--border); box-shadow: var(--shadow-soft);">
+                        <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1600&auto=format&fit=crop" alt="Tailor at work" class="img-fluid" />
+                        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.2), transparent 30%, rgba(0,0,0,0.4));"></div>
+                        <div class="position-absolute bottom-0 start-0 p-3 p-md-4">
+                            <span class="portfolio-badge"><i class="bi bi-award me-1" style="color: var(--gold)"></i>10+ Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="glass-card p-4 p-md-5 h-100">
+                        <h2 class="section-title mb-2">About Us</h2>
+                        <div class="gold-divider mb-3"></div>
+                        <p class="mb-3">Founded with a passion for fine tailoring, Royal Stitch Studio blends traditional craftsmanship with modern aesthetics. We believe every garment should feel like it was made just for you—because with us, it is.</p>
+                        <p class="muted mb-4">From subtle alterations to runway-ready couture, our mission is simple: deliver elegance, precision, and a perfect fit—every single time.</p>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-rulers"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Perfect Measurements</div>
+                                        <div class="muted small">Laser-precise fitting</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-gem"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Premium Fabrics</div>
+                                        <div class="muted small">Curated selection</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-lightning-charge"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Quick Turnarounds</div>
+                                        <div class="muted small">Express options</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-shield-check"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Satisfaction Guarantee</div>
+                                        <div class="muted small">Free minor tweaks</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative rounded-18 overflow-hidden" style="border:1px solid var(--border); min-height: 320px;">
+                        <img src="https://images.unsplash.com/photo-1542060748-10c28b62716f?q=80&w=1600&auto=format&fit=crop" alt="Premium fabrics" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship & Materials -->
+    <section id="craftsmanship" class="section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="glass-card p-4 p-md-5 h-100">
+                        <h2 class="section-title mb-2">Craftsmanship & Materials</h2>
+                        <div class="gold-divider mb-3"></div>
+                        <p class="mb-3">We blend time-honored tailoring with modern cuts. Every seam is reinforced, every lining is chosen for comfort, and every edge is finished to last.</p>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-arrow-repeat"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Durable Thread</div>
+                                        <div class="muted small">High-tensile stitching</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-patch-check"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Tailored Fit</div>
+                                        <div class="muted small">Pattern calibration</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-palette"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Premium Fabrics</div>
+                                        <div class="muted small">Wool, silk, linen</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="icon-pill"><i class="bi bi-stars"></i></span>
+                                    <div>
+                                        <div class="fw-semibold">Hand Finish</div>
+                                        <div class="muted small">Clean edges</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge text-bg-dark border" style="border-color: var(--border);">Double-stitch seams</span>
+                            <span class="badge text-bg-dark border" style="border-color: var(--border);">Canvas structuring</span>
+                            <span class="badge text-bg-dark border" style="border-color: var(--border);">Soft liners</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative rounded-18 overflow-hidden" style="border:1px dashed var(--border); min-height: 320px;">
+                        <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1600&auto=format&fit=crop" alt="Craft detail" class="img-fluid" />
+                        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.15), transparent 50%, rgba(0,0,0,0.35));"></div>
+                        <span class="portfolio-badge"><i class="bi bi-scissors me-1" style="color: var(--gold)"></i>Hand-cut Precision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process / How It Works -->
+    <section id="process" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">How It Works</h2>
+                <div class="gold-divider mx-auto my-3"></div>
+                <p class="section-subtitle maxw-680 mx-auto">From first measure to final stitch — a smooth, tailored journey.</p>
+            </div>
+
+            <div class="row g-4 g-md-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card h-100 p-4">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <span class="icon-pill"><i class="bi bi-chat-dots"></i></span>
+                            <h6 class="mb-0">1. Consultation</h6>
+                        </div>
+                        <p class="mb-0 muted">Discuss your outfit and fit goals. We review fabrics, styles, and timelines.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card h-100 p-4">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <span class="icon-pill"><i class="bi bi-rulers"></i></span>
+                            <h6 class="mb-0">2. Measurements</h6>
+                        </div>
+                        <p class="mb-0 muted">Laser-precise measuring and pattern setup for your unique body profile.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card h-100 p-4">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <span class="icon-pill"><i class="bi bi-scissors"></i></span>
+                            <h6 class="mb-0">3. Stitch & Fit</h6>
+                        </div>
+                        <p class="mb-0 muted">Expert cutting, stitching, and interim fittings to refine the silhouette.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="glass-card h-100 p-4">
+                        <div class="d-flex align-items-center gap-3 mb-2">
+                            <span class="icon-pill"><i class="bi bi-gem"></i></span>
+                            <h6 class="mb-0">4. Final Finish</h6>
+                        </div>
+                        <p class="mb-0 muted">Hand detailing, press & premium finishing for a flawless, lasting fit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+                <div class="gold-divider mx-auto my-3"></div>
+                <p class="section-subtitle maxw-680 mx-auto">From quick fixes to bespoke ensembles, choose a plan that meets your style and timeline.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card price-card h-100 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="icon-pill"><i class="bi bi-scissors"></i></span>
+                                <h5 class="mb-0">Alterations</h5>
+                            </div>
+                            <div class="price">₹499+</div>
+                        </div>
+                        <ul class="mb-4 ps-3">
+                            <li>Hemming, tapering, resizing</li>
+                            <li>Button, zip & minor repairs</li>
+                            <li>Fit tuning and adjustments</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-ghost w-100">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card price-card h-100 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="icon-pill"><i class="bi bi-patch-check"></i></span>
+                                <h5 class="mb-0">Custom Stitching</h5>
+                            </div>
+                            <div class="price">₹1999+</div>
+                        </div>
+                        <ul class="mb-4 ps-3">
+                            <li>Men & Women tailoring</li>
+                            <li>Ethnic, formal & casual</li>
+                            <li>Pattern making & fitting</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-gold w-100">Get Measured</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="glass-card price-card h-100 p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="icon-pill"><i class="bi bi-gem"></i></span>
+                                <h5 class="mb-0">Bespoke Couture</h5>
+                            </div>
+                            <div class="price">On Request</div>
+                        </div>
+                        <ul class="mb-4 ps-3">
+                            <li>Bridal & luxury outfits</li>
+                            <li>Hand detailing & finishes</li>
+                            <li>Exclusive consultations</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-ghost w-100">Plan a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Portfolio</h2>
+                <div class="gold-divider mx-auto my-3"></div>
+                <p class="section-subtitle maxw-680 mx-auto">A glimpse of our recent work—tailor-made outfits, clean lines, and timeless elegance.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="portfolio-filter">
+                <button class="portfolio-filter-btn active" data-filter="all">All Work</button>
+                <button class="portfolio-filter-btn" data-filter="alterations">Alterations</button>
+                <button class="portfolio-filter-btn" data-filter="custom">Custom Stitching</button>
+                <button class="portfolio-filter-btn" data-filter="bespoke">Bespoke Couture</button>
+            </div>
+
+            <div class="row" id="portfolioGrid">
+                <!-- Alterations -->
+                <div class="col-6 col-md-4 col-lg-4 mb-4 portfolio-item" data-category="alterations">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon-wrapper">
+                            <i class="bi bi-scissors portfolio-card-icon"></i>
+                        </div>
+                        <h5 class="portfolio-card-title">Alterations</h5>
+                        <p class="portfolio-card-desc">Perfect fit adjustments with precision tailoring. Hemming, tapering, and resizing for a flawless silhouette.</p>
+                        <a href="#contact" class="btn btn-gold portfolio-card-btn btn-sm"><i class="bi bi-arrow-right me-1"></i>View Details</a>
+                    </div>
+                </div>
+                <!-- Custom Stitching -->
+                <div class="col-6 col-md-4 col-lg-4 mb-4 portfolio-item" data-category="custom">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon-wrapper">
+                            <i class="bi bi-clock-history portfolio-card-icon"></i>
+                        </div>
+                        <h5 class="portfolio-card-title">Custom Stitching</h5>
+                        <p class="portfolio-card-desc">Bespoke men's suit crafted from premium wool. Pattern-matched, canvas structured, hand-finished details.</p>
+                        <a href="#contact" class="btn btn-gold portfolio-card-btn btn-sm"><i class="bi bi-arrow-right me-1"></i>View Details</a>
+                    </div>
+                </div>
+                <!-- Bespoke Couture -->
+                <div class="col-6 col-md-4 col-lg-4 mb-4 portfolio-item" data-category="bespoke">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon-wrapper">
+                            <i class="bi bi-gem portfolio-card-icon"></i>
+                        </div>
+                        <h5 class="portfolio-card-title">Bespoke Couture</h5>
+                        <p class="portfolio-card-desc">Luxury ethnic wear with intricate hand embroidery. Premium silk fabric, custom fit, traditional craftsmanship.</p>
+                        <a href="#contact" class="btn btn-gold portfolio-card-btn btn-sm"><i class="bi bi-arrow-right me-1"></i>View Details</a>
+                    </div>
+                </div>
+                <!-- Bespoke Couture -->
+                <div class="col-6 col-md-4 col-lg-4 mb-4 portfolio-item" data-category="bespoke">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon-wrapper">
+                            <i class="bi bi-stars portfolio-card-icon"></i>
+                        </div>
+                        <h5 class="portfolio-card-title">Bridal Gown</h5>
+                        <p class="portfolio-card-desc">Exquisite bridal lehenga with hand-stitched sequins and beads. Custom design, premium fabrics, perfect fit.</p>
+                        <a href="#contact" class="btn btn-gold portfolio-card-btn btn-sm"><i class="bi bi-arrow-right me-1"></i>View Details</a>
+                    </div>
+                </div>
+                <!-- Custom Stitching -->
+                <div class="col-6 col-md-4 col-lg-4 mb-4 portfolio-item" data-category="custom">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon-wrapper">
+                            <i class="bi bi-patch-check portfolio-card-icon"></i>
+                        </div>
+                        <h5 class="portfolio-card-title">Hand Detailing</h5>
+                        <p class="portfolio-card-desc">Premium dress with hand-finished edges and custom embellishments. Double-stitched seams, clean finish.</p>
+                        <a href="#contact" class="btn btn-gold portfolio-card-btn btn-sm"><i class="bi bi-arrow-right me-1"></i>View Details</a>
+                    </div>
+                </div>
+                <!-- Alterations -->
+                <div class="col-6 col-md-4 col-lg-4 mb-4 portfolio-item" data-category="alterations">
+                    <div class="portfolio-card">
+                        <div class="portfolio-icon-wrapper">
+                            <i class="bi bi-tools portfolio-card-icon"></i>
+                        </div>
+                        <h5 class="portfolio-card-title">Dress Alterations</h5>
+                        <p class="portfolio-card-desc">Quick alterations and fit adjustments. Professional hemming, zip repairs, and size modifications.</p>
+                        <a href="#contact" class="btn btn-gold portfolio-card-btn btn-sm"><i class="bi bi-arrow-right me-1"></i>View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Clients Say</h2>
+                <div class="gold-divider mx-auto my-3"></div>
+                <p class="section-subtitle maxw-680 mx-auto">Real feedback from our happy customers.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="glass-card p-4 h-100 testimonial">
+                        <p class="mb-3">"Perfect fitting, elegant stitching, and on-time delivery. My bridal lehenga looked straight out of a designer studio!"</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Client A" class="rounded-circle" width="44" height="44" />
+                            <div>
+                                <div class="fw-semibold">Aisha Verma</div>
+                                <div class="muted small">Bridal Couture</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="glass-card p-4 h-100 testimonial">
+                        <p class="mb-3">"They altered my suit in a day and the fit is immaculate. Subtle, classy, professional service."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" alt="Client B" class="rounded-circle" width="44" height="44" />
+                            <div>
+                                <div class="fw-semibold">Rahul Mehta</div>
+                                <div class="muted small">Suit Alterations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="glass-card p-4 h-100 testimonial">
+                        <p class="mb-3">"Loved their fabric recommendations and clean finish. Highly recommended for custom stitching."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop" alt="Client C" class="rounded-circle" width="44" height="44" />
+                            <div>
+                                <div class="fw-semibold">Neha Kapoor</div>
+                                <div class="muted small">Custom Dress</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="glass-card p-4 h-100 testimonial">
+                        <p class="mb-3">"Great team, patient fittings, and the result speaks luxury. Will come back again."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" alt="Client D" class="rounded-circle" width="44" height="44" />
+                            <div>
+                                <div class="fw-semibold">Aman Khurana</div>
+                                <div class="muted small">Bespoke Suit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <section class="cta-strip py-5">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-md-8">
+                    <h3 class="mb-1">Ready for a perfect fit?</h3>
+                    <p class="muted mb-0">Share your requirements—our experts will get back within 24 hours.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="#contact" class="btn btn-gold btn-lg px-4"><i class="bi bi-telephone-outbound me-2"></i>Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="gold-divider mx-auto my-3"></div>
+                <p class="section-subtitle maxw-680 mx-auto">Tell us about your outfit, timeline, and budget. We'll respond quickly.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="glass-card p-4 p-md-5 h-100">
+                        <form class="row g-3" onsubmit="event.preventDefault(); this.reset(); alert('Thanks! We\'ll contact you shortly.');">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Your name" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="name@example.com" required />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" placeholder="+91-XXXXXXXXXX" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Service</label>
+                                <select class="form-select">
+                                    <option>Alterations</option>
+                                    <option>Custom Stitching</option>
+                                    <option>Bespoke Couture</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" rows="4" placeholder="Tell us about your outfit..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-gold btn-lg px-4" type="submit"><i class="bi bi-send me-2"></i>Send Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="glass-card p-4 p-md-5 h-100">
+                        <h5 class="mb-3">Business Info</h5>
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                            <span class="icon-pill"><i class="bi bi-geo-alt"></i></span>
+                            <div>
+                                <div class="fw-semibold">Studio</div>
+                                <div class="muted">123 Couture Street, New Delhi, India</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-3 mb-3">
+                            <span class="icon-pill"><i class="bi bi-telephone"></i></span>
+                            <div>
+                                <div class="fw-semibold">Phone</div>
+                                <div class="muted">+91 98765 43210</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start gap-3 mb-4">
+                            <span class="icon-pill"><i class="bi bi-envelope"></i></span>
+                            <div>
+                                <div class="fw-semibold">Email</div>
+                                <div class="muted">hello@royalstitch.studio</div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-ghost" href="#"><i class="bi bi-instagram"></i></a>
+                            <a class="btn btn-ghost" href="#"><i class="bi bi-facebook"></i></a>
+                            <a class="btn btn-ghost" href="#"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-section">
+            <div class="row g-4 g-lg-5">
+                <!-- Brand Column -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <h5>Royal <span style="color: var(--gold)">Stitch</span> Studio</h5>
+                        <p>Premium tailoring, alterations, and bespoke couture. Crafted with precision, designed for perfection.</p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h6>Quick Links</h6>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h6>Services</h6>
+                        <ul>
+                            <li><a href="#services">Alterations</a></li>
+                            <li><a href="#services">Custom Stitching</a></li>
+                            <li><a href="#services">Bespoke Couture</a></li>
+                            <li><a href="#process">How It Works</a></li>
+                            <li><a href="#contact">Get Quote</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-newsletter">
+                        <h6>Stay Updated</h6>
+                        <p>Subscribe for exclusive offers, styling tips, and new collection updates.</p>
+                        <form class="footer-input-group" onsubmit="event.preventDefault(); alert('Thanks for subscribing!'); this.reset();">
+                            <input type="email" class="footer-input" placeholder="Your email" required />
+                            <button type="submit" class="btn btn-gold btn-sm px-3"><i class="bi bi-send"></i></button>
+                        </form>
+                        <p class="small muted mb-0" style="font-size: 11px;">We respect your privacy. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="container footer-bottom">
+            <div class="muted">© <span id="year"></span> Royal Stitch Studio. All rights reserved.</div>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="muted">Made with <i class="bi bi-heart-fill" style="color: var(--gold)"></i> for perfect fits.</div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
