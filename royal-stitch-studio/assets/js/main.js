@@ -420,7 +420,7 @@
         // Service CTAs pre-select the chip
         $$('[data-service]').forEach(a => a.addEventListener('click', () => {
             const radio = $('input[name="service"][value="' + a.dataset.service + '"]', form);
-            if (radio) radio.checked = true;
+            if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change')); }
         }));
 
         const validate = () => {
@@ -436,6 +436,42 @@
         };
         $$('[required]', form).forEach(input => input.addEventListener('input', () => input.closest('.field').classList.remove('is-invalid')));
 
+        // Live turnaround check: is the date doable for the chosen service?
+        const timing = $('#timing');
+        const dateInput = $('#date', form);
+        const LEAD = {
+            'Alterations': { days: 2, label: 'about 48 hours' },
+            'Made to measure': { days: 10, label: '7–14 days' },
+            'Bridal & couture': { days: 56, label: '8–12 weeks' }
+        };
+        const today = new Date(); today.setHours(0, 0, 0, 0);
+        const iso = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+        const nice = d => d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+        if (dateInput) dateInput.min = iso(today);
+        const updateTiming = () => {
+            if (!timing || !dateInput) return;
+            timing.classList.remove('is-ok', 'is-tight');
+            if (!dateInput.value) { timing.textContent = "Pick a date and we'll tell you if it's doable."; return; }
+            const service = ($('input[name="service"]:checked', form) || {}).value || 'Alterations';
+            const lead = LEAD[service];
+            const due = new Date(dateInput.value + 'T00:00:00');
+            const days = Math.round((due - today) / 86400000);
+            if (days < 0) { timing.textContent = 'That date has already passed.'; timing.classList.add('is-tight'); return; }
+            if (days >= lead.days * 1.5) {
+                timing.textContent = 'Comfortable. ' + service + ' takes ' + lead.label + ', so there is room for an extra fitting.';
+                timing.classList.add('is-ok');
+            } else if (days >= lead.days) {
+                const by = new Date(due.getTime() - lead.days * 86400000);
+                timing.textContent = 'Doable, if we measure you by ' + nice(by < today ? today : by) + '.';
+                timing.classList.add('is-ok');
+            } else {
+                timing.textContent = 'Tight: ' + service.toLowerCase() + ' usually takes ' + lead.label + '. Call us and we will see what we can do.';
+                timing.classList.add('is-tight');
+            }
+        };
+        if (dateInput) dateInput.addEventListener('change', updateTiming);
+        $$('input[name="service"]', form).forEach(r => r.addEventListener('change', updateTiming));
+
         form.addEventListener('submit', e => {
             e.preventDefault();
             if (!validate()) return;
@@ -445,6 +481,7 @@
         $('#formReset').addEventListener('click', () => {
             form.reset();
             form.classList.remove('is-sent');
+            updateTiming();
         });
     }
 

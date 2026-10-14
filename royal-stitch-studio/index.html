@@ -25,6 +25,7 @@
         <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
         <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
         <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+        <symbol id="i-snip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6 20 17M8.6 16.4 20 7"/></g></symbol>
         <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     </svg>
 
@@ -46,7 +47,7 @@
         <div class="wrap header-inner">
             <a href="#home" class="logo" aria-label="Royal Stitch Studio home">
                 <span class="logo-mark">RS</span>
-                <span class="logo-text">Royal Stitch <span class="mono">Studio</span></span>
+                <span class="logo-text">Royal Stitch <span class="contact-key">Studio</span></span>
             </a>
             <nav class="nav" aria-label="Main">
                 <a href="#atelier" class="nav-link">Atelier</a>
@@ -67,14 +68,14 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <nav class="mobile-nav">
-            <a href="#atelier"><span class="mono">01</span>Atelier</a>
-            <a href="#process"><span class="mono">02</span>Process</a>
-            <a href="#services"><span class="mono">03</span>Services</a>
-            <a href="#work"><span class="mono">04</span>Work</a>
-            <a href="#words"><span class="mono">05</span>Clients</a>
-            <a href="#contact"><span class="mono">06</span>Contact</a>
+            <a href="#atelier">Atelier</a>
+            <a href="#process">Process</a>
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#words">Clients</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <div class="mobile-menu-foot mono">
+        <div class="mobile-menu-foot">
             <span>+91 98765 43210</span>
             <a href="login.html">Sign in →</a>
         </div>
@@ -84,18 +85,16 @@
         <!-- Hero -->
         <section class="hero" id="home">
             <div class="wrap">
-                <div class="hero-meta mono" data-reveal>
-                    <span>Est. 2014</span>
-                    <span>Atelier — New Delhi</span>
-                    <span class="hero-status"><i></i>Taking bookings for Nov–Dec</span>
+                <div class="hero-meta" data-reveal>
+                    <span>Tailoring & couture in New Delhi since 2014</span>
+                    <span class="hero-status"><i></i>Taking bookings for November and December</span>
                 </div>
 
                 <div class="hero-grid">
                     <div class="hero-copy">
                         <h1 class="hero-title" data-split>
-                            <span class="line">Clothes that</span>
-                            <span class="line"><em>remember</em> your</span>
-                            <span class="line">shape.</span>
+                            <span class="line">Clothes that <em>remember</em></span>
+                            <span class="line">your shape.</span>
                         </h1>
                         <p class="hero-lead" data-reveal style="--d:.5s">
                             Alterations, made-to-measure and bridal couture, cut by hand and fitted twice. Nothing leaves the studio until it sits exactly right.
@@ -117,10 +116,7 @@
                             </svg>
                             <span class="badge-core"><svg><use href="#i-scissors"/></svg></span>
                         </div>
-                        <div class="hero-note mono" data-reveal style="--d:.9s">
-                            <span>Fig. 01</span>
-                            <span>Chalk, shears & a 150 cm tape</span>
-                        </div>
+                        <p class="hero-note" data-reveal style="--d:.9s">Chalk, shears and a 150 cm tape: the whole toolkit.</p>
                     </div>
                 </div>
             </div>
@@ -134,51 +130,43 @@
         <!-- Marquee -->
         <div class="marquee" aria-hidden="true">
             <div class="marquee-track" id="marqueeTrack">
-                <span>Alterations</span><i>✂</i><span class="outline">Sherwanis</span><i>✂</i><span>Bridal lehengas</span><i>✂</i><span class="outline">Two-piece suits</span><i>✂</i><span>Blouses</span><i>✂</i><span class="outline">Bandhgalas</span><i>✂</i>
-                <span>Alterations</span><i>✂</i><span class="outline">Sherwanis</span><i>✂</i><span>Bridal lehengas</span><i>✂</i><span class="outline">Two-piece suits</span><i>✂</i><span>Blouses</span><i>✂</i><span class="outline">Bandhgalas</span><i>✂</i>
+                <span>Alterations</span><svg class="snip"><use href="#i-snip"/></svg><span class="outline">Sherwanis</span><svg class="snip"><use href="#i-snip"/></svg><span>Bridal lehengas</span><svg class="snip"><use href="#i-snip"/></svg><span class="outline">Two-piece suits</span><svg class="snip"><use href="#i-snip"/></svg><span>Blouses</span><svg class="snip"><use href="#i-snip"/></svg><span class="outline">Bandhgalas</span><svg class="snip"><use href="#i-snip"/></svg>
+                <span>Alterations</span><svg class="snip"><use href="#i-snip"/></svg><span class="outline">Sherwanis</span><svg class="snip"><use href="#i-snip"/></svg><span>Bridal lehengas</span><svg class="snip"><use href="#i-snip"/></svg><span class="outline">Two-piece suits</span><svg class="snip"><use href="#i-snip"/></svg><span>Blouses</span><svg class="snip"><use href="#i-snip"/></svg><span class="outline">Bandhgalas</span><svg class="snip"><use href="#i-snip"/></svg>
             </div>
         </div>
 
         <!-- Atelier / About -->
         <section class="section atelier" id="atelier">
             <div class="wrap">
-                <div class="section-label mono" data-reveal><span>(01)</span> The atelier</div>
 
+                <h2 class="visually-hidden">The atelier</h2>
                 <p class="statement" id="statement">
-                    We started with one sewing machine and a simple rule: measure twice, cut once, and never hand over a garment we wouldn't wear ourselves. Ten years on, the rule hasn't changed — only the size of the cutting table.
+                    We started with one sewing machine and one rule: measure twice, cut once, and never hand over a garment we wouldn't wear ourselves.
                 </p>
 
                 <div class="atelier-grid">
                     <figure class="atelier-img" data-clip>
                         <img src="https://images.unsplash.com/photo-1542060748-10c28b62716f?q=80&w=1400&auto=format&fit=crop" alt="Rolls of premium fabric on shelves" data-speed="-0.06" />
-                        <figcaption class="mono">Fig. 02 — The fabric wall</figcaption>
                     </figure>
 
                     <div class="atelier-side">
-                        <div class="stats">
-                            <div class="stat" data-reveal>
-                                <div class="stat-num"><span data-count="10">0</span>+</div>
-                                <div class="stat-label mono">Years at the table</div>
-                            </div>
-                            <div class="stat" data-reveal style="--d:.08s">
-                                <div class="stat-num"><span data-count="12400" data-format>0</span></div>
-                                <div class="stat-label mono">Garments delivered</div>
-                            </div>
-                            <div class="stat" data-reveal style="--d:.16s">
-                                <div class="stat-num"><span data-count="4.9" data-decimals="1">0</span><small>/5</small></div>
-                                <div class="stat-label mono">Average rating</div>
-                            </div>
-                            <div class="stat" data-reveal style="--d:.24s">
-                                <div class="stat-num"><span data-count="48">0</span><small>h</small></div>
-                                <div class="stat-label mono">Express alterations</div>
-                            </div>
+                        <div class="garment-label" data-reveal>
+                            <div class="label-brand">Royal <em>Stitch</em> Studio</div>
+                            <p class="label-sub">Made by hand in New Delhi · since 2014</p>
+                            <dl class="label-facts">
+                                <div><dt>Years at the cutting table</dt><dd><span data-count="10">0</span>+</dd></div>
+                                <div><dt>Average client rating</dt><dd><span data-count="4.9" data-decimals="1">0</span>/5</dd></div>
+                                <div><dt>Express alterations</dt><dd><span data-count="48">0</span> h</dd></div>
+                                <div><dt>Free tweaks after pick-up</dt><dd>30 days</dd></div>
+                            </dl>
+                            <p class="label-care">Dry clean · Cool iron · Wear often</p>
                         </div>
 
                         <ul class="craft-list">
-                            <li data-reveal><span class="mono">A</span><div><h3>Measured, not guessed</h3><p>Twenty-two measurements and a posture note for every new client.</p></div></li>
-                            <li data-reveal style="--d:.06s"><span class="mono">B</span><div><h3>Fabric we'd vouch for</h3><p>Wool, raw silk, linen and khadi from mills we've visited.</p></div></li>
-                            <li data-reveal style="--d:.12s"><span class="mono">C</span><div><h3>Built inside</h3><p>Double-stitched seams, canvas structuring and soft liners.</p></div></li>
-                            <li data-reveal style="--d:.18s"><span class="mono">D</span><div><h3>Free minor tweaks</h3><p>If it pulls anywhere in the first month, we fix it. No charge.</p></div></li>
+                            <li data-reveal><div><h3>Measured, not guessed</h3><p>Twenty-two measurements and a posture note for every new client.</p></div></li>
+                            <li data-reveal style="--d:.06s"><div><h3>Fabric we'd vouch for</h3><p>Wool, raw silk, linen and khadi from mills we've visited.</p></div></li>
+                            <li data-reveal style="--d:.12s"><div><h3>Built inside</h3><p>Double-stitched seams, canvas structuring and soft liners.</p></div></li>
+                            <li data-reveal style="--d:.18s"><div><h3>Free minor tweaks</h3><p>If it pulls anywhere in the first month, we fix it. No charge.</p></div></li>
                         </ul>
                     </div>
                 </div>
@@ -189,8 +177,7 @@
         <section class="section process" id="process">
             <div class="wrap process-grid">
                 <div class="process-head">
-                    <div class="section-label mono" data-reveal><span>(02)</span> Process</div>
-                    <h2 class="h2" data-split><span class="line">From first measure</span><span class="line">to <em>final stitch.</em></span></h2>
+                    <h2 class="h2" data-split><span class="line">First measure,</span><span class="line"><em>final stitch.</em></span></h2>
                     <p class="process-sub" data-reveal>Four steps, usually two visits. Bridal pieces get a third fitting.</p>
                 </div>
 
@@ -201,7 +188,7 @@
                         <div>
                             <h3>Consultation</h3>
                             <p>We talk about the occasion, how you like things to fall, fabrics and the date you need it by.</p>
-                            <span class="step-meta mono">≈ 30 min · in studio or video</span>
+                            <span class="step-meta">≈ 30 min · in studio or video</span>
                         </div>
                     </li>
                     <li class="step" data-reveal>
@@ -209,7 +196,7 @@
                         <div>
                             <h3>Measurements</h3>
                             <p>Twenty-two points taken by hand, then drafted into a paper pattern that's yours to keep.</p>
-                            <span class="step-meta mono">≈ 20 min · pattern within 2 days</span>
+                            <span class="step-meta">≈ 20 min · pattern within 2 days</span>
                         </div>
                     </li>
                     <li class="step" data-reveal>
@@ -217,7 +204,7 @@
                         <div>
                             <h3>Cut, stitch & fit</h3>
                             <p>A basted trial fitting first, so the silhouette is right before the final seams go in.</p>
-                            <span class="step-meta mono">1–2 fittings · 7–14 days</span>
+                            <span class="step-meta">1–2 fittings · 7–14 days</span>
                         </div>
                     </li>
                     <li class="step" data-reveal>
@@ -225,7 +212,7 @@
                         <div>
                             <h3>Final finish</h3>
                             <p>Hand-felled hems, pressed with steam and checked on you once more before it goes home.</p>
-                            <span class="step-meta mono">Pick-up or delivery in Delhi NCR</span>
+                            <span class="step-meta">Pick-up or delivery in Delhi NCR</span>
                         </div>
                     </li>
                 </ol>
@@ -236,47 +223,43 @@
         <section class="section services" id="services">
             <div class="wrap">
                 <div class="services-head">
-                    <div class="section-label mono" data-reveal><span>(03)</span> Services</div>
                     <h2 class="h2" data-split><span class="line">Three ways</span><span class="line">to <em>work with us.</em></span></h2>
                 </div>
 
                 <div class="service-list">
                     <details class="service" data-swatch="pinstripe" data-reveal>
                         <summary>
-                            <span class="service-num mono">01</span>
                             <span class="service-name">Alterations</span>
                             <span class="service-price">from ₹499</span>
                             <span class="service-toggle" aria-hidden="true"></span>
                         </summary>
                         <div class="service-body">
                             <p>Hemming, tapering, resizing, zips, buttons and small repairs. Most jobs are ready in 48 hours.</p>
-                            <ul class="mono"><li>Trouser hem · ₹499</li><li>Suit taper · ₹1,200</li><li>Blouse resize · ₹650</li></ul>
+                            <ul class="price-list"><li>Trouser hem · ₹499</li><li>Suit taper · ₹1,200</li><li>Blouse resize · ₹650</li></ul>
                             <a href="#contact" class="btn btn-line btn-sm" data-service="Alterations">Book alteration <svg><use href="#i-arrow"/></svg></a>
                         </div>
                     </details>
                     <details class="service" data-swatch="herringbone" data-reveal>
                         <summary>
-                            <span class="service-num mono">02</span>
-                            <span class="service-name">Made to measure <span class="tag mono">Most booked</span></span>
+                            <span class="service-name">Made to measure <span class="tag">Most booked</span></span>
                             <span class="service-price">from ₹1,999</span>
                             <span class="service-toggle" aria-hidden="true"></span>
                         </summary>
                         <div class="service-body">
                             <p>Menswear and womenswear cut from your own pattern: formal, ethnic or everyday. One trial fitting included.</p>
-                            <ul class="mono"><li>Shirt · ₹1,999</li><li>Kurta set · ₹3,500</li><li>Two-piece suit · ₹14,000</li></ul>
+                            <ul class="price-list"><li>Shirt · ₹1,999</li><li>Kurta set · ₹3,500</li><li>Two-piece suit · ₹14,000</li></ul>
                             <a href="#contact" class="btn btn-line btn-sm" data-service="Made to measure">Get measured <svg><use href="#i-arrow"/></svg></a>
                         </div>
                     </details>
                     <details class="service" data-swatch="brocade" data-reveal>
                         <summary>
-                            <span class="service-num mono">03</span>
                             <span class="service-name">Bridal & couture</span>
                             <span class="service-price">on request</span>
                             <span class="service-toggle" aria-hidden="true"></span>
                         </summary>
                         <div class="service-body">
                             <p>Lehengas, sherwanis and occasion wear with hand embroidery. A private consultation and three fittings.</p>
-                            <ul class="mono"><li>Book 8–12 weeks ahead</li><li>Embroidery samples first</li><li>Family fittings welcome</li></ul>
+                            <ul class="price-list"><li>Book 8–12 weeks ahead</li><li>Embroidery samples first</li><li>Family fittings welcome</li></ul>
                             <a href="#contact" class="btn btn-line btn-sm" data-service="Bridal & couture">Plan a consultation <svg><use href="#i-arrow"/></svg></a>
                         </div>
                     </details>
@@ -290,7 +273,6 @@
             <div class="wrap">
                 <div class="work-head">
                     <div>
-                        <div class="section-label mono" data-reveal><span>(04)</span> Swatch book</div>
                         <h2 class="h2" data-split><span class="line">Recent work,</span><span class="line"><em>by the cloth.</em></span></h2>
                     </div>
                     <div class="filters" role="tablist" aria-label="Filter work" data-reveal>
@@ -306,7 +288,7 @@
                     <article class="swatch" data-category="bespoke" data-cursor="View">
                         <div class="swatch-cloth cloth-brocade"></div>
                         <div class="swatch-info">
-                            <span class="mono">No. 112 · Couture</span>
+                            <span class="swatch-no">No. 112 · Couture</span>
                             <h3>Ivory bridal lehenga</h3>
                             <p>Raw silk, hand-set sequins, 6 kg skirt</p>
                         </div>
@@ -314,7 +296,7 @@
                     <article class="swatch" data-category="custom" data-cursor="View">
                         <div class="swatch-cloth cloth-herringbone"></div>
                         <div class="swatch-info">
-                            <span class="mono">No. 108 · Made to measure</span>
+                            <span class="swatch-no">No. 108 · Made to measure</span>
                             <h3>Charcoal two-piece</h3>
                             <p>Merino herringbone, half-canvas</p>
                         </div>
@@ -322,7 +304,7 @@
                     <article class="swatch" data-category="alterations" data-cursor="View">
                         <div class="swatch-cloth cloth-pinstripe"></div>
                         <div class="swatch-info">
-                            <span class="mono">No. 104 · Alterations</span>
+                            <span class="swatch-no">No. 104 · Alterations</span>
                             <h3>Inherited suit, re-cut</h3>
                             <p>Shoulders taken in 2 cm, sleeves shortened</p>
                         </div>
@@ -330,7 +312,7 @@
                     <article class="swatch" data-category="custom" data-cursor="View">
                         <div class="swatch-cloth cloth-linen"></div>
                         <div class="swatch-info">
-                            <span class="mono">No. 101 · Made to measure</span>
+                            <span class="swatch-no">No. 101 · Made to measure</span>
                             <h3>Summer linen kurta</h3>
                             <p>Handloom linen, hand-felled hems</p>
                         </div>
@@ -338,7 +320,7 @@
                     <article class="swatch" data-category="bespoke" data-cursor="View">
                         <div class="swatch-cloth cloth-velvet"></div>
                         <div class="swatch-info">
-                            <span class="mono">No. 097 · Couture</span>
+                            <span class="swatch-no">No. 097 · Couture</span>
                             <h3>Midnight sherwani</h3>
                             <p>Silk velvet, zardozi collar</p>
                         </div>
@@ -346,7 +328,7 @@
                     <article class="swatch" data-category="alterations" data-cursor="View">
                         <div class="swatch-cloth cloth-check"></div>
                         <div class="swatch-info">
-                            <span class="mono">No. 093 · Alterations</span>
+                            <span class="swatch-no">No. 093 · Alterations</span>
                             <h3>Dress, taken in</h3>
                             <p>Side seams, new invisible zip</p>
                         </div>
@@ -356,29 +338,28 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="section words" id="words">
+        <section class="section words" id="words" aria-label="Client reviews">
             <div class="wrap">
-                <div class="section-label mono" data-reveal><span>(05)</span> Client notes</div>
                 <div class="quotes" id="quotes">
                     <figure class="quote is-active">
                         <blockquote>“The fit was perfect, the stitching was elegant and it arrived a day early. My lehenga looked like it came out of a <em>designer studio.</em>”</blockquote>
-                        <figcaption><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Aisha Verma</b><span class="mono">Bridal couture</span></span></figcaption>
+                        <figcaption><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Aisha Verma</b><span>Bridal couture</span></span></figcaption>
                     </figure>
                     <figure class="quote">
                         <blockquote>“They altered my suit in a day and the fit is <em>immaculate.</em> Quiet, careful, properly professional.”</blockquote>
-                        <figcaption><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Rahul Mehta</b><span class="mono">Suit alterations</span></span></figcaption>
+                        <figcaption><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Rahul Mehta</b><span>Suit alterations</span></span></figcaption>
                     </figure>
                     <figure class="quote">
                         <blockquote>“They talked me out of the wrong fabric, and they were right. The <em>finish inside</em> is as clean as the outside.”</blockquote>
-                        <figcaption><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Neha Kapoor</b><span class="mono">Made-to-measure dress</span></span></figcaption>
+                        <figcaption><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Neha Kapoor</b><span>Made-to-measure dress</span></span></figcaption>
                     </figure>
                     <figure class="quote">
                         <blockquote>“Patient fittings, no rush, and the result <em>feels expensive.</em> I'm already planning the next one.”</blockquote>
-                        <figcaption><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Aman Khurana</b><span class="mono">Bespoke suit</span></span></figcaption>
+                        <figcaption><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="" /><span><b>Aman Khurana</b><span>Bespoke suit</span></span></figcaption>
                     </figure>
                 </div>
                 <div class="quotes-nav">
-                    <div class="quotes-progress mono"><span id="quoteIndex">01</span><span class="bar"><i id="quoteBar"></i></span><span>04</span></div>
+                    <div class="quotes-progress"><span id="quoteIndex">01</span><span class="bar"><i id="quoteBar"></i></span><span>04</span></div>
                     <div class="quotes-buttons">
                         <button class="icon-btn" id="quotePrev" aria-label="Previous review"><svg><use href="#i-left"/></svg></button>
                         <button class="icon-btn" id="quoteNext" aria-label="Next review"><svg><use href="#i-right"/></svg></button>
@@ -402,16 +383,15 @@
         <section class="section contact" id="contact">
             <div class="wrap contact-grid">
                 <div class="contact-info">
-                    <div class="section-label mono" data-reveal><span>(06)</span> Contact</div>
                     <h2 class="h2" data-split><span class="line">Tell us what</span><span class="line">you're <em>making.</em></span></h2>
                     <p class="contact-sub" data-reveal>The outfit, the date and a rough budget. We reply within 24 hours, usually much sooner.</p>
 
                     <ul class="contact-list" data-reveal>
-                        <li><svg><use href="#i-pin"/></svg><div><span class="mono">Studio</span>123 Couture Street, New Delhi</div></li>
-                        <li><svg><use href="#i-phone"/></svg><div><span class="mono">Phone</span><a href="tel:+919876543210">+91 98765 43210</a></div></li>
-                        <li><svg><use href="#i-mail"/></svg><div><span class="mono">Email</span><a href="mailto:hello@royalstitch.studio">hello@royalstitch.studio</a></div></li>
+                        <li><svg><use href="#i-pin"/></svg><div><span class="contact-key">Studio</span>123 Couture Street, New Delhi</div></li>
+                        <li><svg><use href="#i-phone"/></svg><div><span class="contact-key">Phone</span><a href="tel:+919876543210">+91 98765 43210</a></div></li>
+                        <li><svg><use href="#i-mail"/></svg><div><span class="contact-key">Email</span><a href="mailto:hello@royalstitch.studio">hello@royalstitch.studio</a></div></li>
                     </ul>
-                    <div class="hours mono" data-reveal>
+                    <div class="hours" data-reveal>
                         <span>Mon–Sat · 10:00–19:30</span>
                         <span>Delhi time <b id="clock">--:--</b></span>
                     </div>
@@ -419,7 +399,7 @@
 
                 <form class="contact-form" id="contactForm" data-reveal novalidate>
                     <fieldset class="chips">
-                        <legend class="mono">I'm interested in</legend>
+                        <legend>I'm interested in</legend>
                         <label><input type="radio" name="service" value="Alterations" checked /><span>Alterations</span></label>
                         <label><input type="radio" name="service" value="Made to measure" /><span>Made to measure</span></label>
                         <label><input type="radio" name="service" value="Bridal & couture" /><span>Bridal & couture</span></label>
@@ -445,6 +425,7 @@
                             <label for="date" class="is-static">Needed by</label>
                         </div>
                     </div>
+                    <p class="timing" id="timing" aria-live="polite">Pick a date and we'll tell you if it's doable.</p>
                     <div class="field">
                         <textarea id="message" name="message" rows="3" placeholder=" " required></textarea>
                         <label for="message">Tell us about the outfit</label>
@@ -452,7 +433,7 @@
 
                     <div class="form-foot">
                         <button type="submit" class="btn btn-accent" data-magnetic>Send request <svg><use href="#i-arrow"/></svg></button>
-                        <p class="form-note mono">No spam. We only use this to reply.</p>
+                        <p class="form-note">We only use your details to reply.</p>
                     </div>
 
                     <div class="form-success" id="formSuccess" role="status" aria-live="polite">
@@ -477,19 +458,19 @@
                         <input type="email" placeholder="Your email" aria-label="Email address" required />
                         <button type="submit" aria-label="Subscribe"><svg><use href="#i-arrow"/></svg></button>
                     </form>
-                    <p class="news-msg mono" id="newsMsg" role="status" aria-live="polite"></p>
+                    <p class="news-msg" id="newsMsg" role="status" aria-live="polite"></p>
                 </div>
                 <div class="footer-cols">
                     <div>
-                        <h4 class="mono">Studio</h4>
+                        <h4>Studio</h4>
                         <a href="#atelier">Atelier</a><a href="#process">Process</a><a href="#work">Work</a><a href="#words">Clients</a>
                     </div>
                     <div>
-                        <h4 class="mono">Services</h4>
+                        <h4>Services</h4>
                         <a href="#services">Alterations</a><a href="#services">Made to measure</a><a href="#services">Bridal & couture</a><a href="#contact">Get a quote</a>
                     </div>
                     <div>
-                        <h4 class="mono">Follow</h4>
+                        <h4>Follow</h4>
                         <a href="#">Instagram</a><a href="#">WhatsApp</a><a href="#">Facebook</a><a href="#">Pinterest</a>
                     </div>
                 </div>
@@ -497,7 +478,7 @@
 
             <div class="footer-word" aria-hidden="true">Royal <em>Stitch</em></div>
 
-            <div class="footer-bottom mono">
+            <div class="footer-bottom">
                 <span>© <span id="year"></span> Royal Stitch Studio</span>
                 <span class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Refunds</a></span>
                 <a href="#home" class="to-top">Back to top ↑</a>

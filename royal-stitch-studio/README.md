@@ -48,7 +48,9 @@ royal-stitch-studio/
 
 ## ✨ Features (2026 redesign)
 
-- **Editorial atelier look**: bone paper, ink type, madder red and brass accents, Instrument Serif + Geist + Geist Mono
+- **Editorial atelier look**: chalk paper, ink type, crimson madder and brass accents, Instrument Serif + Geist (Geist Mono only on the measuring tape)
+- **Garment label**: studio facts shown as a stitched, sewn-in clothing label
+- **Turnaround checker**: pick a service and a date in the contact form and it tells you live whether that's comfortable, doable or tight
 - **Motion**: intro loader with a stitched thread, word-by-word headline reveals, clip-path image reveals, parallax
 - **Scroll effects**: measuring-tape ruler, marquee that reacts to scroll speed, statement text that lights up as you read, process "thread" that fills in
 - **Interactions**: custom cursor, magnetic buttons, fabric swatch that follows the cursor over services, animated filter pill
@@ -64,10 +66,12 @@ royal-stitch-studio/
 - **Vanilla JavaScript**: no dependencies
 - **Modern CSS**: custom properties, grid, clip-path, masks
 - **Google Fonts**: Instrument Serif, Geist, Geist Mono
+- Polished with the [impeccable](https://github.com/pbakaus/impeccable) and [taste-skill](https://github.com/Leonxlnx/taste-skill) design rules
 
 ## 📝 Notes
 
 - Photos load from Unsplash; if they fail, a fabric-toned background shows instead. Replace with your own in `assets/img/`
+- Testimonials, ratings and prices are sample content. Replace them with real ones before launch
 - Forms are demo-only. Connect them to your backend (or Formspree / WhatsApp) in `assets/js/main.js`
 
 ## 🎨 Customization
