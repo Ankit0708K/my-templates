@@ -7,6 +7,7 @@ A modern, production-ready website for Royal Stitch Studio - Premium Tailoring &
 ```
 royal-stitch-studio/
 ├── index.html          # Main HTML file
+├── login.html          # Sign-in page
 ├── assets/
 │   ├── css/
 │   │   └── style.css   # All custom styles
@@ -45,35 +46,35 @@ royal-stitch-studio/
    - Set publish directory: `/` (root)
    - Deploy!
 
-## ✨ Features
+## ✨ Features (2026 redesign)
 
-- **Modern Design**: Premium glassmorphism effects with gold accents
-- **Fully Responsive**: Works perfectly on all devices
-- **Smooth Animations**: Intersection Observer-based reveal animations
-- **Interactive Portfolio**: Filterable portfolio section
-- **Scroll to Top**: Smooth scroll button
-- **Active Navigation**: Auto-highlights current section
+- **Editorial atelier look**: bone paper, ink type, madder red and brass accents, Instrument Serif + Geist + Geist Mono
+- **Motion**: intro loader with a stitched thread, word-by-word headline reveals, clip-path image reveals, parallax
+- **Scroll effects**: measuring-tape ruler, marquee that reacts to scroll speed, statement text that lights up as you read, process "thread" that fills in
+- **Interactions**: custom cursor, magnetic buttons, fabric swatch that follows the cursor over services, animated filter pill
+- **Swatch book portfolio**: pure-CSS fabric patterns (no images needed), filterable
+- **Testimonials**: auto-advancing quotes with progress bar
+- **Contact form**: floating labels, service chips, inline validation and success state (no alerts)
+- **Login page**: matching split layout, show/hide password, loading state
+- **Accessible**: respects `prefers-reduced-motion`, keyboard focus styles, works without JS
+- **No framework**: Bootstrap removed. Plain HTML, CSS and JS only
 
 ## 🛠️ Technologies
 
-- **Bootstrap 5.3.3**: Responsive framework
-- **Bootstrap Icons**: Icon library
-- **Poppins Font**: Google Fonts
-- **Vanilla JavaScript**: No dependencies
-- **CSS3**: Modern styling with CSS variables
+- **Vanilla JavaScript**: no dependencies
+- **Modern CSS**: custom properties, grid, clip-path, masks
+- **Google Fonts**: Instrument Serif, Geist, Geist Mono
 
 ## 📝 Notes
 
-- All external resources (Bootstrap, Icons, Fonts) are loaded via CDN
-- Images are currently using Unsplash URLs - replace with your own images in `assets/img/`
-- Form submissions are currently demo (alert-based) - integrate with your backend
-- All styles and scripts are properly separated for maintainability
+- Photos load from Unsplash; if they fail, a fabric-toned background shows instead. Replace with your own in `assets/img/`
+- Forms are demo-only. Connect them to your backend (or Formspree / WhatsApp) in `assets/js/main.js`
 
 ## 🎨 Customization
 
-- **Colors**: Edit CSS variables in `assets/css/style.css` (lines 18-32)
-- **Content**: Edit `index.html` directly
-- **Functionality**: Modify `assets/js/main.js` for custom behavior
+- **Colors & fonts**: CSS variables at the top of `assets/css/style.css`
+- **Content**: edit `index.html` / `login.html` directly
+- **Motion**: `assets/js/main.js`
 
 ---
 
