@@ -62,6 +62,12 @@ Use motion with intent: smooth, eased (`cubic-bezier(0.22, 1, 0.36, 1)`), never 
 
 Note: cloud sandboxes may block CDNs/Unsplash. Missing photos in screenshots can be the sandbox, not the code. Say so instead of guessing.
 
+## Portfolio / case-study PDFs
+
+- The owner's house style for portfolios and case studies is **Poppins** for all text (this overrides the font advice above for these documents).
+- Format follows the owner's examples: one continuous page, sections separated by background, a "main screens" section with captioned key screens, and a separate "all screens" gallery grouped by area.
+- Real screenshots go in the case study's `screens/` folder; never present illustrations as real screens.
+
 ## Communication
 
 The owner writes in Hinglish. Reply in the same casual Hinglish, keep it clear, and share preview links (raw.githack.com for branches) and screenshots after each change.
