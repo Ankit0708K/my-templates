@@ -185,7 +185,7 @@ p { text-wrap: pretty; }
 .surface li b { font-weight: 600; }
 
 /* ---------- How a job works ---------- */
-.works { display: grid; grid-template-columns: 1fr 500px; gap: 56px; align-items: center; }
+.works { display: grid; grid-template-columns: 1fr 560px; gap: 48px; align-items: center; }
 .steps { list-style: none; margin-top: 40px; display: grid; counter-reset: s; }
 .step { display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 16px 0; position: relative; }
 .step::before { counter-increment: s; content: counter(s); width: 40px; height: 40px; border-radius: 50%; background: var(--green-soft); color: var(--green-deep); font-family: var(--display); font-weight: 700; font-size: 17px; display: grid; place-items: center; position: relative; z-index: 1; }
@@ -283,7 +283,7 @@ p { text-wrap: pretty; }
 .hero-phones .toast.t2 { right: -10px; left: auto; top: 470px; }
 .works-phones { align-items: flex-start; }
 .works-phones { justify-content: center; background: var(--mint); border-radius: 24px; padding: 44px 24px 48px; }
-.works-phones .device { width: 210px; }
+.works-phones .device { width: 242px; flex: none; }
 .works-phones .device:nth-child(2) { margin-top: 70px; }
 .main-grid.mobile + .main-grid.mobile { margin-top: 22px; }
 .main-card .device { margin: auto auto 0; width: 210px; border-radius: 30px 30px 0 0; padding: 8px 8px 0; box-shadow: none; height: 340px; overflow: hidden; }
@@ -295,13 +295,14 @@ p { text-wrap: pretty; }
 
 /* Spotlights: four key screens, large, with what they do */
 .spots { display: grid; gap: 36px; margin-top: 56px; }
-.spot { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.spot { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.spot.flip { grid-template-columns: 1fr 1.15fr; }
 .spot.flip .spot-visual { order: 2; }
-.spot-visual { border-radius: 24px; height: 460px; overflow: hidden; display: flex; justify-content: center; gap: 22px; padding-top: 44px; }
+.spot-visual { border-radius: 24px; height: 580px; overflow: hidden; display: flex; justify-content: center; gap: 22px; padding-top: 48px; }
 .spot-visual.c1 { background: #DCEFE3; } .spot-visual.c2 { background: #FBF0CF; } .spot-visual.c3 { background: #E1EAF6; } .spot-visual.c4 { background: #F6E3DE; }
-.spot-visual .device { width: 236px; height: max-content; box-shadow: 0 26px 50px -24px rgba(16,32,26,.45); }
+.spot-visual .device { width: 300px; flex: none; height: max-content; box-shadow: 0 26px 50px -24px rgba(16,32,26,.45); }
 .spot-visual.pair { gap: 18px; }
-.spot-visual.pair .device { width: 188px; }
+.spot-visual.pair .device { width: 226px; }
 .spot-visual.pair .device:nth-child(2) { margin-top: 56px; }
 .spot-text h3 { font-size: 30px; letter-spacing: -0.02em; line-height: 1.15; }
 .spot-text > p { margin-top: 12px; font-size: 18px; line-height: 1.55; color: var(--ink); max-width: 44ch; }
