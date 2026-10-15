@@ -361,7 +361,9 @@ p { text-wrap: pretty; }
 .bar i { display: block; height: 7px; border-radius: 99px; background: rgba(255,255,255,.14); position: relative; overflow: hidden; }
 .bar i::after { content: ""; position: absolute; inset: 0; width: var(--w); background: var(--leaf); border-radius: inherit; }
 .bar b { text-align: right; color: #fff; }
-.voice { display: grid; gap: 20px; align-content: start; }
+.voice { display: grid; gap: 20px; align-content: stretch; }
+.voice .quote { display: flex; flex-direction: column; justify-content: center; padding: 48px 52px; }
+.voice .quote blockquote { font-size: 36px; }
 .quote { background: var(--mint); border-radius: 20px; padding: 32px 34px; }
 .quote blockquote { font-family: var(--display); font-size: 30px; line-height: 1.15; letter-spacing: -0.025em; font-weight: 600; }
 .quote cite { display: block; margin-top: 14px; font-style: normal; font-size: 14.5px; color: var(--muted); }
@@ -711,7 +713,7 @@ p { text-wrap: pretty; }
 <!-- ============================ REVIEWS ============================ -->
 <section class="band">
     <h2 class="h2">What users say.</h2>
-    <p class="lead">Feedback from verified Capterra reviews, the good and the honest.</p>
+    <p class="lead">Ratings and feedback from verified reviews on Capterra.</p>
 
     <div class="reviews">
         <div class="score">
@@ -730,15 +732,7 @@ p { text-wrap: pretty; }
                 <blockquote>“As affordable and customizable for our type of business as any alternative.”</blockquote>
                 <cite>Window cleaning business owner, verified review on Capterra</cite>
             </div>
-            <div class="honest">
-                <h3>Where a next version could go further</h3>
-                <ul>
-                    <li><svg><use href="#i-flag"/></svg><span><b>Navigation and search.</b> The most common complaint in reviews is that records are hard to find.</span></li>
-                    <li><svg><use href="#i-flag"/></svg><span><b>Route optimization.</b> Independent guides note it isn't built in, which matters once a business runs several crews.</span></li>
-                    <li><svg><use href="#i-flag"/></svg><span><b>Message delivery.</b> One reviewer reported client emails not always arriving, a case for delivery tracking.</span></li>
-                </ul>
-            </div>
-        </div>
+</div>
     </div>
 </section>
 
