@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=1200" />
+<meta name="viewport" content="width=1440" />
 <title>The Customer Factor — Case Study · Adroit Infosoft</title>
 <meta name="description" content="A product case study of The Customer Factor, scheduling, estimating and invoicing software for service businesses, by Adroit Infosoft." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,7 +11,7 @@
 <style>
 /* ==========================================================================
    One continuous, print-ready case study (exported as a single-page PDF).
-   Fixed 1200px width, sections separated by background, no motion.
+   1440px frame (sections full-bleed, content 1056px), sections separated by background, no motion.
    ========================================================================== */
 :root {
     --ink: #10201A;
@@ -32,13 +32,12 @@
     --sky: #DCE8F5;
     --display: "Poppins", ui-sans-serif, system-ui, sans-serif;
     --sans: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-    --w: 1200px;
-    --pad: 72px;
+    --pad: max(72px, calc(50% - 528px));
 }
 @page { margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #D5DBD7; }
-body { width: var(--w); margin: 0 auto; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--paper); }
+body { width: 100%; min-width: 1200px; margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 svg { width: 1em; height: 1em; flex-shrink: 0; }
 ::selection { background: var(--sun); color: var(--ink); }
 a { color: inherit; text-decoration: none; }
