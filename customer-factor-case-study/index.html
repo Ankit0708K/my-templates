@@ -268,6 +268,26 @@ p { text-wrap: pretty; }
 .g-item figcaption { margin-top: 10px; font-size: 14px; font-weight: 600; }
 .g-item figcaption span { display: block; font-weight: 400; color: var(--muted); font-size: 13px; }
 
+/* Real phone screens (Android screenshots, 540×1170) */
+.device { background: var(--ink); border-radius: 30px; padding: 8px; box-shadow: 0 30px 60px -26px rgba(16,32,26,.55); }
+.device img { display: block; width: 100%; aspect-ratio: 540 / 1170; object-fit: cover; object-position: top; border-radius: 23px; }
+.hero-phones { position: relative; height: 560px; }
+.hero-phones .device { position: absolute; width: 228px; }
+.hero-phones .d-left { left: 40px; top: 60px; transform: rotate(-6deg); }
+.hero-phones .d-right { right: 30px; top: 60px; transform: rotate(6deg); }
+.hero-phones .d-mid { left: 50%; top: 0; width: 248px; margin-left: -124px; z-index: 2; }
+.hero-phones .toast { z-index: 3; }
+.hero-phones .toast.t1 { left: -20px; top: 430px; }
+.hero-phones .toast.t2 { right: -10px; left: auto; top: 470px; }
+.works-phones { align-items: flex-start; }
+.works-phones .device { width: 220px; }
+.works-phones .device:nth-child(2) { margin-top: 70px; }
+.main-grid.mobile + .main-grid.mobile { margin-top: 22px; }
+.main-card .device { margin: auto auto 0; width: 210px; border-radius: 30px 30px 0 0; padding: 8px 8px 0; box-shadow: none; height: 340px; overflow: hidden; }
+.main-card .device img { border-radius: 22px 22px 0 0; }
+.g-item .device { width: 100%; max-width: 172px; padding: 6px; border-radius: 22px; box-shadow: none; }
+.g-item .device img { border-radius: 17px; }
+
 /* ---------- Engineering ---------- */
 .eng { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
 .eng-card { border-radius: 20px; padding: 30px 28px; background: var(--field); }
@@ -412,61 +432,12 @@ p { text-wrap: pretty; }
             </div>
         </div>
 
-        <div class="hero-visual">
-            <div class="window">
-                <div class="window-bar"><i></i><i></i><i></i><span>Schedule</span></div>
-                <div class="app">
-                    <div class="app-side">
-                        <div class="logo">Customer<br><i>Factor</i></div>
-                        <div class="on">Schedule</div><div>Customers</div><div>Estimates</div><div>Invoices</div><div>Employees</div><div>Crews</div>
-                    </div>
-                    <div class="app-main">
-                        <div class="app-head"><b>Week of 12 Oct</b><span class="app-btn">+ New job</span></div>
-                        <div class="sched">
-                            <span></span><span class="h">Mon</span><span class="h">Tue</span><span class="h">Wed</span><span class="h">Thu</span><span class="h">Fri</span>
-                            <span class="crew">Crew A</span>
-                            <div class="job j-g"><b>Window clean</b><span>Every 4 wk</span></div>
-                            <div class="job j-y"><b>Estimate</b><span>New lead</span></div>
-                            <div class="job j-g"><b>Window clean</b><span>Every 8 wk</span></div>
-                            <div class="job j-e"></div>
-                            <div class="job j-b"><b>Gutters</b><span>One-time</span></div>
-                            <span class="crew">Crew B</span>
-                            <div class="job j-b"><b>Pressure wash</b><span>Driveway</span></div>
-                            <div class="job j-e"></div>
-                            <div class="job j-r"><b>Carpet clean</b><span>3 rooms</span></div>
-                            <div class="job j-g"><b>Window clean</b><span>Every 6 wk</span></div>
-                            <div class="job j-y"><b>Estimate</b><span>Commercial</span></div>
-                            <span class="crew">Crew C</span>
-                            <div class="job j-e"></div>
-                            <div class="job j-g"><b>Maid service</b><span>Every 2 wk</span></div>
-                            <div class="job j-g"><b>Maid service</b><span>Every 2 wk</span></div>
-                            <div class="job j-b"><b>Deck wash</b><span>One-time</span></div>
-                            <div class="job j-e"></div>
-                        </div>
-                        <div class="pool"><span>Job pool</span><i class="chip">Screen repair</i><i class="chip">Window clean · due</i><i class="chip">Solar panels</i><i class="chip">+ 6 more</i></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="phone">
-                <div class="phone-screen">
-                    <div class="phone-top"><i></i></div>
-                    <div class="ph-head"><small>Tuesday · Crew A</small><b>Today's jobs</b></div>
-                    <div class="ph-list">
-                        <div class="ph-job"><b>Window clean</b><span>8:00 · Done · Invoiced</span></div>
-                        <div class="ph-job now"><b>Estimate visit</b><span>10:30 · On site</span>
-                            <div class="timer"><em class="num">00:42:10</em><u>Stop timer</u></div>
-                        </div>
-                        <div class="ph-job"><b>Gutter clean</b><span>13:00 · One-time</span></div>
-                        <div class="ph-job"><b>Window clean</b><span>15:00 · Every 6 wk</span></div>
-                        <div class="ph-job"><b>Personal appt.</b><span>17:30</span></div>
-                    </div>
-                    <div class="ph-tabs"><span class="on">Schedule</span><span>Estimates</span><span>Invoices</span><span>More</span></div>
-                </div>
-            </div>
-
+        <div class="hero-phones">
+            <div class="device d-left"><img src="screens/hero-calendar-day.png" alt="Day view of the calendar with jobs, estimates and a personal appointment" /></div>
+            <div class="device d-right"><img src="screens/hero-invoices-paid.png" alt="Paid invoices list" /></div>
+            <div class="device d-mid"><img src="screens/hero-job-photos.png" alt="Job with line item, price and before-and-after photos" /></div>
             <div class="toast t1"><span class="ic"><svg><use href="#i-sync"/></svg></span><div><b>Synced to QuickBooks Online</b><span>Every morning, 3:00 am</span></div></div>
-            <div class="toast t2"><span class="ic" style="background:var(--sun);color:var(--ink)"><svg><use href="#i-card"/></svg></span><div><b>12 invoices created</b><span>4 charged to cards on file</span></div></div>
+            <div class="toast t2"><span class="ic" style="background:var(--sun);color:var(--ink)"><svg><use href="#i-card"/></svg></span><div><b>Paid invoices</b><span>Cards, checks and cash</span></div></div>
         </div>
     </div>
 
@@ -592,39 +563,10 @@ p { text-wrap: pretty; }
         </div>
         <div>
             <div class="works-phones">
-                <div class="phone slot">
-                    <img class="shot-img" src="screens/mobile-estimate.png" alt="Estimate screen in the mobile app" onerror="this.remove()" />
-                    <div class="phone-screen">
-                        <div class="phone-top"><i></i></div>
-                        <div class="ph-head"><small>Estimate · Residential windows</small><b>2-storey house</b></div>
-                        <div style="padding:0 16px">
-                            <div class="ph-line"><span>Exterior windows</span><span class="num">$180.00</span></div>
-                            <div class="ph-line"><span>Interior windows</span><span class="num">$120.00</span></div>
-                            <div class="ph-line"><span>Screen cleaning</span><span class="num">$35.00</span></div>
-                            <div class="ph-line"><span>Tracks &amp; sills</span><span class="num">$40.00</span></div>
-                            <div class="ph-total"><span>Total</span><span class="num">$375.00</span></div>
-                            <div class="ph-btn">Send by text</div>
-                            <div class="ph-btn dark">Send by email</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="phone slot">
-                    <img class="shot-img" src="screens/mobile-invoice.png" alt="Invoice screen in the mobile app" onerror="this.remove()" />
-                    <div class="phone-screen">
-                        <div class="phone-top"><i></i></div>
-                        <div class="ph-head"><small>Invoice · Window clean</small><b>Job complete</b></div>
-                        <div style="padding:0 16px">
-                            <div class="ph-line"><span>Time on site</span><span class="num">1 h 42 m</span></div>
-                            <div class="ph-line"><span>Window clean</span><span class="num">$95.00</span></div>
-                            <div class="ph-line"><span>Repeats</span><span>Every 4 weeks</span></div>
-                            <div class="ph-total"><span>Due</span><span class="num">$95.00</span></div>
-                            <div class="ph-btn">Charge card on file</div>
-                            <div class="ph-btn dark">Email invoice</div>
-                        </div>
-                    </div>
-                </div>
+                <div class="device"><img src="screens/how-estimate.png" alt="Estimate with a button to convert it into a job" /></div>
+                <div class="device"><img src="screens/how-pay-invoice.png" alt="Pay invoice screen with coupon, tip and payment method" /></div>
             </div>
-            <p class="cap">Estimate and invoice in the field app.</p>
+            <p class="cap">An estimate becomes a job in one tap; the invoice is paid on site.</p>
         </div>
     </div>
 </section>
@@ -632,78 +574,76 @@ p { text-wrap: pretty; }
 <!-- ============================ MAIN SCREENS ============================ -->
 <section class="band tint">
     <h2 class="h2">The product in action.</h2>
-    <p class="lead">The screens that do the most work, from planning the week in the office to finishing a job on site.</p>
+    <p class="lead">The screens a crew and an office use every day, from the morning dashboard to getting paid.</p>
 
     <div class="main-group">
-        <h3>Web app</h3>
-        <p>For the owner and office</p>
-        <div class="main-grid web">
-            <figure class="main-card c1"><h4>Plan the week on one board</h4><span>Jobs dragged from the job pool onto days and crews.</span><div class="slot desktop"><img class="shot-img" src="screens/web-schedule.png" alt="Plan the week on one board" onerror="this.remove()" /><div class="placeholder"><div><b>Plan the week on one board</b>screens/web-schedule.png</div></div></div></figure>
-            <figure class="main-card c2"><h4>Quote from a template</h4><span>Line items from a saved template, sent by email or text.</span><div class="slot desktop"><img class="shot-img" src="screens/web-estimate.png" alt="Quote from a template" onerror="this.remove()" /><div class="placeholder"><div><b>Quote from a template</b>screens/web-estimate.png</div></div></div></figure>
-        </div>
-        <div class="main-grid web">
-            <figure class="main-card c3"><h4>Bill a whole week at once</h4><span>Bulk invoicing, with saved cards charged automatically.</span><div class="slot desktop"><img class="shot-img" src="screens/web-invoices.png" alt="Bill a whole week at once" onerror="this.remove()" /><div class="placeholder"><div><b>Bill a whole week at once</b>screens/web-invoices.png</div></div></div></figure>
-            <figure class="main-card c4"><h4>Customers request their next visit</h4><span>Only the days and services the owner opens are bookable.</span><div class="slot desktop"><img class="shot-img" src="screens/web-portal.png" alt="Customers request their next visit" onerror="this.remove()" /><div class="placeholder"><div><b>Customers request their next visit</b>screens/web-portal.png</div></div></div></figure>
-        </div>
-    </div>
-
-    <div class="main-group">
-        <h3>Mobile app</h3>
-        <p>For crews in the field, on iOS and Android</p>
         <div class="main-grid mobile">
-            <figure class="main-card c1"><h4>Today's jobs</h4><span>The crew's day, job by job</span><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-today.png" alt="Today's jobs" onerror="this.remove()" /><div class="placeholder"><div><b>Today's jobs</b>screens/mobile-today.png</div></div></div></figure>
-            <figure class="main-card c2"><h4>Time on site</h4><span>Tracked against each job</span><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-timer.png" alt="Time on site" onerror="this.remove()" /><div class="placeholder"><div><b>Time on site</b>screens/mobile-timer.png</div></div></div></figure>
-            <figure class="main-card c3"><h4>Estimate on site</h4><span>Built and sent from the phone</span><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-estimate.png" alt="Estimate on site" onerror="this.remove()" /><div class="placeholder"><div><b>Estimate on site</b>screens/mobile-estimate.png</div></div></div></figure>
-            <figure class="main-card c4"><h4>Invoice on the spot</h4><span>Generated when the job is done</span><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-invoice.png" alt="Invoice on the spot" onerror="this.remove()" /><div class="placeholder"><div><b>Invoice on the spot</b>screens/mobile-invoice.png</div></div></div></figure>
+            <figure class="main-card c1"><h4>Dashboard</h4><span>Calendar, estimates, invoices and clock-in, one tap away</span><div class="device"><img src="screens/main-dashboard.png" alt="Dashboard screen" /></div></figure>
+            <figure class="main-card c2"><h4>Calendar</h4><span>Month view with the day's jobs and estimates below</span><div class="device"><img src="screens/main-calendar.png" alt="Calendar screen" /></div></figure>
+            <figure class="main-card c3"><h4>Job details</h4><span>Customer, address, status and notes in one place</span><div class="device"><img src="screens/main-job-details.png" alt="Job details screen" /></div></figure>
+            <figure class="main-card c4"><h4>Job timer</h4><span>Travel, arrival, start and finish, timed per job</span><div class="device"><img src="screens/main-job-timer.png" alt="Job timer screen" /></div></figure>
+        </div>
+        <div class="main-grid mobile">
+            <figure class="main-card c1"><h4>Recurring jobs</h4><span>Weekly to every 5 years, set once</span><div class="device"><img src="screens/main-recurring.png" alt="Recurring jobs screen" /></div></figure>
+            <figure class="main-card c2"><h4>Invoice</h4><span>Built on site, then emailed, texted or printed</span><div class="device"><img src="screens/main-invoice.png" alt="Invoice screen" /></div></figure>
+            <figure class="main-card c3"><h4>Signature</h4><span>Signed by the customer on the phone</span><div class="device"><img src="screens/main-signature.png" alt="Signature screen" /></div></figure>
+            <figure class="main-card c4"><h4>Online payment</h4><span>Customers pay open charges from a link</span><div class="device"><img src="screens/main-payment-portal.png" alt="Online payment screen" /></div></figure>
         </div>
     </div>
-    <p class="illustrative">Screenshot credit: replace with the source of these screens, e.g. "The Customer Factor web app, App Store and Google Play listings".</p>
+    <p class="illustrative">Screens from The Customer Factor's Android app, captured on a test account.</p>
 </section>
 
 <!-- ============================ ALL SCREENS ============================ -->
 <section class="band">
     <h2 class="h2">Every screen, in depth.</h2>
-    <p class="lead">The full product, grouped by what each part of the business does in it.</p>
+    <p class="lead">The rest of the app, grouped by what each part of the business does in it.</p>
     <div class="gallery-group">
-        <h3>Schedule & jobs</h3>
-        <div class="gallery-row web">
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-schedule.png" alt="Schedule" onerror="this.remove()" /><div class="placeholder"><div><b>Schedule</b>screens/web-schedule.png</div></div></div><figcaption>Schedule<span>Week view by crew</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-job-pool.png" alt="Job pool" onerror="this.remove()" /><div class="placeholder"><div><b>Job pool</b>screens/web-job-pool.png</div></div></div><figcaption>Job pool<span>Recurring and one-time work</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-job-detail.png" alt="Job details" onerror="this.remove()" /><div class="placeholder"><div><b>Job details</b>screens/web-job-detail.png</div></div></div><figcaption>Job details<span>Frequency, price, crew</span></figcaption></figure>
-        </div>
-    </div>
-    <div class="gallery-group">
-        <h3>Customers & estimates</h3>
-        <div class="gallery-row web">
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-customers.png" alt="Customers" onerror="this.remove()" /><div class="placeholder"><div><b>Customers</b>screens/web-customers.png</div></div></div><figcaption>Customers<span>Customer list</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-customer-detail.png" alt="Customer record" onerror="this.remove()" /><div class="placeholder"><div><b>Customer record</b>screens/web-customer-detail.png</div></div></div><figcaption>Customer record<span>History and jobs</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-estimate.png" alt="Estimate" onerror="this.remove()" /><div class="placeholder"><div><b>Estimate</b>screens/web-estimate.png</div></div></div><figcaption>Estimate<span>Built from a template</span></figcaption></figure>
-        </div>
-    </div>
-    <div class="gallery-group">
-        <h3>Invoices & accounting</h3>
-        <div class="gallery-row web">
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-invoices.png" alt="Invoices" onerror="this.remove()" /><div class="placeholder"><div><b>Invoices</b>screens/web-invoices.png</div></div></div><figcaption>Invoices<span>Bulk invoicing</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-payments.png" alt="Payments" onerror="this.remove()" /><div class="placeholder"><div><b>Payments</b>screens/web-payments.png</div></div></div><figcaption>Payments<span>Cards on file</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-quickbooks.png" alt="QuickBooks" onerror="this.remove()" /><div class="placeholder"><div><b>QuickBooks</b>screens/web-quickbooks.png</div></div></div><figcaption>QuickBooks<span>Sync settings</span></figcaption></figure>
-        </div>
-    </div>
-    <div class="gallery-group">
-        <h3>Team & customer portal</h3>
-        <div class="gallery-row web">
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-employees.png" alt="Employees & crews" onerror="this.remove()" /><div class="placeholder"><div><b>Employees & crews</b>screens/web-employees.png</div></div></div><figcaption>Employees & crews<span>Who does the work</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-portal-settings.png" alt="Portal settings" onerror="this.remove()" /><div class="placeholder"><div><b>Portal settings</b>screens/web-portal-settings.png</div></div></div><figcaption>Portal settings<span>Days and services offered</span></figcaption></figure>
-            <figure class="g-item"><div class="slot desktop"><img class="shot-img" src="screens/web-portal.png" alt="Customer portal" onerror="this.remove()" /><div class="placeholder"><div><b>Customer portal</b>screens/web-portal.png</div></div></div><figcaption>Customer portal<span>Service request form</span></figcaption></figure>
-        </div>
-    </div>
-    <div class="gallery-group">
-        <h3>Mobile app</h3>
+        <h3>Customers</h3>
         <div class="gallery-row mobile">
-            <figure class="g-item"><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-today.png" alt="Today's jobs" onerror="this.remove()" /><div class="placeholder"><div><b>Today's jobs</b>screens/mobile-today.png</div></div></div><figcaption>Today's jobs<span>Daily list</span></figcaption></figure>
-            <figure class="g-item"><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-timer.png" alt="Time tracking" onerror="this.remove()" /><div class="placeholder"><div><b>Time tracking</b>screens/mobile-timer.png</div></div></div><figcaption>Time tracking<span>Per job</span></figcaption></figure>
-            <figure class="g-item"><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-job.png" alt="Job details" onerror="this.remove()" /><div class="placeholder"><div><b>Job details</b>screens/mobile-job.png</div></div></div><figcaption>Job details<span>Address and notes</span></figcaption></figure>
-            <figure class="g-item"><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-estimate.png" alt="Estimate" onerror="this.remove()" /><div class="placeholder"><div><b>Estimate</b>screens/mobile-estimate.png</div></div></div><figcaption>Estimate<span>Send by text</span></figcaption></figure>
-            <figure class="g-item"><div class="slot phone-slot"><img class="shot-img" src="screens/mobile-invoice.png" alt="Invoice" onerror="this.remove()" /><div class="placeholder"><div><b>Invoice</b>screens/mobile-invoice.png</div></div></div><figcaption>Invoice<span>Charge or email</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-customer-search.png" alt="Customer search screen" /></div><figcaption>Customer search<span>Customers and prospects</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-customer-info.png" alt="Customer details screen" /></div><figcaption>Customer details<span>Contact and address</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-customer-photos.png" alt="Photos & documents screen" /></div><figcaption>Photos & documents<span>Saved per customer</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-customer-jobs.png" alt="Current jobs screen" /></div><figcaption>Current jobs<span>Upcoming work</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-custom-fields.png" alt="Custom fields screen" /></div><figcaption>Custom fields<span>Gate codes, zones, rooms</span></figcaption></figure>
+        </div>
+    </div>
+    <div class="gallery-group">
+        <h3>Scheduling & jobs</h3>
+        <div class="gallery-row mobile">
+            <figure class="g-item"><div class="device"><img src="screens/all-calendar-3day.png" alt="3-day view screen" /></div><figcaption>3-day view<span>Jobs side by side</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-on-hold.png" alt="On-hold jobs screen" /></div><figcaption>On-hold jobs<span>Waiting to be scheduled</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-recurring-period.png" alt="Repeat rules screen" /></div><figcaption>Repeat rules<span>Days, months, end date</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-add-job.png" alt="Add a job screen" /></div><figcaption>Add a job<span>Line items and price</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-job-history.png" alt="Job history screen" /></div><figcaption>Job history<span>Past jobs and estimates</span></figcaption></figure>
+        </div>
+    </div>
+    <div class="gallery-group">
+        <h3>Estimates & billing</h3>
+        <div class="gallery-row mobile">
+            <figure class="g-item"><div class="device"><img src="screens/all-estimates.png" alt="Estimates screen" /></div><figcaption>Estimates<span>Open, pending, accepted</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-invoices-unpaid.png" alt="Unpaid invoices screen" /></div><figcaption>Unpaid invoices<span>With pay-now</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-edit-line-item.png" alt="Line item screen" /></div><figcaption>Line item<span>Quantity and price</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-email-proposal.png" alt="Email a proposal screen" /></div><figcaption>Email a proposal<span>From a saved template</span></figcaption></figure>
+        </div>
+    </div>
+    <div class="gallery-group">
+        <h3>Messages & checklists</h3>
+        <div class="gallery-row mobile">
+            <figure class="g-item"><div class="device"><img src="screens/all-on-the-way.png" alt="On my way screen" /></div><figcaption>On my way<span>Text to the customer</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-email-template.png" alt="Email templates screen" /></div><figcaption>Email templates<span>Reminders and proposals</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-sms-template.png" alt="Text templates screen" /></div><figcaption>Text templates<span>Invoice links by SMS</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-checklist.png" alt="Job checklist screen" /></div><figcaption>Job checklist<span>To-dos for the crew</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-task.png" alt="Tasks screen" /></div><figcaption>Tasks<span>Assigned to a person</span></figcaption></figure>
+        </div>
+    </div>
+    <div class="gallery-group">
+        <h3>Field tools</h3>
+        <div class="gallery-row mobile">
+            <figure class="g-item"><div class="device"><img src="screens/all-login.png" alt="Sign in screen" /></div><figcaption>Sign in<span>Per company login</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-appointment-type.png" alt="New appointment screen" /></div><figcaption>New appointment<span>Job, estimate, task</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-job-media.png" alt="Job media screen" /></div><figcaption>Job media<span>Photos, video, PDFs</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-receipt.png" alt="Expense receipt screen" /></div><figcaption>Expense receipt<span>Scanned and filed</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-personal.png" alt="Personal time screen" /></div><figcaption>Personal time<span>Blocked on the calendar</span></figcaption></figure>
         </div>
     </div>
 </section>
@@ -830,7 +770,7 @@ p { text-wrap: pretty; }
 
     <div class="foot">
         <div class="studio"><span class="brand-dot"></span>Adroit Infosoft</div>
-        <p class="sources">Product facts from public sources, checked October 2026: The Customer Factor's features page and help center, its App Store and Google Play listings, and Capterra reviews. Adroit Infosoft is not affiliated with The Customer Factor LLC; product names belong to their owners. Interface views are our illustrations. Pricing is not shown because public listings disagree; see thecustomerfactor.com for current plans.</p>
+        <p class="sources">Product facts from public sources, checked October 2026: The Customer Factor's features page and help center, its App Store and Google Play listings, and Capterra reviews. Adroit Infosoft is not affiliated with The Customer Factor LLC; product names belong to their owners. App screens are from The Customer Factor's Android app, captured on a test account. Pricing is not shown because public listings disagree; see thecustomerfactor.com for current plans.</p>
     </div>
 </footer>
 

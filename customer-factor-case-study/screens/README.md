@@ -1,34 +1,44 @@
 # Screenshots
 
-Drop real screenshots here with exactly these names. Any missing file shows a placeholder (or, for the two phones in "How a job works", the drawn illustration) until it's added.
+Real screens from The Customer Factor's Android app (540×1170, captured on a test account), chosen from the 154 supplied screenshots. Each screen is used once; screens with an open keyboard, error popups or duplicates were left out.
 
-PNG or JPG both work if you keep the name and change the extension in `index.html`.
+To swap a screen, replace the file and keep the name.
 
-## Web app (landscape, about 1600×1000)
-
-| File | Used in |
-| --- | --- |
-| `web-schedule.png` | Main screens + All screens · Schedule (week view) |
-| `web-estimate.png` | Main screens + All screens · Estimate |
-| `web-invoices.png` | Main screens + All screens · Create invoices |
-| `web-portal.png` | Main screens + All screens · Customer portal request |
-| `web-job-pool.png` | All screens · Job pool |
-| `web-job-detail.png` | All screens · Job details |
-| `web-customers.png` | All screens · Customer list |
-| `web-customer-detail.png` | All screens · Customer record |
-| `web-payments.png` | All screens · Payments |
-| `web-quickbooks.png` | All screens · QuickBooks sync settings |
-| `web-employees.png` | All screens · Employees & crews |
-| `web-portal-settings.png` | All screens · Portal settings |
-
-## Mobile app (portrait phone, about 1170×2532)
-
-| File | Used in |
-| --- | --- |
-| `mobile-today.png` | Main screens + All screens · Today's jobs |
-| `mobile-timer.png` | Main screens + All screens · Time tracking |
-| `mobile-estimate.png` | How a job works + Main screens + All screens · Estimate |
-| `mobile-invoice.png` | How a job works + Main screens + All screens · Invoice |
-| `mobile-job.png` | All screens · Job details |
-
-Once real screens are in, update the footer line "Interface views are our illustrations" in `index.html`, and credit where the screenshots came from.
+| File | Section | Shows |
+| --- | --- | --- |
+| `hero-calendar-day.png` | Hero | Day view of the calendar with jobs, estimates and a personal appointment |
+| `hero-invoices-paid.png` | Hero | Paid invoices list |
+| `hero-job-photos.png` | Hero | Job with line item, price and before-and-after photos |
+| `how-estimate.png` | How a job works | Estimate with a button to convert it into a job |
+| `how-pay-invoice.png` | How a job works | Pay invoice screen with coupon, tip and payment method |
+| `main-dashboard.png` | The product in action | Dashboard screen |
+| `main-calendar.png` | The product in action | Calendar screen |
+| `main-job-details.png` | The product in action | Job details screen |
+| `main-job-timer.png` | The product in action | Job timer screen |
+| `main-recurring.png` | The product in action | Recurring jobs screen |
+| `main-invoice.png` | The product in action | Invoice screen |
+| `main-signature.png` | The product in action | Signature screen |
+| `main-payment-portal.png` | The product in action | Online payment screen |
+| `all-customer-search.png` | Every screen, in depth | Customer search screen |
+| `all-customer-info.png` | Every screen, in depth | Customer details screen |
+| `all-customer-photos.png` | Every screen, in depth | Photos & documents screen |
+| `all-customer-jobs.png` | Every screen, in depth | Current jobs screen |
+| `all-custom-fields.png` | Every screen, in depth | Custom fields screen |
+| `all-on-hold.png` | Every screen, in depth | On-hold jobs screen |
+| `all-recurring-period.png` | Every screen, in depth | Repeat rules screen |
+| `all-add-job.png` | Every screen, in depth | Add a job screen |
+| `all-job-history.png` | Every screen, in depth | Job history screen |
+| `all-estimates.png` | Every screen, in depth | Estimates screen |
+| `all-invoices-unpaid.png` | Every screen, in depth | Unpaid invoices screen |
+| `all-edit-line-item.png` | Every screen, in depth | Line item screen |
+| `all-email-proposal.png` | Every screen, in depth | Email a proposal screen |
+| `all-on-the-way.png` | Every screen, in depth | On my way screen |
+| `all-email-template.png` | Every screen, in depth | Email templates screen |
+| `all-sms-template.png` | Every screen, in depth | Text templates screen |
+| `all-checklist.png` | Every screen, in depth | Job checklist screen |
+| `all-task.png` | Every screen, in depth | Tasks screen |
+| `all-login.png` | Every screen, in depth | Sign in screen |
+| `all-appointment-type.png` | Every screen, in depth | New appointment screen |
+| `all-job-media.png` | Every screen, in depth | Job media screen |
+| `all-receipt.png` | Every screen, in depth | Expense receipt screen |
+| `all-personal.png` | Every screen, in depth | Personal time screen |
