@@ -61,6 +61,27 @@ Motion with intent: smooth, eased (`cubic-bezier(0.22, 1, 0.36, 1)`), never jank
 - Ship a single self-contained HTML too (images, font and icons embedded) so it imports into Figma cleanly. Avoid CSS-counter or other pseudo-element content that importers drop.
 - Keep Figma, the HTML and the PDF in sync after every change.
 
+## How we work (step by step)
+
+1. **Brief:** understand the brand/product, collect real facts and real screenshots/photos. Ask only if something important is missing.
+2. **Concept:** pick a direction that fits the brand (palette, type pair, one signature idea). No template copies.
+3. **Build:** first full version, checked in a browser, then shared with screenshots and a preview link.
+4. **Review section by section:** I point at a section ("ab yeh section"), you give an honest opinion (what's weak, what's fine), then make only the agreed changes.
+5. **Approved base:** once I say "yahi final", that version is the base. Only small targeted edits after that; never redo it.
+6. **Final check:** whole page top to bottom for misinfo, repetition, broken layout, then export (PDF / single HTML / Figma).
+7. **Save every approved change** (commit + push) so nothing is lost and any version can be restored.
+
+## Exports
+
+- **PDF:** one continuous tall page at the design width (e.g. 1200px), backgrounds printed, no page breaks inside sections.
+- **Single HTML:** one file with images (base64), font and SVG icons embedded, so it opens offline and imports cleanly.
+- **Figma (html.to.design or similar):** import at the same width (1200px), then check:
+  - frame width and side margins match the design (no extra gaps)
+  - nothing sticks out of the frame (labels with `white-space: nowrap` + `translateX` can import huge)
+  - headlines didn't wrap into an extra line (set the text to auto-width if they did)
+  - all images loaded, no clipped text
+- Fix issues directly in Figma when asked, and copy the same fixes back to HTML/PDF.
+
 ## Before calling anything done
 
 1. Open it in a real (headless) browser and screenshot every section at **1440px**, **768px** and **390px** (or the fixed width for PDFs). Look at them and fix what looks off.
@@ -72,3 +93,7 @@ Motion with intent: smooth, eased (`cubic-bezier(0.22, 1, 0.36, 1)`), never jank
 ## Communication
 
 I write in Hinglish. Reply in the same casual Hinglish, short and clear. Be honest: if something is weak, missing or unverified, tell me straight and recommend the best option.
+
+## Keeping this file updated
+
+Whenever I approve a new rule or preference ("aage se aise hi karna"), add it to the right section of this file in one short line, so every future project follows it.
