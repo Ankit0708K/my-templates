@@ -356,23 +356,24 @@ p { text-wrap: pretty; }
 
 /* ---------- Reviews ---------- */
 .reviews { display: grid; grid-template-columns: 340px 1fr; gap: 24px; margin-top: 48px; }
-.score { background: var(--ink); color: #fff; border-radius: 20px; padding: 32px 30px; }
+.score { background: var(--ink); color: #fff; border-radius: 22px; padding: 36px 34px; }
 .score .big { font-family: var(--display); font-size: 76px; font-weight: 800; letter-spacing: -0.035em; line-height: 1; }
 .score .big small { font-size: 28px; color: #A9BAB1; font-weight: 600; }
 .stars { display: flex; gap: 5px; margin-top: 10px; color: var(--sun); }
 .stars svg { width: 22px; height: 22px; }
-.score p { font-size: 14.5px; color: #CFDAD3; margin-top: 12px; }
-.bars { margin-top: 22px; display: grid; gap: 12px; }
-.bar { display: grid; grid-template-columns: 128px 1fr 30px; align-items: center; gap: 10px; font-size: 13.5px; color: #DCE5DF; }
+.score p { font-size: 15.5px; color: #DCE6E0; margin-top: 12px; }
+.bars { margin-top: 26px; display: grid; gap: 14px; }
+.bar { display: grid; grid-template-columns: 140px 1fr 32px; align-items: center; gap: 12px; font-size: 15px; color: #E6EEE9; }
 .bar i { display: block; height: 7px; border-radius: 99px; background: rgba(255,255,255,.14); position: relative; overflow: hidden; }
 .bar i::after { content: ""; position: absolute; inset: 0; width: var(--w); background: var(--leaf); border-radius: inherit; }
 .bar b { text-align: right; color: #fff; }
 .voice { display: grid; gap: 20px; align-content: stretch; }
-.voice .quote { display: flex; flex-direction: column; justify-content: center; padding: 48px 52px; }
+.voice .quote { display: flex; flex-direction: column; justify-content: center; padding: 48px 56px; position: relative; border-radius: 22px; }
+.voice .quote::before { content: "\201C"; font-family: var(--display); font-weight: 700; font-size: 120px; line-height: 1; color: var(--green); opacity: .25; display: block; height: 56px; margin-bottom: 8px; }
 .voice .quote blockquote { font-size: 36px; }
 .quote { background: var(--mint); border-radius: 20px; padding: 32px 34px; }
 .quote blockquote { font-family: var(--display); font-size: 30px; line-height: 1.15; letter-spacing: -0.025em; font-weight: 600; }
-.quote cite { display: block; margin-top: 14px; font-style: normal; font-size: 14.5px; color: var(--muted); }
+.quote cite { display: block; margin-top: 18px; font-style: normal; font-size: 16px; font-weight: 500; color: var(--ink-2); }
 .honest { border-radius: 20px; padding: 28px 30px; background: var(--field); }
 .honest h3 { font-size: 21px; letter-spacing: -0.02em; }
 .honest ul { list-style: none; margin-top: 14px; display: grid; gap: 10px; }
@@ -722,7 +723,7 @@ p { text-wrap: pretty; }
         <div class="score">
             <div class="big num">4.4<small>/5</small></div>
             <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg style="opacity:.45"><use href="#i-star"/></svg></div>
-            <p>Capterra, 17 verified reviews: 14 five-star, 1 three-star, 2 one-star.</p>
+            <p>Based on 17 verified reviews on Capterra.</p>
             <div class="bars">
                 <div class="bar"><span>Value for money</span><i style="--w:90%"></i><b class="num">4.5</b></div>
                 <div class="bar"><span>Features</span><i style="--w:88%"></i><b class="num">4.4</b></div>
@@ -732,7 +733,7 @@ p { text-wrap: pretty; }
         </div>
         <div class="voice">
             <div class="quote">
-                <blockquote>“As affordable and customizable for our type of business as any alternative.”</blockquote>
+                <blockquote>As affordable and customizable for our type of business as any alternative.</blockquote>
                 <cite>Window cleaning business owner, verified review on Capterra</cite>
             </div>
 </div>
