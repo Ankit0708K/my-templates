@@ -110,7 +110,7 @@ p { text-wrap: pretty; }
 .toast span { color: var(--muted); font-size: 12px; }
 
 /* ---------- Hero ---------- */
-.hero { background: var(--mint); padding: 36px var(--pad) 0; overflow: hidden; }
+.hero { background: var(--mint); padding: 36px var(--pad) 56px; overflow: hidden; }
 .topbar { display: flex; justify-content: space-between; align-items: center; }
 .studio { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 16px; }
 .topbar .logo { width: 34px; height: 34px; }
@@ -132,12 +132,11 @@ p { text-wrap: pretty; }
 .hero-visual .phone { position: absolute; right: 0; top: 96px; }
 .hero-visual .toast.t1 { left: -34px; top: 400px; }
 .hero-visual .toast.t2 { left: 250px; top: 486px; }
-.facts { display: grid; grid-template-columns: repeat(3, 1fr); margin: 8px calc(-1 * var(--pad)) 0; background: #fff; }
-.fact { padding: 30px 32px 32px 40px; }
-.fact:first-child { padding-left: var(--pad); }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); margin: 40px 0 0; background: #fff; border-radius: 22px; padding: 30px 0; box-shadow: 0 24px 50px -36px rgba(16,32,26,.45); position: relative; z-index: 4; }
+.fact { padding: 0 36px; }
 .fact + .fact { box-shadow: inset 1px 0 0 var(--field-2); }
-.fact b { display: block; font-family: var(--display); font-size: 34px; letter-spacing: -0.035em; line-height: 1; }
-.fact span { display: block; margin-top: 8px; font-size: 14.5px; color: var(--muted); line-height: 1.4; }
+.fact b { display: block; font-family: var(--display); font-size: 32px; letter-spacing: -0.03em; line-height: 1; }
+.fact span { display: block; margin-top: 8px; font-size: 15px; color: var(--ink-2); line-height: 1.4; }
 
 /* ---------- Challenge ---------- */
 .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
@@ -472,7 +471,7 @@ p { text-wrap: pretty; }
     <div class="facts">
         <div class="fact"><b class="num">4.4/5</b><span>Capterra rating from 17 verified reviews</span></div>
         <div class="fact"><b class="num">10K+</b><span>Android installs on Google Play</span></div>
-        <div class="fact"><b>Web · iOS · Android</b><span>The office on the web, crews on their phones</span></div>
+        <div class="fact"><b>Web + mobile</b><span>Office on the web, crews on iOS and Android</span></div>
     </div>
 </header>
 
