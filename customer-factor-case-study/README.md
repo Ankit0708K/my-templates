@@ -19,3 +19,7 @@ The PDF was exported with headless Chromium as a single page sized to the full c
 ## Approved version
 
 The owner approved this layout (commit `8117846`, restored in `78be996`) as the final base. Make further changes as small, targeted edits to this file. Don't run broad restyles or full taste-skill / impeccable polish passes on it; an earlier full polish was rejected.
+
+## Single-file version
+
+`the-customer-factor-case-study.html` is the same page with every image embedded (base64) and every icon inlined as SVG, so it works as one file: download it, open it, or import it into Figma (e.g. html.to.design at 1200px width). Rebuild it after editing `index.html` so the two stay identical.

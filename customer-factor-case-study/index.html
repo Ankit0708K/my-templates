@@ -186,9 +186,9 @@ p { text-wrap: pretty; }
 
 /* ---------- How a job works ---------- */
 .works { display: grid; grid-template-columns: 1fr 560px; gap: 48px; align-items: center; }
-.steps { list-style: none; margin-top: 40px; display: grid; counter-reset: s; }
+.steps { list-style: none; margin-top: 40px; display: grid; }
 .step { display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 16px 0; position: relative; }
-.step::before { counter-increment: s; content: counter(s); width: 40px; height: 40px; border-radius: 50%; background: var(--green-soft); color: var(--green-deep); font-family: var(--display); font-weight: 700; font-size: 17px; display: grid; place-items: center; position: relative; z-index: 1; }
+.step-n { width: 40px; height: 40px; border-radius: 50%; background: var(--green-soft); color: var(--green-deep); font-family: var(--display); font-weight: 700; font-size: 17px; display: grid; place-items: center; position: relative; z-index: 1; }
 .step:not(:last-child)::after { content: ""; position: absolute; left: 19px; top: 56px; bottom: -16px; width: 2px; background: var(--field-2); }
 .step b { display: block; font-family: var(--display); font-size: 20px; letter-spacing: -0.015em; margin-top: 6px; }
 .step p { font-size: 16.5px; color: var(--ink); margin-top: 4px; max-width: 470px; }
@@ -575,12 +575,12 @@ p { text-wrap: pretty; }
             <h2 class="h2">How a job works, start to finish.</h2>
             <p class="lead">One window-cleaning customer, followed through the product.</p>
             <ol class="steps">
-                <li class="step"><div><b>Send the estimate</b><p>The office picks a template, adjusts the line items and sends it to the customer by text or email.</p></div></li>
-                <li class="step"><div><b>Put it in the job pool</b><p>Once approved, it becomes a job: one-time, or repeating on a set frequency.</p></div></li>
-                <li class="step"><div><b>Drag it onto the schedule</b><p>When it's due, the job is dragged onto a day and assigned to an employee or a crew.</p></div></li>
-                <li class="step"><div><b>Do the work and track the time</b><p>The crew sees the job in the iOS or Android app and tracks time against it on site.</p></div></li>
-                <li class="step"><div><b>Invoice and get paid</b><p>The invoice is paid on the spot by card, check or cash, or a saved card is charged for repeat work.</p></div></li>
-                <li class="step"><div><b>Land in the books</b><p>The payment flows into QuickBooks with the rest of the day's work.</p></div></li>
+                <li class="step"><span class="step-n">1</span><div><b>Send the estimate</b><p>The office picks a template, adjusts the line items and sends it to the customer by text or email.</p></div></li>
+                <li class="step"><span class="step-n">2</span><div><b>Put it in the job pool</b><p>Once approved, it becomes a job: one-time, or repeating on a set frequency.</p></div></li>
+                <li class="step"><span class="step-n">3</span><div><b>Drag it onto the schedule</b><p>When it's due, the job is dragged onto a day and assigned to an employee or a crew.</p></div></li>
+                <li class="step"><span class="step-n">4</span><div><b>Do the work and track the time</b><p>The crew sees the job in the iOS or Android app and tracks time against it on site.</p></div></li>
+                <li class="step"><span class="step-n">5</span><div><b>Invoice and get paid</b><p>The invoice is paid on the spot by card, check or cash, or a saved card is charged for repeat work.</p></div></li>
+                <li class="step"><span class="step-n">6</span><div><b>Land in the books</b><p>The payment flows into QuickBooks with the rest of the day's work.</p></div></li>
             </ol>
         </div>
         <div>
