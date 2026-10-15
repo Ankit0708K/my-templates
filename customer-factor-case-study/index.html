@@ -185,16 +185,16 @@ p { text-wrap: pretty; }
 .surface li b { font-weight: 600; }
 
 /* ---------- How a job works ---------- */
-.works { display: grid; grid-template-columns: 1fr 470px; gap: 56px; align-items: start; }
+.works { display: grid; grid-template-columns: 1fr 500px; gap: 56px; align-items: center; }
 .steps { list-style: none; margin-top: 40px; display: grid; counter-reset: s; }
 .step { display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 16px 0; position: relative; }
 .step::before { counter-increment: s; content: counter(s); width: 40px; height: 40px; border-radius: 50%; background: var(--green-soft); color: var(--green-deep); font-family: var(--display); font-weight: 700; font-size: 17px; display: grid; place-items: center; position: relative; z-index: 1; }
 .step:not(:last-child)::after { content: ""; position: absolute; left: 19px; top: 56px; bottom: -16px; width: 2px; background: var(--field-2); }
 .step b { display: block; font-family: var(--display); font-size: 20px; letter-spacing: -0.015em; margin-top: 6px; }
-.step p { font-size: 15.5px; color: var(--ink-2); margin-top: 4px; max-width: 470px; }
+.step p { font-size: 16.5px; color: var(--ink); margin-top: 4px; max-width: 470px; }
 .works-phones { display: flex; gap: 22px; justify-content: flex-end; margin-top: 8px; }
 .works-phones .phone:nth-child(2) { margin-top: 70px; }
-.cap { text-align: right; font-size: 13.5px; color: var(--muted); margin-top: 18px; }
+.cap { text-align: center; font-size: 15px; color: var(--ink-2); margin-top: 16px; }
 
 /* ---------- Screens ---------- */
 .screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
@@ -282,7 +282,8 @@ p { text-wrap: pretty; }
 .hero-phones .toast.t1 { left: -10px; top: 448px; }
 .hero-phones .toast.t2 { right: -10px; left: auto; top: 470px; }
 .works-phones { align-items: flex-start; }
-.works-phones .device { width: 220px; }
+.works-phones { justify-content: center; background: var(--mint); border-radius: 24px; padding: 44px 24px 48px; }
+.works-phones .device { width: 210px; }
 .works-phones .device:nth-child(2) { margin-top: 70px; }
 .main-grid.mobile + .main-grid.mobile { margin-top: 22px; }
 .main-card .device { margin: auto auto 0; width: 210px; border-radius: 30px 30px 0 0; padding: 8px 8px 0; box-shadow: none; height: 340px; overflow: hidden; }
@@ -575,8 +576,8 @@ p { text-wrap: pretty; }
                 <li class="step"><div><b>Put it in the job pool</b><p>Once approved, it becomes a job: one-time, or repeating on a set frequency.</p></div></li>
                 <li class="step"><div><b>Drag it onto the schedule</b><p>When it's due, the job is dragged onto a day and assigned to an employee or a crew.</p></div></li>
                 <li class="step"><div><b>Do the work and track the time</b><p>The crew sees the job in the iOS or Android app and tracks time against it on site.</p></div></li>
-                <li class="step"><div><b>Invoice and get paid</b><p>The job is invoiced in bulk with the rest of the week, and charged to a saved card if there is one.</p></div></li>
-                <li class="step"><div><b>Land in the books</b><p>The sale reaches QuickBooks Online at 3am the next morning, or Desktop on the next manual sync.</p></div></li>
+                <li class="step"><div><b>Invoice and get paid</b><p>The invoice is paid on the spot by card, check or cash, or a saved card is charged for repeat work.</p></div></li>
+                <li class="step"><div><b>Land in the books</b><p>The payment flows into QuickBooks with the rest of the day's work.</p></div></li>
             </ol>
         </div>
         <div>
