@@ -306,6 +306,12 @@ p { text-wrap: pretty; }
 .gallery-row.mobile { grid-template-columns: repeat(5, 1fr); }
 
 /* ---------- Engineering ---------- */
+.band.night { background: var(--ink); color: #EEF3EF; }
+.band.night .lead { color: #C9D6CF; }
+.night .eng-card { background: rgba(255,255,255,.06); }
+.night .eng-card .ic { background: var(--green); color: #fff; }
+.night .eng-card p { color: #C9D6CF; }
+.night .sync { background: #1B2D25; }
 .eng { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
 .eng-card { border-radius: 20px; padding: 30px 28px; background: var(--field); }
 .eng-card .ic { width: 50px; height: 50px; border-radius: 14px; background: var(--ink); color: var(--leaf); display: grid; place-items: center; }
@@ -523,10 +529,10 @@ p { text-wrap: pretty; }
             <h3>Web app</h3>
             <p>Where the business is planned, priced and billed.</p>
             <ul>
-                <li><svg><use href="#i-check"/></svg><span><b>Customer records</b> with photos, documents and custom fields</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Drag-and-drop scheduling</b> from the job pool</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Bulk invoicing</b> for the week's work</span></li>
                 <li><svg><use href="#i-check"/></svg><span><b>Employees and crews</b> that jobs can be assigned to</span></li>
                 <li><svg><use href="#i-check"/></svg><span><b>Service plan pricing</b> for repeat work</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Email and text templates</b> for reminders, proposals and invoices</span></li>
             </ul>
         </div>
         <div class="surface dark">
@@ -642,7 +648,7 @@ p { text-wrap: pretty; }
         <h3>Scheduling & jobs</h3>
         <div class="gallery-row mobile">
             <figure class="g-item"><div class="device"><img src="screens/main-calendar.png" alt="Month calendar screen" /></div><figcaption>Month calendar<span>The day's jobs below</span></figcaption></figure>
-            <figure class="g-item"><div class="device"><img src="screens/all-on-hold.png" alt="On-hold jobs screen" /></div><figcaption>On-hold jobs<span>Waiting to be scheduled</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-on-hold.png" alt="On-hold jobs screen" /></div><figcaption>On-hold jobs<span>Jobs put on hold</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/main-recurring.png" alt="Repeat frequency screen" /></div><figcaption>Repeat frequency<span>Weekly to every 5 years</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/all-add-job.png" alt="Add a job screen" /></div><figcaption>Add a job<span>Line items and price</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/all-job-history.png" alt="Job history screen" /></div><figcaption>Job history<span>Past jobs and estimates</span></figcaption></figure>
@@ -680,14 +686,14 @@ p { text-wrap: pretty; }
 </section>
 
 <!-- ============================ ENGINEERING ============================ -->
-<section class="band">
+<section class="band night">
     <h2 class="h2">Technically, what makes it interesting.</h2>
     <p class="lead">The hard parts of this kind of product aren't the screens. They are the rules underneath them.</p>
 
     <div class="eng">
         <div class="eng-card"><span class="ic"><svg><use href="#i-repeat"/></svg></span><h3>Recurring work as data, not reminders</h3><p>A job can repeat weekly, every few weeks or months, or yearly. Keeping frequency, service plans and pricing on the job itself is what lets due work resurface on its own.</p></div>
-        <div class="eng-card"><span class="ic"><svg><use href="#i-sync"/></svg></span><h3>Two accounting integrations, one ledger</h3><p>A scheduled cloud push for QuickBooks Online and a user-triggered sync for Desktop. Both must agree on customers, items and payments, and never post twice.</p></div>
-        <div class="eng-card"><span class="ic"><svg><use href="#i-lock"/></svg></span><h3>One record, three audiences</h3><p>Owners, crews and end customers see the same job with different permissions. The portal shows only what the owner allows: days, services, history and prices.</p></div>
+        <div class="eng-card"><span class="ic"><svg><use href="#i-tool"/></svg></span><h3>Field data the office can trust</h3><p>Travel, arrival, start and finish are timed against each job, and clock-ins and daily routes are logged per employee. The office sees what happened on site without having to ask.</p></div>
+        <div class="eng-card"><span class="ic"><svg><use href="#i-lock"/></svg></span><h3>One record, three audiences</h3><p>Owners, crews and end customers work from the same job. The portal shows customers only what the owner chooses: bookable days, services, past jobs and prices.</p></div>
     </div>
 
     <div class="sync">
