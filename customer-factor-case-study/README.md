@@ -16,3 +16,7 @@ The PDF was exported with headless Chromium as a single page sized to the full c
 - Interface views are illustrations drawn in HTML/CSS, labelled as such. Swap in real screenshots if you have permission.
 - Pricing is left out on purpose: public listings disagree.
 - Company details (Adroit Infosoft, adroitinfosoft.com, sales@adroitinfosoft.com) were taken from the example case studies. Confirm them.
+
+## Approved version
+
+The owner approved this layout (commit `8117846`, restored in `78be996`) as the final base. Make further changes as small, targeted edits to this file. Don't run broad restyles or full taste-skill / impeccable polish passes on it; an earlier full polish was rejected.
