@@ -309,7 +309,7 @@ p { text-wrap: pretty; }
 .wire::after { content: ""; position: absolute; right: -1px; top: -4px; border: 5px solid transparent; border-left: 8px solid var(--leaf); border-right: 0; }
 
 /* ---------- Tech ---------- */
-.tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 48px; }
+.tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 48px; align-items: start; }
 .tech { background: #fff; border-radius: 20px; padding: 30px 30px 32px; }
 .tech h3 { font-size: 22px; letter-spacing: -0.02em; }
 .tech > p { font-size: 15px; color: var(--muted); margin-top: 6px; }
@@ -358,9 +358,9 @@ p { text-wrap: pretty; }
 .platform em { font-style: normal; display: inline-block; margin-top: 10px; font-size: 12.5px; font-weight: 600; background: var(--green-soft); color: var(--green-deep); border-radius: 99px; padding: 3px 10px; }
 
 /* ---------- CTA ---------- */
-.cta { background: var(--green); color: #fff; padding: 110px var(--pad) 56px; }
-.cta-grid { display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: end; }
-.cta h2 { font-size: 66px; letter-spacing: -0.03em; line-height: .98; }
+.cta { background: var(--green); color: #fff; padding: 80px var(--pad) 32px; }
+.cta-grid { display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: center; }
+.cta h2 { font-size: 48px; letter-spacing: -0.03em; line-height: .98; }
 .cta h2 span { color: var(--sun); }
 .cta-grid > div > p { margin-top: 22px; font-size: 19px; color: #DDF0E4; max-width: 600px; }
 .offer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
@@ -372,10 +372,10 @@ p { text-wrap: pretty; }
 .contact a { display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 600; }
 .contact a .ic { width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; }
 .contact a .ic svg { width: 18px; height: 18px; }
-.foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-top: 72px; padding-top: 26px; box-shadow: inset 0 1px 0 rgba(255,255,255,.18); }
+.foot { display: flex; justify-content: space-between; align-items: center; gap: 40px; margin-top: 56px; padding-top: 22px; box-shadow: inset 0 1px 0 rgba(255,255,255,.18); }
 .foot .studio { color: #fff; white-space: nowrap; }
 .foot .brand-dot { background: #fff; }
-.sources { font-size: 12.5px; color: #CDE8D7; line-height: 1.5; max-width: 760px; text-align: right; }
+.sources { font-size: 12.5px; color: #E3F3E9; line-height: 1.5; max-width: 640px; text-align: right; }
 </style>
 </head>
 <body>
@@ -484,7 +484,7 @@ p { text-wrap: pretty; }
         <h2 class="h2">Quote, schedule, invoice and sync, without retyping.</h2>
         <div class="overview-text">
             <p>The Customer Factor, made by The Customer Factor LLC of Sioux Falls, South Dakota, keeps a service company's customers, jobs, prices and payments in one record. The office plans the week on the web, crews work from iOS and Android apps, and customers can request their next visit through a portal.</p>
-            <p>It's tuned for businesses whose revenue is mostly repeat visits to the same addresses, rather than for large field-service fleets.</p>
+            <p>It's built around repeat visits: recurring jobs come back into view when they're due.</p>
             <div class="trades">
                 <span class="trade"><svg><use href="#i-window"/></svg>Window cleaning</span>
                 <span class="trade"><svg><use href="#i-spray"/></svg>Pressure washing</span>
@@ -530,7 +530,8 @@ p { text-wrap: pretty; }
                 <li><svg><use href="#i-check"/></svg><span>Schedule <b>jobs, estimates, tasks</b> and personal appointments</span></li>
                 <li><svg><use href="#i-check"/></svg><span><b>Time tracking</b> for each job</span></li>
                 <li><svg><use href="#i-check"/></svg><span><b>Invoice generation</b> from the phone</span></li>
-                <li><svg><use href="#i-check"/></svg><span>Works from the <b>same customers and jobs</b> as the office</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Clock in/out</b>, with daily route and mileage tracking</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Expense receipts</b> photographed and filed on site</span></li>
             </ul>
         </div>
         <div class="surface">
@@ -554,7 +555,7 @@ p { text-wrap: pretty; }
             <p class="lead">One window-cleaning customer, followed through the product.</p>
             <ol class="steps">
                 <li class="step"><div><b>Send the estimate</b><p>The office picks a template, adjusts the line items and sends it to the customer by text or email.</p></div></li>
-                <li class="step"><div><b>Put it in the job pool</b><p>Once approved, the work is saved as a recurring job, every 4, 6 or 8 weeks, or as a one-time visit.</p></div></li>
+                <li class="step"><div><b>Put it in the job pool</b><p>Once approved, it becomes a job: one-time, or repeating on a set frequency.</p></div></li>
                 <li class="step"><div><b>Drag it onto the schedule</b><p>When it's due, the job is dragged onto a day and assigned to an employee or a crew.</p></div></li>
                 <li class="step"><div><b>Do the work and track the time</b><p>The crew sees the job in the iOS or Android app and tracks time against it on site.</p></div></li>
                 <li class="step"><div><b>Invoice and get paid</b><p>The job is invoiced in bulk with the rest of the week, and charged to a saved card if there is one.</p></div></li>
@@ -639,10 +640,10 @@ p { text-wrap: pretty; }
     <div class="gallery-group">
         <h3>Field tools</h3>
         <div class="gallery-row mobile">
-            <figure class="g-item"><div class="device"><img src="screens/all-login.png" alt="Sign in screen" /></div><figcaption>Sign in<span>Per company login</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-login.png" alt="Sign in screen" /></div><figcaption>Sign in<span>Username and password</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/all-appointment-type.png" alt="New appointment screen" /></div><figcaption>New appointment<span>Job, estimate, task</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/all-job-media.png" alt="Job media screen" /></div><figcaption>Job media<span>Photos, video, PDFs</span></figcaption></figure>
-            <figure class="g-item"><div class="device"><img src="screens/all-receipt.png" alt="Expense receipt screen" /></div><figcaption>Expense receipt<span>Scanned and filed</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-receipt.png" alt="Expense receipt screen" /></div><figcaption>Expense receipt<span>Photo, category, vendor</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/all-personal.png" alt="Personal time screen" /></div><figcaption>Personal time<span>Blocked on the calendar</span></figcaption></figure>
         </div>
     </div>
@@ -654,7 +655,7 @@ p { text-wrap: pretty; }
     <p class="lead">The hard parts of this kind of product aren't the screens. They are the rules underneath them.</p>
 
     <div class="eng">
-        <div class="eng-card"><span class="ic"><svg><use href="#i-repeat"/></svg></span><h3>Recurring work as data, not reminders</h3><p>A window round repeats every 4, 6 or 8 weeks. Storing frequency, service plans and pricing on the job itself is what lets the job pool fill itself.</p></div>
+        <div class="eng-card"><span class="ic"><svg><use href="#i-repeat"/></svg></span><h3>Recurring work as data, not reminders</h3><p>A job can repeat weekly, every few weeks or months, or yearly. Keeping frequency, service plans and pricing on the job itself is what lets due work resurface on its own.</p></div>
         <div class="eng-card"><span class="ic"><svg><use href="#i-sync"/></svg></span><h3>Two accounting integrations, one ledger</h3><p>A scheduled cloud push for QuickBooks Online and a user-triggered sync for Desktop. Both must agree on customers, items and payments, and never post twice.</p></div>
         <div class="eng-card"><span class="ic"><svg><use href="#i-lock"/></svg></span><h3>One record, three audiences</h3><p>Owners, crews and end customers see the same job with different permissions. The portal shows only what the owner allows: days, services, history and prices.</p></div>
     </div>
@@ -662,7 +663,7 @@ p { text-wrap: pretty; }
     <div class="sync">
         <div>
             <h3>Two roads into the same ledger</h3>
-            <p>Plenty of small businesses still run QuickBooks Desktop while others have moved to Online, so the product supports both, and the sync is included in the subscription.</p>
+            <p>The product supports both QuickBooks Online and QuickBooks Desktop, and the sync is included in the subscription.</p>
         </div>
         <div class="lanes">
             <div class="lane"><div class="node">Customers, invoices, payments<small>The Customer Factor</small></div><div class="wire"><span>Automatic, every morning at 3:00 am</span></div><div class="node qb">QuickBooks Online<small>Cloud sync</small></div></div>
@@ -678,15 +679,13 @@ p { text-wrap: pretty; }
 
     <div class="tech-grid">
         <div class="tech">
-            <h3>Platforms &amp; integrations</h3>
-            <p>From the vendor's site and app store listings</p>
+            <h3>Integrations</h3>
+            <p>From the vendor's website and help center</p>
             <div class="tiles">
                 <div class="tile"><span class="ic"><svg><use href="#i-book"/></svg></span><div><b>QuickBooks Online</b><span>Nightly automatic sync</span></div></div>
                 <div class="tile"><span class="ic"><svg><use href="#i-book"/></svg></span><div><b>QuickBooks Desktop</b><span>User-triggered sync</span></div></div>
                 <div class="tile"><span class="ic"><svg><use href="#i-card"/></svg></span><div><b>Card processing</b><span>Cards on file, auto-pay</span></div></div>
                 <div class="tile"><span class="ic"><svg><use href="#i-chat"/></svg></span><div><b>Email &amp; text</b><span>Estimates, portal confirmations</span></div></div>
-                <div class="tile"><span class="ic"><svg><use href="#i-apple"/></svg></span><div><b>iOS app</b><span>Requires iOS 15 or later</span></div></div>
-                <div class="tile"><span class="ic"><svg><use href="#i-android"/></svg></span><div><b>Android app</b><span>10K+ installs</span></div></div>
             </div>
         </div>
         <div class="tech ours">
@@ -752,8 +751,8 @@ p { text-wrap: pretty; }
 <footer class="cta">
     <div class="cta-grid">
         <div>
-            <h2>Building software for a <span>service business?</span></h2>
-            <p>Adroit Infosoft designs and builds web and mobile products. Recurring scheduling, accounting sync, field apps and customer portals: everything in this case study is the kind of system we build for clients.</p>
+            <h2>Have an app idea like <span>The Customer Factor?</span></h2>
+            <p>Adroit Infosoft builds web and mobile apps. Every feature in this case study is one we can build for your business.</p>
         </div>
         <div class="contact">
             <span>Talk to our team</span>
@@ -761,16 +760,9 @@ p { text-wrap: pretty; }
             <a href="mailto:sales@adroitinfosoft.com"><span class="ic"><svg><use href="#i-mail"/></svg></span>sales@adroitinfosoft.com</a>
         </div>
     </div>
-
-    <div class="offer">
-        <div><b>Web platforms</b><span>Admin dashboards, scheduling, billing and reporting</span></div>
-        <div><b>iOS &amp; Android apps</b><span>Field apps for crews, working from the same data as the office</span></div>
-        <div><b>Integrations</b><span>QuickBooks, payment gateways, email and SMS</span></div>
-    </div>
-
     <div class="foot">
         <div class="studio"><span class="brand-dot"></span>Adroit Infosoft</div>
-        <p class="sources">Product facts from public sources, checked October 2026: The Customer Factor's features page and help center, its App Store and Google Play listings, and Capterra reviews. Adroit Infosoft is not affiliated with The Customer Factor LLC; product names belong to their owners. App screens are from The Customer Factor's Android app, captured on a test account. Pricing is not shown because public listings disagree; see thecustomerfactor.com for current plans.</p>
+        <p class="sources">Facts from The Customer Factor's website, App Store, Google Play and Capterra listings, checked Oct 2026. App screens from its Android app on a test account. Not affiliated with The Customer Factor LLC.</p>
     </div>
 </footer>
 
