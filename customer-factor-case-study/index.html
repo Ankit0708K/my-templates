@@ -131,7 +131,7 @@ p { text-wrap: pretty; }
 .hero-visual .phone { position: absolute; right: 0; top: 96px; }
 .hero-visual .toast.t1 { left: -34px; top: 400px; }
 .hero-visual .toast.t2 { left: 250px; top: 486px; }
-.facts { display: grid; grid-template-columns: repeat(4, 1fr); margin: 8px calc(-1 * var(--pad)) 0; background: #fff; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); margin: 8px calc(-1 * var(--pad)) 0; background: #fff; }
 .fact { padding: 30px 32px 32px 40px; }
 .fact:first-child { padding-left: var(--pad); }
 .fact + .fact { box-shadow: inset 1px 0 0 var(--field-2); }
@@ -411,6 +411,8 @@ p { text-wrap: pretty; }
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-timer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V10M10 2.5h4M18.5 6.5l1.5-1.5"/></g></symbol>
+    <symbol id="i-photo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2.5"/><path d="M8.5 6l1.5-2.5h4L15.5 6"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m8.5 14.5 2 2 4-4"/></g></symbol>
@@ -451,10 +453,10 @@ p { text-wrap: pretty; }
         <div>
             <span class="product-tag"><i>CF</i><b>The Customer Factor</b></span>
             <h1>Quote to <span>QuickBooks</span>,<br />in one app.</h1>
-            <p class="lead">Scheduling, estimating and invoicing for window cleaners, pressure washers, carpet cleaners and maid services, on the web, iOS and Android.</p>
+            <p class="lead">Scheduling, estimating and invoicing for window cleaners, pressure washers, carpet cleaners and maid services, from the first quote to the paid invoice.</p>
             <div class="pills">
                 <span class="pill"><svg><use href="#i-repeat"/></svg>Recurring jobs</span>
-                <span class="pill"><svg><use href="#i-sync"/></svg>QuickBooks sync</span>
+                <span class="pill"><svg><use href="#i-timer"/></svg>Job timer</span>
                 <span class="pill"><svg><use href="#i-globe"/></svg>Customer portal</span>
             </div>
         </div>
@@ -463,15 +465,14 @@ p { text-wrap: pretty; }
             <div class="device d-left"><img src="screens/hero-calendar-day.png" alt="Day view of the calendar with jobs, estimates and a personal appointment" /></div>
             <div class="device d-right"><img src="screens/hero-invoices-paid.png" alt="Paid invoices list" /></div>
             <div class="device d-mid"><img src="screens/hero-job-photos.png" alt="Job with line item, price and before-and-after photos" /></div>
-            <div class="toast t1"><span class="ic"><svg><use href="#i-sync"/></svg></span><div><b>Synced to QuickBooks Online</b><span>Every morning, 3:00 am</span></div></div>
+            <div class="toast t1"><span class="ic"><svg><use href="#i-photo"/></svg></span><div><b>Job photos</b><span>Taken and saved on site</span></div></div>
         </div>
     </div>
 
     <div class="facts">
         <div class="fact"><b class="num">4.4/5</b><span>Capterra rating from 17 verified reviews</span></div>
         <div class="fact"><b class="num">10K+</b><span>Android installs on Google Play</span></div>
-        <div class="fact"><b>QuickBooks</b><span>Online and Desktop sync, included in the subscription</span></div>
-        <div class="fact"><b>3 surfaces</b><span>Office web app, field apps, customer portal</span></div>
+        <div class="fact"><b>Web · iOS · Android</b><span>The office on the web, crews on their phones</span></div>
     </div>
 </header>
 
