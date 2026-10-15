@@ -1,17 +1,18 @@
 # The Customer Factor: case study (PDF)
 
-A 6-page, print-ready product case study in a single HTML file, in the style of Adroit Infosoft's app case studies.
+One continuous product case study in a single HTML file (1200px wide, sections separated by background), in the style of Adroit Infosoft's app case studies.
 
-- `index.html`: the source. Open it in a browser to view; every `.page` is one A4 sheet.
-- `the-customer-factor-case-study.pdf`: the exported PDF.
+- `index.html`: the source. Open it in a browser to view.
+- `the-customer-factor-case-study.pdf`: the exported PDF, one tall page (1200px wide).
 
 ## Export the PDF yourself
 
-Open `index.html` in Chrome → Print → Destination "Save as PDF", Paper A4, Margins "None", tick "Background graphics".
+The PDF was exported with headless Chromium as a single page sized to the full content height. A normal browser "Print to PDF" will split it across pages, so prefer the included PDF.
 
 ## Content notes
 
 - Product facts come from public sources (vendor features page and help center, App Store, Google Play, Capterra), checked October 2026. Re-check before sending.
+- The "Our recommended build" stack is Adroit Infosoft's suggestion, clearly labelled; The Customer Factor doesn't publish its own stack.
 - Interface views are illustrations drawn in HTML/CSS, labelled as such. Swap in real screenshots if you have permission.
 - Pricing is left out on purpose: public listings disagree.
 - Company details (Adroit Infosoft, adroitinfosoft.com, sales@adroitinfosoft.com) were taken from the example case studies. Confirm them.
