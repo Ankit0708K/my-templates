@@ -381,13 +381,14 @@ p { text-wrap: pretty; }
 .honest li svg { width: 18px; height: 18px; margin-top: 3px; color: #B88A0C; }
 
 /* ---------- Platforms ---------- */
-.platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
-.platform { background: #fff; border-radius: 20px; padding: 26px; display: grid; grid-template-columns: 54px 1fr; gap: 16px; align-items: start; }
-.p-icon { width: 54px; height: 54px; border-radius: 15px; background: var(--ink); color: #fff; display: grid; place-items: center; }
-.p-icon svg { width: 26px; height: 26px; }
-.platform b { display: block; font-family: var(--display); font-size: 21px; letter-spacing: -0.015em; }
-.platform div span { display: block; font-size: 14.5px; color: var(--muted); margin-top: 4px; line-height: 1.45; }
-.platform em { font-style: normal; display: inline-block; margin-top: 10px; font-size: 12.5px; font-weight: 600; background: var(--green-soft); color: var(--green-deep); border-radius: 99px; padding: 3px 10px; }
+.platforms-band .h2 { max-width: none; }
+.platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 44px; }
+.platform { background: #fff; border-radius: 22px; padding: 30px; display: flex; flex-direction: column; align-items: flex-start; }
+.p-icon { width: 52px; height: 52px; border-radius: 50%; background: var(--green-soft); color: var(--green-deep); display: grid; place-items: center; margin-bottom: 22px; }
+.p-icon svg { width: 24px; height: 24px; }
+.platform b { display: block; font-family: var(--display); font-size: 24px; letter-spacing: -0.02em; }
+.platform > span:not(.p-icon) { display: block; font-size: 16px; color: var(--ink-2); margin-top: 8px; line-height: 1.5; flex: 1; }
+.platform em { font-style: normal; display: inline-block; margin-top: 20px; font-size: 13.5px; font-weight: 600; background: var(--mint, var(--green-soft)); color: var(--green-deep); border-radius: 99px; padding: 5px 12px; box-shadow: inset 0 0 0 1px var(--green-soft); }
 
 /* ---------- CTA ---------- */
 .cta { background: var(--green); color: #fff; padding: 80px var(--pad) 32px; }
@@ -399,10 +400,10 @@ p { text-wrap: pretty; }
 .offer div { background: rgba(255,255,255,.1); border-radius: 16px; padding: 20px 22px; }
 .offer b { display: block; font-family: var(--display); font-size: 19px; letter-spacing: -0.01em; }
 .offer span { display: block; font-size: 14.5px; color: #DDF0E4; margin-top: 4px; line-height: 1.45; }
-.contact { background: #fff; color: var(--ink); border-radius: 20px; padding: 28px; display: grid; gap: 14px; }
-.contact > span { font-size: 14px; color: var(--muted); }
+.contact { background: #fff; color: var(--ink); border-radius: 22px; padding: 30px 30px 32px; display: grid; gap: 16px; }
+.contact > span { font-size: 15px; font-weight: 500; color: var(--ink-2); margin-bottom: 2px; }
 .contact a { display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 600; }
-.contact a .ic { width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; }
+.contact a .ic { width: 42px; height: 42px; flex: none; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; }
 .contact a .ic svg { width: 18px; height: 18px; }
 .foot { display: flex; justify-content: space-between; align-items: center; gap: 40px; margin-top: 56px; padding-top: 22px; box-shadow: inset 0 1px 0 rgba(255,255,255,.18); }
 .foot .studio { color: #fff; white-space: nowrap; }
@@ -741,12 +742,12 @@ p { text-wrap: pretty; }
 </section>
 
 <!-- ============================ PLATFORMS ============================ -->
-<section class="band mint">
+<section class="band mint platforms-band">
     <h2 class="h2">Available on the web, iOS and Android.</h2>
     <div class="platforms">
-        <div class="platform"><span class="p-icon"><svg><use href="#i-globe"/></svg></span><div><b>Web app</b><span>Runs in the browser for the office: scheduling, estimates, invoicing and settings.</span><em>thecustomerfactor.com</em></div></div>
-        <div class="platform"><span class="p-icon"><svg><use href="#i-apple"/></svg></span><div><b>iOS</b><span>On the App Store from The Customer Factor LLC.</span><em>Requires iOS 15+</em></div></div>
-        <div class="platform"><span class="p-icon"><svg><use href="#i-android"/></svg></span><div><b>Android</b><span>On Google Play; developer based in Sioux Falls, SD.</span><em>10K+ installs</em></div></div>
+        <div class="platform"><span class="p-icon"><svg><use href="#i-globe"/></svg></span><b>Web app</b><span>For the office, in any browser: scheduling, estimates, invoicing and QuickBooks sync.</span><em>thecustomerfactor.com</em></div>
+        <div class="platform"><span class="p-icon"><svg><use href="#i-apple"/></svg></span><b>iOS</b><span>For crews on iPhone: today's jobs, the job timer, photos and payments on site.</span><em>App Store · iOS 15+</em></div>
+        <div class="platform"><span class="p-icon"><svg><use href="#i-android"/></svg></span><b>Android</b><span>The same crew app for Android phones, so every crew member can use it on their own device.</span><em>Google Play</em></div>
     </div>
 </section>
 
