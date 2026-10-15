@@ -153,13 +153,13 @@ p { text-wrap: pretty; }
 .col-old li span { color: var(--ink); }
 
 /* ---------- Overview ---------- */
-.overview { display: grid; grid-template-columns: 430px 1fr; gap: 56px; align-items: start; }
+.overview { display: grid; grid-template-columns: 430px 1fr; gap: 56px; align-items: center; }
 .overview .h2 { font-size: 46px; }
-.overview-text p { font-size: 18px; color: var(--ink-2); }
+.overview-text p { font-size: 18px; color: var(--ink); }
 .overview-text p + p { margin-top: 14px; }
 .trades { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .trade { display: inline-flex; align-items: center; gap: 9px; padding: 10px 18px; border-radius: 99px; background: var(--green-soft); color: var(--green-deep); font-weight: 600; font-size: 15.5px; }
-.trade svg { width: 19px; height: 19px; }
+
 .flow { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 64px; position: relative; background: var(--field); border-radius: 22px; padding: 36px 24px 32px; }
 .flow::before { content: ""; position: absolute; left: 10%; right: 10%; top: 66px; height: 2px; background: repeating-linear-gradient(90deg, var(--green) 0 6px, transparent 6px 11px); }
 .flow li { position: relative; text-align: center; }
@@ -453,7 +453,7 @@ p { text-wrap: pretty; }
         <div>
             <span class="product-tag"><i>CF</i><b>The Customer Factor</b></span>
             <h1>Quote to <span>QuickBooks</span>,<br />in one app.</h1>
-            <p class="lead">Scheduling, estimating and invoicing for window cleaners, pressure washers, carpet cleaners and maid services, from the first quote to the paid invoice.</p>
+            <p class="lead">Scheduling, estimating and invoicing software for small service businesses and the crews who do the work.</p>
             <div class="pills">
                 <span class="pill"><svg><use href="#i-repeat"/></svg>Recurring jobs</span>
                 <span class="pill"><svg><use href="#i-timer"/></svg>Job timer</span>
@@ -508,15 +508,15 @@ p { text-wrap: pretty; }
 <!-- ============================ OVERVIEW ============================ -->
 <section class="band">
     <div class="overview">
-        <h2 class="h2">Quote, schedule, invoice and sync, without retyping.</h2>
+        <h2 class="h2">One record for the whole business.</h2>
         <div class="overview-text">
-            <p>The Customer Factor, made by The Customer Factor LLC of Sioux Falls, South Dakota, keeps a service company's customers, jobs, prices and payments in one record. The office plans the week on the web, crews work from iOS and Android apps, and customers can request their next visit through a portal.</p>
-            <p>It's built around repeat visits: recurring jobs come back into view when they're due.</p>
+            <p>The Customer Factor keeps a service company's customers, jobs, prices and payments together, so the same details are never typed twice.</p>
+            <p>It's built around repeat visits, which is why it fits trades where the same customers book again and again:</p>
             <div class="trades">
-                <span class="trade"><svg><use href="#i-window"/></svg>Window cleaning</span>
-                <span class="trade"><svg><use href="#i-spray"/></svg>Pressure washing</span>
-                <span class="trade"><svg><use href="#i-rug"/></svg>Carpet cleaning</span>
-                <span class="trade"><svg><use href="#i-sparkle"/></svg>Maid &amp; cleaning services</span>
+                <span class="trade">Window cleaning</span>
+                <span class="trade">Pressure washing</span>
+                <span class="trade">Carpet cleaning</span>
+                <span class="trade">Maid &amp; cleaning services</span>
             </div>
         </div>
     </div>
