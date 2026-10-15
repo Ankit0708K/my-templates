@@ -26,6 +26,8 @@ Where the two disagree, keep the template's committed identity (impeccable: "pol
 - **Accent colour** on the main action and at most one other thing. Avoid the default cream + rust / violet-indigo palettes.
 - **No glass/backdrop blur, no gradient text, no glows**; shadows only on things that float, with offset + soft blur.
 - **Never invent proof** (customer counts, reviews, press). Flag sample content for the owner.
+- **Never invent a brand's logo** (no made-up monograms for a real product). Use the official file, or plain text if there isn't one.
+- **Stay current and original:** every new piece should feel 2026+ (latest UI patterns, motion and interaction), never a copied template or a generic "AI-generated" layout.
 - **Give the page one "live thing"** made from the subject (e.g. Royal Stitch's turnaround checker in the contact form).
 - **Theme the browser surfaces:** selection, caret, scrollbar, focus ring, underline offset.
 - **Copy:** specific and human (real details, prices, timings), not filler like "premium quality solutions".
@@ -67,6 +69,11 @@ Note: cloud sandboxes may block CDNs/Unsplash. Missing photos in screenshots can
 - The owner's house style for portfolios and case studies is **Poppins** for all text (this overrides the font advice above for these documents).
 - Format follows the owner's examples: one continuous page, sections separated by background, a "main screens" section with captioned key screens, and a separate "all screens" gallery grouped by area.
 - Real screenshots go in the case study's `screens/` folder; never present illustrations as real screens.
+
+## Figma exports (portfolios / case studies)
+
+- Frame width 1200px with 72px side margins (content 1056px), so the PDF reads at fit-width without zoom or side gaps.
+- Keep Figma, the HTML and the PDF in sync after each change.
 
 ## Communication
 
