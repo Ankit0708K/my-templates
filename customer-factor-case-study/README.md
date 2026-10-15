@@ -22,4 +22,4 @@ The owner approved this layout (commit `8117846`, restored in `78be996`) as the 
 
 ## Single-file version
 
-`the-customer-factor-case-study.html` is the same page with every image, the Poppins font (latin) and every icon embedded, so it works as one offline file: download it, open it, or import it into Figma (e.g. html.to.design at **1440px** width). The page is a 1440px frame: section backgrounds run full width and the content column stays 1056px wide. Rebuild it after editing `index.html` so the two stay identical.
+`the-customer-factor-case-study.html` is the same page with every image, the Poppins font (latin) and every icon embedded, so it works as one offline file: download it, open it, or import it into Figma (e.g. html.to.design at **1200px** width). The page is a 1200px frame (72px side margins, the same as the PDF): section backgrounds run full width and the content column stays 1056px wide. Rebuild it after editing `index.html` so the two stay identical.
