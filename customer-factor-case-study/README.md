@@ -12,7 +12,6 @@ The PDF was exported with headless Chromium as a single page sized to the full c
 ## Content notes
 
 - Product facts come from public sources (vendor features page and help center, App Store, Google Play, Capterra), checked October 2026. Re-check before sending.
-- The "Our recommended build" stack is Adroit Infosoft's suggestion, clearly labelled; The Customer Factor doesn't publish its own stack.
 - Interface views are illustrations drawn in HTML/CSS, labelled as such. Swap in real screenshots if you have permission.
 - Pricing is left out on purpose: public listings disagree.
 - Company details (Adroit Infosoft, adroitinfosoft.com, sales@adroitinfosoft.com) were taken from the example case studies. Confirm them.
