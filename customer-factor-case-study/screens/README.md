@@ -40,3 +40,4 @@ To swap a screen, replace the file and keep the name.
 | `all-job-media.png` | Job media screen |
 | `all-receipt.png` | Expense receipt screen |
 | `all-personal.png` | Personal time screen |
+| `all-print-invoice.png` | Print invoice screen |

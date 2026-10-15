@@ -285,7 +285,9 @@ p { text-wrap: pretty; }
 .main-grid.mobile + .main-grid.mobile { margin-top: 22px; }
 .main-card .device { margin: auto auto 0; width: 210px; border-radius: 30px 30px 0 0; padding: 8px 8px 0; box-shadow: none; height: 340px; overflow: hidden; }
 .main-card .device img { border-radius: 22px 22px 0 0; }
-.g-item .device { width: 100%; max-width: 172px; padding: 6px; border-radius: 22px; box-shadow: none; }
+.g-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.g-item .device { width: 100%; max-width: 176px; padding: 6px; border-radius: 22px; box-shadow: 0 16px 30px -22px rgba(16,32,26,.5); }
+.g-item figcaption { width: 100%; max-width: 176px; }
 .g-item .device img { border-radius: 17px; }
 
 /* Spotlights: four key screens, large, with what they do */
@@ -664,6 +666,7 @@ p { text-wrap: pretty; }
             <figure class="g-item"><div class="device"><img src="screens/all-invoices-unpaid.png" alt="Unpaid invoices screen" /></div><figcaption>Unpaid invoices<span>With pay-now</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/all-edit-line-item.png" alt="Line item screen" /></div><figcaption>Line item<span>Quantity and price</span></figcaption></figure>
             <figure class="g-item"><div class="device"><img src="screens/all-email-proposal.png" alt="Email a proposal screen" /></div><figcaption>Email a proposal<span>From a saved template</span></figcaption></figure>
+            <figure class="g-item"><div class="device"><img src="screens/all-print-invoice.png" alt="Print invoice screen" /></div><figcaption>Print invoice<span>Signed copy to a printer</span></figcaption></figure>
         </div>
     </div>
     <div class="gallery-group">
