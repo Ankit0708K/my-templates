@@ -140,16 +140,17 @@ p { text-wrap: pretty; }
 
 /* ---------- Challenge ---------- */
 .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
-.col { border-radius: 20px; padding: 34px 34px 36px; }
+.col { border-radius: 22px; padding: 38px 38px 40px; }
 .col-old { background: #fff; }
 .col-new { background: var(--ink); color: #EEF3EF; }
-.col h3 { font-size: 22px; letter-spacing: -0.02em; margin-bottom: 20px; }
-.col ul { list-style: none; display: grid; gap: 14px; }
-.col li { display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-size: 16.5px; line-height: 1.45; }
-.col li svg { width: 20px; height: 20px; margin-top: 2px; }
-.col-old li svg { color: var(--red); }
-.col-new li svg { color: var(--leaf); }
-.col-new li span { color: #DCE5DF; }
+.col h3 { font-size: 24px; letter-spacing: -0.02em; margin-bottom: 24px; }
+.col ul { list-style: none; display: grid; gap: 16px; }
+.col li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; font-size: 16.5px; line-height: 1.45; align-items: start; }
+.col li svg { width: 28px; height: 28px; padding: 6px; border-radius: 50%; margin-top: -2px; }
+.col-old li svg { color: var(--red); background: var(--red-soft); }
+.col-new li svg { color: var(--leaf); background: rgba(143,220,174,.14); }
+.col-new li span { color: #E6EEE9; }
+.col-old li span { color: var(--ink); }
 
 /* ---------- Overview ---------- */
 .overview { display: grid; grid-template-columns: 430px 1fr; gap: 56px; align-items: start; }
@@ -477,8 +478,8 @@ p { text-wrap: pretty; }
 
 <!-- ============================ CHALLENGE ============================ -->
 <section class="band tint">
-    <h2 class="h2">A service business runs on <span class="mark">four tools</span> that don't talk.</h2>
-    <p class="lead">A one-van window cleaning company still has to quote, schedule crews, track hours, bill, collect and keep the books. Usually that means a paper diary, a typed estimate, a card reader and an evening re-entering everything into QuickBooks.</p>
+    <h2 class="h2">A service business runs on four tools that don't talk.</h2>
+    <p class="lead">A small window cleaning company still has to quote, schedule crews, bill, get paid and keep the books. Usually that means a paper diary, a typed estimate, a card reader and an evening re-typing it all into QuickBooks.</p>
 
     <div class="compare">
         <div class="col col-old">
