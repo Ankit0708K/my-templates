@@ -171,17 +171,17 @@ p { text-wrap: pretty; }
 
 /* ---------- Surfaces ---------- */
 .surfaces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
-.surface { border-radius: 20px; padding: 30px 28px 32px; background: #fff; }
+.surface { border-radius: 22px; padding: 34px 30px 36px; background: #fff; }
 .surface.dark { background: var(--ink); color: #EEF3EF; }
 .surface-who { font-size: 14.5px; color: var(--muted); }
 .surface.dark .surface-who { color: #A9BAB1; }
 .surface h3 { font-size: 25px; margin-top: 6px; letter-spacing: -0.02em; }
-.surface > p { font-size: 15.5px; color: var(--ink-2); margin-top: 10px; }
+.surface > p { font-size: 16px; color: var(--ink); margin-top: 10px; }
 .surface.dark > p { color: #CFDAD3; }
-.surface ul { list-style: none; margin-top: 20px; display: grid; gap: 12px; }
-.surface li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; font-size: 15.5px; line-height: 1.42; }
-.surface li svg { width: 18px; height: 18px; margin-top: 3px; color: var(--green); }
-.surface.dark li svg { color: var(--leaf); }
+.surface ul { list-style: none; margin-top: 22px; display: grid; gap: 14px; }
+.surface li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; font-size: 16px; line-height: 1.45; }
+.surface li svg { width: 26px; height: 26px; padding: 6px; border-radius: 50%; margin-top: -2px; color: var(--green-deep); background: var(--green-soft); }
+.surface.dark li svg { color: var(--leaf); background: rgba(143,220,174,.14); }
 .surface li b { font-weight: 600; }
 
 /* ---------- How a job works ---------- */
@@ -525,7 +525,7 @@ p { text-wrap: pretty; }
 <!-- ============================ SURFACES ============================ -->
 <section class="band mint">
     <h2 class="h2">Built across three surfaces.</h2>
-    <p class="lead">The same customer, job and price list shows up in three places, each shaped for the person using it.</p>
+    <p class="lead">The office, the crews and their customers each get a view built for what they do.</p>
 
     <div class="surfaces">
         <div class="surface">
@@ -534,9 +534,9 @@ p { text-wrap: pretty; }
             <p>Where the business is planned, priced and billed.</p>
             <ul>
                 <li><svg><use href="#i-check"/></svg><span><b>Drag-and-drop scheduling</b> from the job pool</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Bulk invoicing</b> for the week's work</span></li>
                 <li><svg><use href="#i-check"/></svg><span><b>Employees and crews</b> that jobs can be assigned to</span></li>
                 <li><svg><use href="#i-check"/></svg><span><b>Service plan pricing</b> for repeat work</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Accounting</b> linked to QuickBooks Online or Desktop</span></li>
             </ul>
         </div>
         <div class="surface dark">
