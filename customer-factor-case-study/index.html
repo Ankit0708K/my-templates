@@ -306,8 +306,8 @@ p { text-wrap: pretty; }
 .spot-text h3 { font-size: 30px; letter-spacing: -0.02em; line-height: 1.15; }
 .spot-text > p { margin-top: 12px; font-size: 18px; line-height: 1.55; color: var(--ink); max-width: 44ch; }
 .spot-text ul { list-style: none; margin-top: 24px; display: grid; gap: 14px; }
-.spot-text li { display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-size: 17px; line-height: 1.45; color: var(--ink); }
-.spot-text li svg { width: 20px; height: 20px; margin-top: 2px; color: var(--green-deep); stroke-width: 2.4; }
+.spot-text li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; font-size: 17px; line-height: 1.45; color: var(--ink); text-wrap: pretty; }
+.spot-text li svg { width: 28px; height: 28px; padding: 6px; border-radius: 50%; margin-top: -2px; color: var(--green-deep); background: var(--green-soft); }
 .spot-name { display: inline-block; font-size: 14px; font-weight: 600; color: var(--green-deep); background: var(--green-soft); border-radius: 99px; padding: 3px 12px; margin-bottom: 14px; }
 .gallery-row.mobile { grid-template-columns: repeat(5, 1fr); }
 
@@ -593,7 +593,7 @@ p { text-wrap: pretty; }
 <!-- ============================ MAIN SCREENS ============================ -->
 <section class="band tint">
     <h2 class="h2">The product in action.</h2>
-    <p class="lead">Four screens where the app does the heavy lifting, from the first minute on site to getting paid.</p>
+    <p class="lead">Four screens that carry a visit, from the first minute on site to getting paid.</p>
     <div class="spots">
         <article class="spot ">
             <div class="spot-visual c1"><div class="device"><img src="screens/main-job-details.png" alt="Job details screen" /></div></div>
@@ -601,7 +601,7 @@ p { text-wrap: pretty; }
                 <span class="spot-name">Job details</span>
                 <h3>Everything about the visit, on one screen.</h3>
                 <p>The crew opens a job and has the customer, the place and the history in front of them.</p>
-                <ul><li><svg><use href="#i-check"/></svg><span>Address, phone and email, with the job's type and time</span></li><li><svg><use href="#i-check"/></svg><span>Status set to open, completed or cancelled</span></li><li><svg><use href="#i-check"/></svg><span>Notes stamped with who added them and when</span></li><li><svg><use href="#i-check"/></svg><span>Email, photo, video, edit and invoice from the bottom bar</span></li></ul>
+                <ul><li><svg><use href="#i-check"/></svg><span>Address, phone, email, job type and time</span></li><li><svg><use href="#i-check"/></svg><span>Status set to open, completed or cancelled</span></li><li><svg><use href="#i-check"/></svg><span>Notes stamped with who added them and when</span></li><li><svg><use href="#i-check"/></svg><span>Email, photo, video and invoice from one bar</span></li></ul>
             </div>
         </article>
         <article class="spot flip">
