@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Customer Factor — Case Study · Adroit Infosoft</title>
+<meta name="description" content="A product case study of The Customer Factor, scheduling, estimating and invoicing software for service businesses, by Adroit Infosoft." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+/* ==========================================================================
+   Print-first case study. One .page = one A4 sheet. No motion, no hover.
+   ========================================================================== */
+@page { size: A4; margin: 0; }
+
+:root {
+    --ink: #10201A;
+    --ink-2: #2D3B35;
+    --muted: #55625C;
+    --paper: #FFFFFF;
+    --field: #F1F4EF;
+    --field-2: #E4EAE2;
+    --green: #1E7A4C;
+    --green-deep: #135A37;
+    --green-soft: #D6EBDD;
+    --sun: #F4C542;
+    --sun-soft: #FCEFC2;
+    --red-soft: #F6DCD6;
+    --red: #B4432E;
+    --sky: #DCE8F5;
+    --display: "Bricolage Grotesque", "Arial Narrow", sans-serif;
+    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { background: #CBD2CD; color: var(--ink); font-family: var(--sans); font-size: 9.6pt; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+svg { width: 1em; height: 1em; flex-shrink: 0; }
+::selection { background: var(--sun); color: var(--ink); }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -0.03em; line-height: 1; text-wrap: balance; }
+p { text-wrap: pretty; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Pages */
+.page {
+    width: 210mm; height: 297mm;
+    margin: 10mm auto;
+    background: var(--paper);
+    position: relative; overflow: hidden;
+    padding: 15mm 15mm 0;
+    display: flex; flex-direction: column;
+    box-shadow: 0 10px 30px -12px rgba(16, 32, 26, .35);
+    break-after: page; page-break-after: always;
+}
+.page:last-child { break-after: auto; page-break-after: auto; }
+@media print {
+    body { background: none; }
+    .page { margin: 0; box-shadow: none; }
+}
+.page-foot {
+    margin-top: auto;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 6mm 0 7mm;
+    font-size: 7.6pt; color: var(--muted);
+}
+.page-foot b { color: var(--ink); font-weight: 600; }
+.brand-mini { display: inline-flex; align-items: center; gap: 6px; }
+.brand-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 6px -4px 0 -1px var(--sun); }
+
+.h2 { font-size: 26pt; max-width: 150mm; }
+.lead { font-size: 11pt; color: var(--ink-2); max-width: 150mm; margin-top: 4mm; line-height: 1.5; }
+.mark { background: linear-gradient(transparent 58%, var(--sun) 58% 92%, transparent 92%); padding: 0 .06em; }
+
+/* ---------- Page 1: Cover ---------- */
+.cover { padding-top: 13mm; }
+.cover-top { display: flex; justify-content: space-between; align-items: center; }
+.studio { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 9pt; }
+.studio .brand-dot { width: 11px; height: 11px; }
+.doc-type { font-size: 8.5pt; color: var(--muted); }
+.cover h1 { font-size: 46pt; margin-top: 15mm; max-width: 175mm; letter-spacing: -0.035em; }
+.cover h1 span { color: var(--green); }
+.cover .lead { font-size: 12pt; max-width: 128mm; margin-top: 6mm; }
+.product-line { display: flex; align-items: center; gap: 10px; margin-top: 8mm; }
+.tcf-word { font-family: var(--display); font-weight: 800; font-size: 15pt; letter-spacing: -0.02em; }
+.tcf-word i { font-style: normal; color: var(--green); }
+.pill { display: inline-flex; align-items: center; gap: 5px; font-size: 8pt; font-weight: 500; padding: 3px 9px; border-radius: 999px; background: var(--field); color: var(--ink-2); }
+.pill svg { color: var(--green); }
+
+.cover-visual { position: relative; margin-top: 10mm; height: 104mm; }
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 9mm; }
+.fact { background: var(--field); border-radius: 3mm; padding: 4.5mm 5mm; }
+.fact b { display: block; font-family: var(--display); font-size: 19pt; letter-spacing: -0.03em; line-height: 1; }
+.fact span { display: block; margin-top: 2mm; font-size: 8pt; color: var(--muted); line-height: 1.35; }
+
+/* App window mock */
+.window {
+    position: absolute; background: #fff; border-radius: 3mm; overflow: hidden;
+    box-shadow: 0 18px 40px -16px rgba(16, 32, 26, .45), 0 0 0 1px rgba(16, 32, 26, .08);
+}
+.window-bar { height: 7mm; background: var(--field); display: flex; align-items: center; gap: 4px; padding: 0 3mm; }
+.window-bar i { width: 6px; height: 6px; border-radius: 50%; background: #C5CEC8; }
+.window-bar span { margin-left: 3mm; font-size: 6.5pt; color: var(--muted); background: #fff; border-radius: 99px; padding: 1px 10px; }
+.app { display: grid; grid-template-columns: 30mm 1fr; height: calc(100% - 7mm); }
+.app-side { background: var(--ink); color: #E6EDE8; padding: 3.5mm 3mm; font-size: 6.6pt; display: flex; flex-direction: column; gap: 1.6mm; }
+.app-side .logo { font-family: var(--display); font-weight: 800; font-size: 8pt; margin-bottom: 2mm; color: #fff; }
+.app-side .logo i { font-style: normal; color: #7CD3A0; }
+.app-side div { padding: 1.2mm 2mm; border-radius: 1.5mm; color: #BFCBC4; }
+.app-side div.on { background: rgba(255,255,255,.1); color: #fff; }
+.app-main { padding: 3.5mm 4mm; font-size: 6.4pt; background: #fff; }
+.app-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5mm; }
+.app-head b { font-family: var(--display); font-size: 9.5pt; letter-spacing: -0.02em; }
+.app-btn { background: var(--green); color: #fff; padding: 1mm 2.6mm; border-radius: 1.4mm; font-weight: 600; font-size: 6.2pt; }
+.sched { display: grid; grid-template-columns: 13mm repeat(5, 1fr); gap: 1mm; }
+.sched .h { color: var(--muted); font-weight: 600; padding-bottom: .8mm; }
+.sched .crew { color: var(--ink-2); font-weight: 600; padding-top: 1mm; }
+.job { border-radius: 1.2mm; padding: 1mm 1.4mm; line-height: 1.25; min-height: 9mm; }
+.job b { display: block; font-weight: 600; font-size: 6.2pt; }
+.job span { color: rgba(16,32,26,.66); font-size: 5.8pt; }
+.j-g { background: var(--green-soft); }
+.j-y { background: var(--sun-soft); }
+.j-b { background: var(--sky); }
+.j-r { background: var(--red-soft); }
+.j-e { background: repeating-linear-gradient(135deg, var(--field) 0 3px, #fff 3px 6px); }
+.pool { margin-top: 2.5mm; display: flex; gap: 1.2mm; align-items: center; flex-wrap: wrap; }
+.pool > span { color: var(--muted); font-weight: 600; margin-right: 1mm; }
+.chip { background: var(--field); border-radius: 99px; padding: .6mm 2.2mm; font-size: 6pt; }
+
+/* Phone mock */
+.phone {
+    position: absolute; width: 46mm; height: 94mm;
+    background: var(--ink); border-radius: 7mm; padding: 2mm;
+    box-shadow: 0 22px 40px -14px rgba(16, 32, 26, .55);
+}
+.phone-screen { background: #fff; border-radius: 5.4mm; height: 100%; overflow: hidden; display: flex; flex-direction: column; font-size: 6.2pt; }
+.phone-top { height: 6mm; display: flex; justify-content: center; align-items: center; }
+.phone-top i { width: 13mm; height: 2.6mm; border-radius: 9px; background: var(--ink); }
+.ph-head { padding: 1mm 3.4mm 2mm; }
+.ph-head small { color: var(--muted); font-size: 5.8pt; }
+.ph-head b { display: block; font-family: var(--display); font-size: 10pt; letter-spacing: -0.02em; }
+.ph-list { padding: 0 2.6mm; display: flex; flex-direction: column; gap: 1.6mm; }
+.ph-job { background: var(--field); border-radius: 2mm; padding: 1.8mm 2.2mm; }
+.ph-job b { display: block; font-size: 6.4pt; }
+.ph-job span { color: var(--muted); font-size: 5.8pt; }
+.ph-job.now { background: var(--ink); color: #fff; }
+.ph-job.now span { color: #B9C7BF; }
+.timer { display: flex; justify-content: space-between; align-items: center; margin-top: 1.4mm; }
+.timer em { font-style: normal; font-family: var(--display); font-size: 9pt; color: #7CD3A0; }
+.timer u { text-decoration: none; background: var(--sun); color: var(--ink); border-radius: 99px; padding: .5mm 2mm; font-size: 5.8pt; font-weight: 600; }
+.ph-tabs { margin-top: auto; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; padding: 2mm 0 3mm; font-size: 5.4pt; color: var(--muted); border-top: 1px solid var(--field-2); }
+.ph-tabs .on { color: var(--green); font-weight: 600; }
+
+/* ---------- Page 2: Problem ---------- */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 9mm; }
+.col { border-radius: 3.5mm; padding: 6mm; }
+.col-old { background: var(--field); }
+.col-new { background: var(--ink); color: #EEF3EF; }
+.col h3 { font-size: 13pt; letter-spacing: -0.02em; margin-bottom: 4mm; }
+.col ul { list-style: none; display: grid; gap: 3mm; }
+.col li { display: grid; grid-template-columns: 5mm 1fr; gap: 2mm; font-size: 9.2pt; line-height: 1.4; align-items: start; }
+.col li svg { width: 4.2mm; height: 4.2mm; margin-top: .3mm; }
+.col-old li svg { color: var(--red); }
+.col-new li svg { color: #7CD3A0; }
+.col-new li span { color: #DCE5DF; }
+
+.who { margin-top: 10mm; display: grid; grid-template-columns: 52mm 1fr; gap: 8mm; align-items: start; }
+.who h3 { font-size: 15pt; }
+.who p { color: var(--ink-2); font-size: 10pt; }
+.trades { display: flex; flex-wrap: wrap; gap: 2.2mm; margin-top: 4mm; }
+.trade { display: inline-flex; align-items: center; gap: 2mm; padding: 2mm 3.6mm; border-radius: 99px; background: var(--green-soft); color: var(--green-deep); font-weight: 600; font-size: 8.8pt; }
+.trade svg { width: 4mm; height: 4mm; }
+.note { font-size: 7.8pt; color: var(--muted); margin-top: 3mm; }
+
+/* Flow */
+.flow-wrap { margin-top: 10mm; background: var(--field); border-radius: 4mm; padding: 7mm 6mm 6mm; }
+.flow-wrap h3 { font-size: 15pt; }
+.flow-wrap > p { color: var(--ink-2); margin-top: 2mm; max-width: 140mm; }
+.flow { list-style: none; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2mm; margin-top: 6mm; position: relative; }
+.flow::before { content: ""; position: absolute; left: 6%; right: 6%; top: 6.5mm; height: 2px; background: repeating-linear-gradient(90deg, var(--green) 0 5px, transparent 5px 9px); }
+.flow li { position: relative; text-align: center; }
+.flow .dot { width: 13mm; height: 13mm; border-radius: 50%; background: #fff; margin: 0 auto; display: grid; place-items: center; color: var(--green); box-shadow: 0 0 0 1.5px var(--green); }
+.flow .dot svg { width: 5.6mm; height: 5.6mm; }
+.flow li:last-child .dot { background: var(--green); color: #fff; }
+.flow b { display: block; margin-top: 3mm; font-family: var(--display); font-size: 10pt; letter-spacing: -0.01em; }
+.flow span { display: block; font-size: 7.6pt; color: var(--muted); line-height: 1.35; margin-top: 1mm; padding: 0 1mm; }
+
+/* ---------- Page 3: Surfaces ---------- */
+.surfaces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.5mm; margin-top: 9mm; }
+.surface { border-radius: 3.5mm; padding: 5.5mm 5mm 6mm; background: var(--field); display: flex; flex-direction: column; }
+.surface.dark { background: var(--ink); color: #EEF3EF; }
+.surface-who { font-size: 8.4pt; color: var(--muted); }
+.surface.dark .surface-who { color: #A9BAB1; }
+.surface h3 { font-size: 14pt; margin-top: 1.5mm; letter-spacing: -0.02em; }
+.surface > p { font-size: 8.8pt; color: var(--ink-2); margin-top: 2.5mm; }
+.surface.dark > p { color: #CFDAD3; }
+.surface ul { list-style: none; margin-top: 4mm; display: grid; gap: 2.6mm; }
+.surface li { display: grid; grid-template-columns: 4mm 1fr; gap: 2mm; font-size: 8.6pt; line-height: 1.38; }
+.surface li svg { width: 3.6mm; height: 3.6mm; margin-top: .4mm; color: var(--green); }
+.surface.dark li svg { color: #7CD3A0; }
+.surface li b { font-weight: 600; }
+
+.sync { margin-top: 9mm; }
+.sync-text { display: grid; grid-template-columns: 62mm 1fr; gap: 8mm; align-items: start; }
+.sync h3 { font-size: 17pt; }
+.sync p { color: var(--ink-2); font-size: 9.6pt; }
+.sync-diagram { margin-top: 5mm; background: var(--field); border-radius: 3.5mm; padding: 5mm 6mm; display: grid; gap: 4mm; }
+.lane { display: grid; grid-template-columns: 44mm 1fr 44mm; align-items: center; gap: 3mm; }
+.node { background: #fff; border-radius: 2mm; padding: 2.6mm 3.2mm; font-size: 8.4pt; font-weight: 600; line-height: 1.25; box-shadow: 0 0 0 1px var(--field-2); }
+.node small { display: block; font-weight: 400; color: var(--muted); font-size: 7.4pt; margin-top: .4mm; }
+.node.qb { background: var(--green); color: #fff; box-shadow: none; }
+.node.qb small { color: #CDEBD9; }
+.wire { position: relative; height: 2px; background: repeating-linear-gradient(90deg, var(--green) 0 5px, transparent 5px 9px); }
+.wire span { position: absolute; left: 50%; top: -6.4mm; transform: translateX(-50%); white-space: nowrap; font-size: 7.8pt; color: var(--ink); background: var(--sun-soft); border-radius: 99px; padding: .6mm 3mm; }
+.wire::after { content: ""; position: absolute; right: -1px; top: -3px; border: 4px solid transparent; border-left: 6px solid var(--green); border-right: 0; }
+
+.glance { margin-top: 8mm; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-radius: 3.5mm; overflow: hidden; }
+.glance div { background: var(--ink); color: #EEF3EF; padding: 4.5mm 4.5mm 5mm; }
+.glance div:nth-child(even) { background: #1A2C25; }
+.glance dt { font-size: 7.8pt; color: #A9BAB1; }
+.glance dd { margin-top: 1.2mm; font-family: var(--display); font-weight: 600; font-size: 10.5pt; letter-spacing: -0.01em; line-height: 1.2; }
+
+/* ---------- Page 4: Screens ---------- */
+.screens { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-top: 8mm; }
+.shot { background: var(--field); border-radius: 3.5mm; padding: 4mm 4mm 4.5mm; }
+.shot-frame { background: #fff; border-radius: 2.4mm; height: 70mm; overflow: hidden; position: relative; box-shadow: 0 0 0 1px var(--field-2); font-size: 6.4pt; }
+.shot figcaption { margin-top: 3.5mm; }
+.shot figcaption b { display: block; font-family: var(--display); font-size: 11pt; letter-spacing: -0.015em; }
+.shot figcaption span { display: block; font-size: 8.2pt; color: var(--muted); margin-top: .8mm; line-height: 1.4; }
+.fr-head { display: flex; justify-content: space-between; align-items: center; padding: 3mm 3.5mm 2mm; }
+.fr-head b { font-family: var(--display); font-size: 9pt; letter-spacing: -0.015em; }
+.fr-body { padding: 0 3.5mm; }
+.row { display: grid; align-items: center; gap: 2mm; padding: 1.7mm 0; border-bottom: 1px solid var(--field); }
+.tag { display: inline-block; font-size: 5.8pt; font-weight: 600; padding: .3mm 1.8mm; border-radius: 99px; }
+.t-g { background: var(--green-soft); color: var(--green-deep); }
+.t-y { background: var(--sun-soft); color: #7A5A00; }
+.t-b { background: var(--sky); color: #24456B; }
+.muted { color: var(--muted); }
+.estimate { display: grid; grid-template-columns: 1fr 34mm; gap: 3mm; padding: 0 3.5mm; }
+.sms { background: var(--field); border-radius: 2.4mm; padding: 2.4mm; align-self: start; }
+.sms .bubble { background: var(--green); color: #fff; border-radius: 2.4mm 2.4mm 2.4mm .6mm; padding: 1.8mm 2.2mm; line-height: 1.35; font-size: 6pt; }
+.sms .meta { font-size: 5.6pt; color: var(--muted); margin-top: 1.2mm; }
+.total { display: flex; justify-content: space-between; padding-top: 2mm; font-weight: 600; font-size: 7.4pt; }
+.portal { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; padding: 0 3.5mm; }
+.days { display: grid; grid-template-columns: repeat(7, 1fr); gap: .9mm; margin-top: 1.4mm; }
+.days i { font-style: normal; text-align: center; padding: 1.2mm 0; border-radius: 1.2mm; background: var(--field); font-size: 5.8pt; color: #9AA59F; }
+.days i.ok { background: var(--green-soft); color: var(--green-deep); font-weight: 600; }
+.days i.pick { background: var(--green); color: #fff; font-weight: 600; }
+.svc { display: flex; align-items: center; gap: 1.6mm; padding: 1.2mm 0; }
+.box { width: 2.6mm; height: 2.6mm; border-radius: .6mm; box-shadow: 0 0 0 1px #AEB9B3; }
+.box.on { background: var(--green); box-shadow: none; }
+.field-mock { background: var(--field); border-radius: 1.2mm; padding: 1.4mm 2mm; margin-top: 1mm; color: var(--muted); }
+.send { margin-top: 2mm; background: var(--ink); color: #fff; text-align: center; border-radius: 1.4mm; padding: 1.4mm; font-weight: 600; }
+.illustrative { margin-top: 5mm; font-size: 7.8pt; color: var(--muted); }
+
+/* ---------- Page 5: Engineering + Reviews ---------- */
+.eng { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.5mm; margin-top: 8mm; }
+.eng-card { border-radius: 3.5mm; padding: 5mm; background: var(--field); }
+.eng-card svg { width: 7mm; height: 7mm; color: var(--green); }
+.eng-card h3 { font-size: 11.5pt; margin-top: 3mm; letter-spacing: -0.015em; line-height: 1.1; }
+.eng-card p { margin-top: 2.4mm; font-size: 8.5pt; color: var(--ink-2); line-height: 1.45; }
+
+.reviews { margin-top: 10mm; display: grid; grid-template-columns: 62mm 1fr; gap: 6mm; }
+.score { background: var(--ink); color: #fff; border-radius: 3.5mm; padding: 6mm 5.5mm; }
+.score .big { font-family: var(--display); font-size: 40pt; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+.score .big small { font-size: 15pt; color: #A9BAB1; font-weight: 600; }
+.stars { display: flex; gap: 1mm; margin-top: 2.2mm; color: var(--sun); }
+.stars svg { width: 4.2mm; height: 4.2mm; }
+.score p { font-size: 8.2pt; color: #CFDAD3; margin-top: 2.4mm; }
+.bars { margin-top: 4.5mm; display: grid; gap: 2.2mm; }
+.bar { display: grid; grid-template-columns: 26mm 1fr 7mm; align-items: center; gap: 2mm; font-size: 7.6pt; color: #DCE5DF; }
+.bar i { display: block; height: 1.6mm; border-radius: 99px; background: rgba(255,255,255,.14); position: relative; overflow: hidden; }
+.bar i::after { content: ""; position: absolute; inset: 0; width: var(--w); background: #7CD3A0; border-radius: inherit; }
+.bar b { text-align: right; font-weight: 600; color: #fff; }
+
+.voice { display: grid; gap: 4mm; align-content: start; }
+.quote { background: var(--field); border-radius: 3.5mm; padding: 5mm 5.5mm; }
+.quote blockquote { font-family: var(--display); font-size: 14pt; line-height: 1.2; letter-spacing: -0.02em; font-weight: 600; }
+.quote cite { display: block; margin-top: 2.6mm; font-style: normal; font-size: 8pt; color: var(--muted); }
+.honest { border-radius: 3.5mm; padding: 5mm 5.5mm; box-shadow: inset 0 0 0 1.5px var(--field-2); }
+.honest h3 { font-size: 11.5pt; letter-spacing: -0.015em; }
+.honest ul { list-style: none; margin-top: 2.8mm; display: grid; gap: 2mm; }
+.honest li { display: grid; grid-template-columns: 4mm 1fr; gap: 2mm; font-size: 8.6pt; color: var(--ink-2); line-height: 1.4; }
+.honest li svg { width: 3.6mm; height: 3.6mm; margin-top: .4mm; color: var(--sun); }
+.honest li svg { color: #C89A12; }
+
+/* ---------- Page 6: Platforms + CTA ---------- */
+.platforms-wrap { margin-top: 9mm; }
+.platforms-wrap h3 { font-size: 15pt; }
+.platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.5mm; margin-top: 4mm; }
+.platform { background: var(--field); border-radius: 3.5mm; padding: 5mm; display: grid; grid-template-columns: 11mm 1fr; gap: 3mm; align-items: start; }
+.p-icon { width: 11mm; height: 11mm; border-radius: 2.6mm; background: var(--ink); color: #fff; display: grid; place-items: center; }
+.p-icon svg { width: 5.6mm; height: 5.6mm; }
+.platform b { display: block; font-family: var(--display); font-size: 12pt; letter-spacing: -0.015em; }
+.platform div span { display: block; font-size: 8.2pt; color: var(--muted); margin-top: .8mm; line-height: 1.4; }
+
+.cta-page { padding: 0; }
+.cta {
+    margin: 0; padding: 20mm 15mm 14mm;
+    background: var(--green); color: #fff; flex: 1;
+    display: flex; flex-direction: column;
+}
+.cta-top { display: flex; justify-content: space-between; align-items: center; color: #DDF0E4; font-size: 8.5pt; }
+.cta-top .studio { color: #fff; font-size: 10pt; }
+.cta .brand-dot { background: #fff; }
+.cta h2 { margin-top: 42mm; font-size: 44pt; letter-spacing: -0.035em; max-width: 165mm; }
+.cta h2 span { color: var(--sun); }
+.cta > p { margin-top: 7mm; font-size: 12pt; color: #DDF0E4; max-width: 128mm; }
+.offer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; margin-top: 12mm; }
+.offer div { background: rgba(255,255,255,.1); border-radius: 3mm; padding: 4.5mm; }
+.offer b { display: block; font-family: var(--display); font-size: 11pt; letter-spacing: -0.01em; }
+.offer span { display: block; font-size: 8.2pt; color: #DDF0E4; margin-top: 1.2mm; line-height: 1.4; }
+.contact { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm; padding-top: 8mm; }
+.contact-links { display: grid; gap: 2.4mm; }
+.contact-links a { display: inline-flex; align-items: center; gap: 2.6mm; color: #fff; text-decoration: none; font-size: 11pt; font-weight: 500; }
+.contact-links a span.ic { width: 8mm; height: 8mm; border-radius: 50%; background: #fff; color: var(--green); display: grid; place-items: center; }
+.contact-links a span.ic svg { width: 4mm; height: 4mm; }
+.contact .studio { color: #fff; font-size: 12pt; }
+.contact .brand-dot { background: #fff; }
+.cta .sources { font-size: 7pt; color: #BFE0CC; line-height: 1.45; margin-top: 7mm; }
+.sources a { color: #E5F4EA; }
+.cta-page .page-foot { display: none; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M4 6h16v10H9l-5 4V6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m8.5 14.5 2 2 4-4"/></g></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5a4 4 0 0 1-2-2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M5 5l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h6M9 16h4"/></g></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></g></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/><path d="M9 8h7M9 11h5"/></g></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.5-4.5L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.5 4.5L20 16"/><path d="M20 20v-4h-4"/></g></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l3 3-3 3"/><path d="M4 11V9a3 3 0 0 1 3-3h13"/><path d="M7 21l-3-3 3-3"/><path d="M20 13v2a3 3 0 0 1-3 3H4"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 4.8a3.2 3.2 0 0 1 0 6.4M18 14.8c1.9.6 3 2.4 3 5.2"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.2.9-4.5 4.4 1.1 6.2L12 17.4l-5.6 2.9 1.1-6.2L3 9.7l6.2-.9L12 3Z" fill="currentColor"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></g></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7a4.6 4.6 0 0 0-3.6-1.9c-1.5-.2-3 .9-3.7.9-.8 0-2-.9-3.2-.9a4.8 4.8 0 0 0-4 2.5c-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4a10 10 0 0 0 1.3-2.8 4.3 4.3 0 0 1-2.4-3.8ZM14 5.4A4.4 4.4 0 0 0 15 2.3a4.5 4.5 0 0 0-2.9 1.5 4.2 4.2 0 0 0-1.1 3 3.7 3.7 0 0 0 3-1.4Z"/></symbol>
+    <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" d="M17.6 9.5 19.4 6.4a.4.4 0 0 0-.7-.4l-1.8 3.2a11 11 0 0 0-9.8 0L5.3 6a.4.4 0 0 0-.7.4l1.8 3.1A10.3 10.3 0 0 0 1.5 17.5h21a10.3 10.3 0 0 0-4.9-8ZM7 14.8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm10 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M12 3v18M4 12h16"/></g></symbol>
+    <symbol id="i-spray" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V11l3-3h4v13z"/><path d="M10 8V5h4M14 5h3M18 3v.01M20 5v.01M18 7v.01"/></g></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-rug" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="5" y="4" width="14" height="16" rx="1"/><path d="M5 8h14M5 16h14M3 4v16M21 4v16"/></g></symbol>
+</svg>
+
+<!-- ======================= PAGE 1 · COVER ======================= -->
+<section class="page cover">
+    <div class="cover-top">
+        <div class="studio"><span class="brand-dot"></span>Adroit Infosoft</div>
+        <div class="doc-type">Product case study · October 2026</div>
+    </div>
+
+    <h1>From the first quote to the <span>QuickBooks entry</span>, in one app.</h1>
+    <p class="lead">The Customer Factor is scheduling, estimating and invoicing software for small service businesses: window cleaners, pressure washers, carpet cleaners and maid services. This is how it is put together, and what we'd learn from it if we were building yours.</p>
+
+    <div class="product-line">
+        <span class="tcf-word">The Customer <i>Factor</i></span>
+        <span class="pill"><svg><use href="#i-globe"/></svg>Web</span>
+        <span class="pill"><svg><use href="#i-apple"/></svg>iOS</span>
+        <span class="pill"><svg><use href="#i-android"/></svg>Android</span>
+    </div>
+
+    <div class="cover-visual">
+        <div class="window" style="left:0; top:0; width:148mm; height:96mm;">
+            <div class="window-bar"><i></i><i></i><i></i><span>Schedule</span></div>
+            <div class="app">
+                <div class="app-side">
+                    <div class="logo">Customer <i>Factor</i></div>
+                    <div class="on">Schedule</div><div>Customers</div><div>Estimates</div><div>Invoices</div><div>Employees &amp; crews</div>
+                </div>
+                <div class="app-main">
+                    <div class="app-head"><b>Week of 12 Oct</b><span class="app-btn">+ New job</span></div>
+                    <div class="sched">
+                        <span></span><span class="h">Mon</span><span class="h">Tue</span><span class="h">Wed</span><span class="h">Thu</span><span class="h">Fri</span>
+                        <span class="crew">Crew A</span>
+                        <div class="job j-g"><b>Window clean</b><span>Recurring · 4 wk</span></div>
+                        <div class="job j-y"><b>Estimate visit</b><span>New lead</span></div>
+                        <div class="job j-g"><b>Window clean</b><span>Recurring · 8 wk</span></div>
+                        <div class="job j-e"></div>
+                        <div class="job j-b"><b>Gutter clean</b><span>One-time</span></div>
+                        <span class="crew">Crew B</span>
+                        <div class="job j-b"><b>Pressure wash</b><span>Driveway</span></div>
+                        <div class="job j-e"></div>
+                        <div class="job j-r"><b>Carpet clean</b><span>3 rooms</span></div>
+                        <div class="job j-g"><b>Window clean</b><span>Recurring · 6 wk</span></div>
+                        <div class="job j-y"><b>Estimate visit</b><span>Commercial</span></div>
+                        <span class="crew">Crew C</span>
+                        <div class="job j-e"></div>
+                        <div class="job j-g"><b>Maid service</b><span>Recurring · 2 wk</span></div>
+                        <div class="job j-g"><b>Maid service</b><span>Recurring · 2 wk</span></div>
+                        <div class="job j-b"><b>Deck wash</b><span>One-time</span></div>
+                        <div class="job j-e"></div>
+                    </div>
+                    <div class="pool"><span>Job pool</span><i class="chip">Screen repair</i><i class="chip">Window clean · due</i><i class="chip">Solar panels</i><i class="chip">+ 6 more</i></div>
+                </div>
+            </div>
+        </div>
+        <div class="phone" style="right:2mm; top:9mm;">
+            <div class="phone-screen">
+                <div class="phone-top"><i></i></div>
+                <div class="ph-head"><small>Tuesday</small><b>Today's jobs</b></div>
+                <div class="ph-list">
+                    <div class="ph-job"><b>Window clean</b><span>8:00 · Done · Invoiced</span></div>
+                    <div class="ph-job now"><b>Estimate visit</b><span>10:30 · On site</span>
+                        <div class="timer"><em class="num">00:42:10</em><u>Stop timer</u></div>
+                    </div>
+                    <div class="ph-job"><b>Gutter clean</b><span>13:00 · Crew A</span></div>
+                    <div class="ph-job"><b>Personal appt.</b><span>16:30</span></div>
+                </div>
+                <div class="ph-tabs"><span class="on">Schedule</span><span>Estimates</span><span>Invoices</span><span>More</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="facts">
+        <div class="fact"><b class="num">4.4/5</b><span>Capterra rating from 17 verified reviews</span></div>
+        <div class="fact"><b class="num">10K+</b><span>Android installs on Google Play</span></div>
+        <div class="fact"><b>QB</b><span>Syncs with QuickBooks Online and Desktop, included in the plan</span></div>
+        <div class="fact"><b>3</b><span>Surfaces: office web app, field apps, customer portal</span></div>
+    </div>
+
+    <div class="page-foot"><span class="brand-mini"><span class="brand-dot"></span><b>Adroit Infosoft</b> · Case study</span><span>Interface views in this document are our illustrations, not product screenshots.</span><span class="num">1 / 6</span></div>
+</section>
+
+<!-- ======================= PAGE 2 · PROBLEM + FLOW ======================= -->
+<section class="page">
+    <h2 class="h2">A service business runs on <span class="mark">four tools</span> that don't talk.</h2>
+    <p class="lead">A one-van window cleaning company still has to quote, schedule crews, track hours, bill, collect and keep the books. Usually that means a paper diary, a word-processor estimate, a card reader and an evening re-typing everything into QuickBooks.</p>
+
+    <div class="compare">
+        <div class="col col-old">
+            <h3>The usual way</h3>
+            <ul>
+                <li><svg><use href="#i-x"/></svg><span>Recurring customers live in a diary, and someone has to remember who is due this month</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Estimates are typed from scratch and emailed as attachments</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Crews get the day's jobs by phone or text</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Invoices are written one by one after the work is done</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Every sale is entered a second time in the accounting software</span></li>
+            </ul>
+        </div>
+        <div class="col col-new">
+            <h3>With The Customer Factor</h3>
+            <ul>
+                <li><svg><use href="#i-check"/></svg><span>Recurring and one-time jobs sit in a job pool and get dragged onto the schedule</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Estimates come from templates and go out by email or text</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Jobs are assigned to an employee or a whole crew, and appear in their app</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Invoices are created in bulk, and saved cards can pay recurring work automatically</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Sales flow into QuickBooks Online overnight, or Desktop in a few clicks</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="who">
+        <div>
+            <h3>Who it's built for</h3>
+            <p class="note">As described by the vendor and its software-directory listings.</p>
+        </div>
+        <div>
+            <p>Owner-operators and small teams whose revenue is mostly repeat visits to the same addresses. The product is tuned for that rhythm rather than for large field-service fleets.</p>
+            <div class="trades">
+                <span class="trade"><svg><use href="#i-window"/></svg>Window cleaning</span>
+                <span class="trade"><svg><use href="#i-spray"/></svg>Pressure washing</span>
+                <span class="trade"><svg><use href="#i-rug"/></svg>Carpet cleaning</span>
+                <span class="trade"><svg><use href="#i-sparkle"/></svg>Maid &amp; cleaning services</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flow-wrap">
+        <h3>How one job moves through the system</h3>
+        <p>Every step below happens inside the product. The only thing that leaves it is the finished sale, on its way to the books.</p>
+        <ol class="flow">
+            <li><span class="dot"><svg><use href="#i-doc"/></svg></span><b>Estimate</b><span>From a template, sent by email or text</span></li>
+            <li><span class="dot"><svg><use href="#i-cal"/></svg></span><b>Schedule</b><span>Dragged from the job pool onto a day</span></li>
+            <li><span class="dot"><svg><use href="#i-users"/></svg></span><b>Assign</b><span>To an employee or a crew</span></li>
+            <li><span class="dot"><svg><use href="#i-tool"/></svg></span><b>Do the work</b><span>Time tracked in the mobile app</span></li>
+            <li><span class="dot"><svg><use href="#i-card"/></svg></span><b>Invoice &amp; pay</b><span>In bulk, or auto-charged to a saved card</span></li>
+            <li><span class="dot"><svg><use href="#i-book"/></svg></span><b>Books</b><span>Synced to QuickBooks</span></li>
+        </ol>
+    </div>
+
+    <div class="page-foot"><span class="brand-mini"><span class="brand-dot"></span><b>Adroit Infosoft</b> · The Customer Factor</span><span class="num">2 / 6</span></div>
+</section>
+
+<!-- ======================= PAGE 3 · SURFACES + SYNC ======================= -->
+<section class="page">
+    <h2 class="h2">Three surfaces, one customer record.</h2>
+    <p class="lead">The same customer, job and price list shows up in three places, each shaped for the person using it.</p>
+
+    <div class="surfaces">
+        <div class="surface">
+            <span class="surface-who">For the owner and office</span>
+            <h3>Web app</h3>
+            <p>Where the business is planned, priced and billed.</p>
+            <ul>
+                <li><svg><use href="#i-check"/></svg><span><b>Job pool</b> of recurring and one-time work, with drag-and-drop scheduling</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Estimate templates</b> sent by email or text</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Bulk invoicing</b> and saved cards for recurring customers</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Employees and crews</b> that jobs can be assigned to</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Service plan pricing</b> for repeat work</span></li>
+            </ul>
+        </div>
+        <div class="surface dark">
+            <span class="surface-who">For technicians in the field</span>
+            <h3>iOS &amp; Android apps</h3>
+            <p>The day's work in a pocket, with the paperwork done on site.</p>
+            <ul>
+                <li><svg><use href="#i-check"/></svg><span>Schedule <b>jobs, estimates, tasks</b> and personal appointments</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Time tracking</b> per job</span></li>
+                <li><svg><use href="#i-check"/></svg><span><b>Invoice generation</b> from the phone</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Works from the <b>same customers and jobs</b> as the office</span></li>
+            </ul>
+        </div>
+        <div class="surface">
+            <span class="surface-who">For the business's customers</span>
+            <h3>Customer portal</h3>
+            <p>Customers ask for work themselves, inside rules the owner sets.</p>
+            <ul>
+                <li><svg><use href="#i-check"/></svg><span>Owner picks <b>which days</b> can be booked and <b>which services</b> can be requested</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Optionally shows <b>past jobs and pricing</b></span></li>
+                <li><svg><use href="#i-check"/></svg><span>Sends an <b>automatic email and text</b> after each request, with editable wording</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sync">
+        <div class="sync-text">
+            <h3>Two roads into the same ledger</h3>
+            <p>Plenty of small businesses still run QuickBooks Desktop while others have moved to Online, so the product supports both, with the sync included in the subscription. Online is pushed automatically every morning at 3am; Desktop is synced by the user in about three clicks.</p>
+        </div>
+        <div class="sync-diagram">
+            <div class="lane">
+                <div class="node">Customers, invoices, payments<small>The Customer Factor</small></div>
+                <div class="wire"><span>Automatic, every morning at 3:00 am</span></div>
+                <div class="node qb">QuickBooks Online<small>Cloud sync</small></div>
+            </div>
+            <div class="lane">
+                <div class="node">Customers, invoices, payments<small>The Customer Factor</small></div>
+                <div class="wire"><span>When the user chooses, about 3 clicks</span></div>
+                <div class="node qb">QuickBooks Desktop<small>User-triggered sync</small></div>
+            </div>
+        </div>
+    </div>
+
+    <dl class="glance">
+        <div><dt>Made by</dt><dd>The Customer Factor LLC, Sioux Falls, SD</dd></div>
+        <div><dt>Runs on</dt><dd>Web, iOS 15+ and Android</dd></div>
+        <div><dt>Accounting</dt><dd>QuickBooks Online &amp; Desktop</dd></div>
+        <div><dt>Payments</dt><dd>Card processing, cards on file</dd></div>
+    </dl>
+
+    <div class="page-foot"><span class="brand-mini"><span class="brand-dot"></span><b>Adroit Infosoft</b> · The Customer Factor</span><span class="num">3 / 6</span></div>
+</section>
+
+<!-- ======================= PAGE 4 · SCREENS ======================= -->
+<section class="page">
+    <h2 class="h2">The product, screen by screen.</h2>
+    <p class="lead">Four moments from a normal working week, redrawn by us from the product's published feature descriptions.</p>
+
+    <div class="screens">
+        <figure class="shot">
+            <div class="shot-frame">
+                <div class="fr-head"><b>Job pool</b><span class="tag t-g">9 due this week</span></div>
+                <div class="fr-body">
+                    <div class="row" style="grid-template-columns:1fr auto auto"><span><b>Window clean</b> <span class="muted">· every 4 weeks</span></span><span class="tag t-g">Recurring</span><span class="muted">Drag →</span></div>
+                    <div class="row" style="grid-template-columns:1fr auto auto"><span><b>Gutter clean</b> <span class="muted">· one visit</span></span><span class="tag t-b">One-time</span><span class="muted">Drag →</span></div>
+                    <div class="row" style="grid-template-columns:1fr auto auto"><span><b>Maid service</b> <span class="muted">· every 2 weeks</span></span><span class="tag t-g">Recurring</span><span class="muted">Drag →</span></div>
+                    <div class="row" style="grid-template-columns:1fr auto auto"><span><b>Pressure wash</b> <span class="muted">· driveway</span></span><span class="tag t-b">One-time</span><span class="muted">Drag →</span></div>
+                    <div class="row" style="grid-template-columns:1fr auto auto"><span><b>Window clean</b> <span class="muted">· every 8 weeks</span></span><span class="tag t-g">Recurring</span><span class="muted">Drag →</span></div>
+                    <div class="row" style="grid-template-columns:1fr auto auto; border:0"><span><b>Carpet clean</b> <span class="muted">· 3 rooms</span></span><span class="tag t-b">One-time</span><span class="muted">Drag →</span></div>
+                </div>
+            </div>
+            <figcaption><b>Plan the week from the job pool</b><span>Recurring and one-time jobs wait here until they're dragged onto a day and a crew.</span></figcaption>
+        </figure>
+
+        <figure class="shot">
+            <div class="shot-frame">
+                <div class="fr-head"><b>Estimate</b><span class="tag t-y">Template: Residential windows</span></div>
+                <div class="estimate">
+                    <div>
+                        <div class="row" style="grid-template-columns:1fr auto"><span>Exterior windows, 2 storeys</span><span class="num">$180.00</span></div>
+                        <div class="row" style="grid-template-columns:1fr auto"><span>Interior windows</span><span class="num">$120.00</span></div>
+                        <div class="row" style="grid-template-columns:1fr auto"><span>Screen cleaning</span><span class="num">$35.00</span></div>
+                        <div class="row" style="grid-template-columns:1fr auto"><span>Tracks &amp; sills</span><span class="num">$40.00</span></div>
+                        <div class="total"><span>Total</span><span class="num">$375.00</span></div>
+                    </div>
+                    <div class="sms">
+                        <div class="bubble">Hi, here's your window cleaning estimate. Tap to view and approve.</div>
+                        <div class="meta">Sent by text · 10:52</div>
+                        <div class="send" style="margin-top:3mm">Send by email</div>
+                    </div>
+                </div>
+            </div>
+            <figcaption><b>Quote in minutes, not evenings</b><span>Line items come from a saved template; the estimate goes out by email or text.</span></figcaption>
+        </figure>
+
+        <figure class="shot">
+            <div class="shot-frame">
+                <div class="fr-head"><b>Create invoices</b><span class="tag t-g">12 selected</span></div>
+                <div class="fr-body">
+                    <div class="row" style="grid-template-columns:auto 1fr auto auto"><span class="box on"></span><span>Window clean · Tue</span><span class="tag t-g">Card on file</span><span class="num">$95.00</span></div>
+                    <div class="row" style="grid-template-columns:auto 1fr auto auto"><span class="box on"></span><span>Maid service · Wed</span><span class="tag t-g">Card on file</span><span class="num">$140.00</span></div>
+                    <div class="row" style="grid-template-columns:auto 1fr auto auto"><span class="box on"></span><span>Pressure wash · Tue</span><span class="tag t-b">Email</span><span class="num">$210.00</span></div>
+                    <div class="row" style="grid-template-columns:auto 1fr auto auto"><span class="box on"></span><span>Gutter clean · Fri</span><span class="tag t-b">Email</span><span class="num">$160.00</span></div>
+                    <div class="row" style="grid-template-columns:auto 1fr auto auto"><span class="box"></span><span>Estimate visit · Tue</span><span class="muted">No charge</span><span class="num">—</span></div>
+                    <div class="send">Create 12 invoices</div>
+                </div>
+            </div>
+            <figcaption><b>Bill a whole week at once</b><span>Invoices are created in bulk; recurring customers with a saved card are charged automatically.</span></figcaption>
+        </figure>
+
+        <figure class="shot">
+            <div class="shot-frame">
+                <div class="fr-head"><b>Request a service</b><span class="muted">Customer portal</span></div>
+                <div class="portal">
+                    <div>
+                        <span class="muted">Choose a day</span>
+                        <div class="days">
+                            <i>M</i><i class="ok">T</i><i>W</i><i class="pick">T</i><i class="ok">F</i><i>S</i><i>S</i>
+                            <i class="ok">M</i><i class="ok">T</i><i>W</i><i class="ok">T</i><i class="ok">F</i><i>S</i><i>S</i>
+                        </div>
+                        <div style="margin-top:2.4mm" class="muted">Last visit</div>
+                        <div class="field-mock">Window clean · 14 Sep · $95</div>
+                    </div>
+                    <div>
+                        <span class="muted">Services</span>
+                        <div class="svc"><span class="box on"></span>Window cleaning</div>
+                        <div class="svc"><span class="box"></span>Screen repair</div>
+                        <div class="svc"><span class="box on"></span>Gutter cleaning</div>
+                        <div class="field-mock">Notes for the crew…</div>
+                        <div class="send">Send request</div>
+                    </div>
+                </div>
+            </div>
+            <figcaption><b>Let customers ask for the next visit</b><span>Only the days and services the owner opens are bookable; an email and text confirm the request.</span></figcaption>
+        </figure>
+    </div>
+
+    <p class="illustrative">Illustrations by Adroit Infosoft based on the vendor's feature pages and help center. Prices and job names are examples, not customer data.</p>
+
+    <div class="page-foot"><span class="brand-mini"><span class="brand-dot"></span><b>Adroit Infosoft</b> · The Customer Factor</span><span class="num">4 / 6</span></div>
+</section>
+
+<!-- ======================= PAGE 5 · ENGINEERING + REVIEWS ======================= -->
+<section class="page">
+    <h2 class="h2">What makes it interesting to build.</h2>
+    <p class="lead">The hard parts of this kind of product aren't the screens. They are the rules underneath them.</p>
+
+    <div class="eng">
+        <div class="eng-card">
+            <svg><use href="#i-repeat"/></svg>
+            <h3>Recurring work as data, not reminders</h3>
+            <p>A window round repeats every 4, 6 or 8 weeks. Modelling frequency, service plans and pricing on the job itself is what lets the job pool fill up on its own.</p>
+        </div>
+        <div class="eng-card">
+            <svg><use href="#i-sync"/></svg>
+            <h3>Two accounting integrations, one source of truth</h3>
+            <p>A scheduled cloud push for QuickBooks Online and a user-triggered sync for Desktop. Both must agree on customers, items and payments, and never post twice.</p>
+        </div>
+        <div class="eng-card">
+            <svg><use href="#i-users"/></svg>
+            <h3>One record, three audiences</h3>
+            <p>Owners, crews and end customers see the same job with different permissions. The portal shows only what the owner chooses: days, services, history and prices.</p>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <div class="score">
+            <div class="big num">4.4<small>/5</small></div>
+            <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg style="opacity:.45"><use href="#i-star"/></svg></div>
+            <p>Capterra, 17 verified reviews: 14 five-star, 1 three-star, 2 one-star.</p>
+            <div class="bars">
+                <div class="bar"><span>Value for money</span><i style="--w:90%"></i><b class="num">4.5</b></div>
+                <div class="bar"><span>Features</span><i style="--w:88%"></i><b class="num">4.4</b></div>
+                <div class="bar"><span>Ease of use</span><i style="--w:84%"></i><b class="num">4.2</b></div>
+                <div class="bar"><span>Customer service</span><i style="--w:82%"></i><b class="num">4.1</b></div>
+            </div>
+        </div>
+        <div class="voice">
+            <div class="quote">
+                <blockquote>“As affordable and customizable for our type of business as any alternative.”</blockquote>
+                <cite>Window cleaning business owner, review on Capterra</cite>
+            </div>
+            <div class="honest">
+                <h3>Where a next version could go further</h3>
+                <ul>
+                    <li><svg><use href="#i-flag"/></svg><span><b>Navigation and search.</b> The most common complaint in reviews is that records are hard to find.</span></li>
+                    <li><svg><use href="#i-flag"/></svg><span><b>Route optimization.</b> Independent guides note it isn't built in, which matters once a business runs several crews.</span></li>
+                    <li><svg><use href="#i-flag"/></svg><span><b>Message delivery.</b> One reviewer reported client emails not always arriving, a case for delivery tracking.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="platforms-wrap">
+        <h3>Available on the web, iOS and Android</h3>
+
+    <div class="platforms">
+        <div class="platform"><span class="p-icon"><svg><use href="#i-globe"/></svg></span><div><b>Web app</b><span>Runs in the browser for the office: scheduling, estimates, invoicing and settings.</span></div></div>
+        <div class="platform"><span class="p-icon"><svg><use href="#i-apple"/></svg></span><div><b>iOS</b><span>App Store, by The Customer Factor LLC. Requires iOS 15 or later.</span></div></div>
+        <div class="platform"><span class="p-icon"><svg><use href="#i-android"/></svg></span><div><b>Android</b><span>Google Play, 10K+ installs. Developer based in Sioux Falls, SD.</span></div></div>
+    </div>
+    </div>
+
+    <div class="page-foot"><span class="brand-mini"><span class="brand-dot"></span><b>Adroit Infosoft</b> · The Customer Factor</span><span class="num">5 / 6</span></div>
+</section>
+
+<!-- ======================= PAGE 6 · PLATFORMS + CTA ======================= -->
+<section class="page cta-page">
+    <div class="cta">
+        <div class="cta-top"><div class="studio"><span class="brand-dot"></span>Adroit Infosoft</div><span>The Customer Factor · Case study</span></div>
+        <h2>Building software for a <span>service business?</span></h2>
+        <p>Adroit Infosoft designs and builds web and mobile products. Everything in this case study, from recurring scheduling to accounting sync and customer portals, is the kind of system we can build for your company.</p>
+
+        <div class="offer">
+            <div><b>Web platforms</b><span>Admin dashboards, scheduling, billing and reporting</span></div>
+            <div><b>iOS &amp; Android apps</b><span>Field apps for crews, with the same data as the office</span></div>
+            <div><b>Integrations</b><span>QuickBooks, payment gateways, email and SMS</span></div>
+        </div>
+
+        <div class="contact">
+            <div class="contact-links">
+                <a href="https://adroitinfosoft.com"><span class="ic"><svg><use href="#i-globe"/></svg></span>adroitinfosoft.com</a>
+                <a href="mailto:sales@adroitinfosoft.com"><span class="ic"><svg><use href="#i-mail"/></svg></span>sales@adroitinfosoft.com</a>
+            </div>
+        </div>
+
+        <p class="sources">Product facts from public sources, checked October 2026: The Customer Factor's features page and help center (thecustomerfactor.com), App Store and Google Play listings, and Capterra reviews. Adroit Infosoft is not affiliated with The Customer Factor LLC; product names belong to their owners. Interface views are our illustrations. Pricing is not shown because public listings disagree; see thecustomerfactor.com for current plans.</p>
+    </div>
+</section>
+
+</body>
+</html>
