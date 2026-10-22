@@ -17,6 +17,7 @@ These rules apply to every UI I ask for: websites, landing pages, login/signup, 
 - **Colour:** a deliberate palette of 1 base + 1 ink + 1–2 accents as CSS variables on `:root`. Alternate light and dark sections for rhythm. Accent on the main action and at most one other thing. Avoid default cream + rust and violet-indigo palettes.
 - **Layout:** editorial grids, generous whitespace, asymmetry where it helps. Separate surfaces with a tone step, not lines.
 - **No eyebrows** (small label above a heading), no decorative 01/02 numbers unless order matters (a real `<ol>`), no tiny uppercase tracked labels.
+- **Calm cards and lists:** one idea per card (title, one-line subtitle, list). List points fit on one line, no bold fragments inside points, generous gaps, equal card heights. If a card feels busy, cut words before shrinking text.
 - **Monospace only for real measurements/code.** Tabular figures for prices and times.
 - **No glass/backdrop blur, no gradient text, no glows.** Shadows only on things that float, with offset + soft blur.
 - **Theme the browser surfaces:** selection, caret, scrollbar, focus ring, underline offset.

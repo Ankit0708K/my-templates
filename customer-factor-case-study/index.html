@@ -146,7 +146,7 @@ p { text-wrap: pretty; }
 .col-old { background: #fff; }
 .col-new { background: var(--ink); color: #EEF3EF; }
 .col h3 { font-size: 24px; letter-spacing: -0.02em; margin-bottom: 24px; }
-.col ul { list-style: none; display: grid; gap: 16px; }
+.col ul { list-style: none; display: grid; gap: 18px; }
 .col li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; font-size: 16.5px; line-height: 1.45; align-items: start; }
 .col li svg { width: 28px; height: 28px; padding: 6px; border-radius: 50%; margin-top: -2px; }
 .col-old li svg { color: var(--red); background: var(--red-soft); }
@@ -172,15 +172,15 @@ p { text-wrap: pretty; }
 .flow span { display: block; font-size: 14px; color: var(--muted); line-height: 1.4; margin-top: 4px; padding: 0 4px; }
 
 /* ---------- Surfaces ---------- */
-.surfaces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
-.surface { border-radius: 22px; padding: 34px 30px 36px; background: #fff; }
+.surfaces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.surface { border-radius: 22px; padding: 36px 28px 40px; background: #fff; }
 .surface.dark { background: var(--ink); color: #EEF3EF; }
 .surface-who { font-size: 14.5px; color: var(--muted); }
 .surface.dark .surface-who { color: #A9BAB1; }
-.surface h3 { font-size: 25px; margin-top: 6px; letter-spacing: -0.02em; }
+.surface h3 { font-size: 26px; letter-spacing: -0.02em; }
 .surface > p { font-size: 16px; color: var(--ink); margin-top: 10px; }
 .surface.dark > p { color: #CFDAD3; }
-.surface ul { list-style: none; margin-top: 22px; display: grid; gap: 14px; }
+.surface ul { list-style: none; margin-top: 26px; display: grid; gap: 18px; }
 .surface li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; font-size: 16px; line-height: 1.45; }
 .surface li svg { width: 26px; height: 26px; padding: 6px; border-radius: 50%; margin-top: -2px; color: var(--green-deep); background: var(--green-soft); }
 .surface.dark li svg { color: var(--leaf); background: rgba(143,220,174,.14); }
@@ -492,21 +492,21 @@ p { text-wrap: pretty; }
         <div class="col col-old">
             <h3>The usual way</h3>
             <ul>
-                <li><svg><use href="#i-x"/></svg><span>Recurring customers live in a diary, and someone has to remember who is due this month</span></li>
-                <li><svg><use href="#i-x"/></svg><span>Estimates are typed from scratch and emailed as attachments</span></li>
-                <li><svg><use href="#i-x"/></svg><span>Crews get the day's jobs by phone call or text</span></li>
-                <li><svg><use href="#i-x"/></svg><span>Invoices are written one by one after the work is done</span></li>
-                <li><svg><use href="#i-x"/></svg><span>Every sale is entered a second time in the accounting software</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Repeat customers tracked in a paper diary</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Estimates typed from scratch every time</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Crews get the day's jobs by phone or text</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Invoices written one by one after the work</span></li>
+                <li><svg><use href="#i-x"/></svg><span>Every sale typed again into the books</span></li>
             </ul>
         </div>
         <div class="col col-new">
             <h3>With The Customer Factor</h3>
             <ul>
-                <li><svg><use href="#i-check"/></svg><span>Recurring and one-time jobs wait in a job pool and are dragged onto the schedule</span></li>
-                <li><svg><use href="#i-check"/></svg><span>Estimates come from templates and go out by email or text</span></li>
-                <li><svg><use href="#i-check"/></svg><span>Jobs are assigned to an employee or a whole crew and show up in their app</span></li>
-                <li><svg><use href="#i-check"/></svg><span>Invoices are created in bulk; saved cards can pay recurring work automatically</span></li>
-                <li><svg><use href="#i-check"/></svg><span>Sales flow into QuickBooks Online overnight, or Desktop in a few clicks</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Jobs wait in a pool, then drag onto a day</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Estimates built from saved templates</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Jobs show up in each crew's app</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Bulk invoices; saved cards pay repeat work</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Sales flow into QuickBooks, no retyping</span></li>
             </ul>
         </div>
     </div>
@@ -536,36 +536,33 @@ p { text-wrap: pretty; }
 
     <div class="surfaces">
         <div class="surface">
-            <span class="surface-who">For the owner and office</span>
             <h3>Web app</h3>
-            <p>Where the business is planned, priced and billed.</p>
+            <p>Where the owner plans, prices and bills.</p>
             <ul>
-                <li><svg><use href="#i-check"/></svg><span><b>Drag-and-drop scheduling</b> from the job pool</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Employees and crews</b> that jobs can be assigned to</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Service plan pricing</b> for repeat work</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Accounting</b> linked to QuickBooks Online or Desktop</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Drag-and-drop scheduling</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Employees and crews</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Service plan pricing</span></li>
+                <li><svg><use href="#i-check"/></svg><span>QuickBooks Online or Desktop</span></li>
             </ul>
         </div>
         <div class="surface dark">
-            <span class="surface-who">For technicians in the field</span>
             <h3>iOS &amp; Android apps</h3>
-            <p>The day's work in a pocket, with the paperwork done on site.</p>
+            <p>The day's work for crews, with the paperwork done on site.</p>
             <ul>
-                <li><svg><use href="#i-check"/></svg><span>Schedule <b>jobs, estimates, tasks</b> and personal appointments</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Time tracking</b> for each job</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Invoice generation</b> from the phone</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Clock in/out</b>, with daily route and mileage tracking</span></li>
-                <li><svg><use href="#i-check"/></svg><span><b>Expense receipts</b> photographed and filed on site</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Jobs, estimates and tasks</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Time tracking per job</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Invoices from the phone</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Clock in/out and mileage</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Expense receipts filed on site</span></li>
             </ul>
         </div>
         <div class="surface">
-            <span class="surface-who">For the business's customers</span>
             <h3>Customer portal</h3>
-            <p>Customers ask for work themselves, inside rules the owner sets.</p>
+            <p>Where customers ask for work, inside rules the owner sets.</p>
             <ul>
-                <li><svg><use href="#i-check"/></svg><span>Owner picks <b>which days</b> can be booked and <b>which services</b> can be requested</span></li>
-                <li><svg><use href="#i-check"/></svg><span>Optionally shows <b>past jobs and pricing</b></span></li>
-                <li><svg><use href="#i-check"/></svg><span>Sends an <b>automatic email and text</b> after each request, with editable wording</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Bookable days and services</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Past jobs and pricing</span></li>
+                <li><svg><use href="#i-check"/></svg><span>Automatic email and text</span></li>
             </ul>
         </div>
     </div>
@@ -604,7 +601,6 @@ p { text-wrap: pretty; }
         <article class="spot ">
             <div class="spot-visual c1"><div class="device"><img src="screens/main-job-details.png" alt="Job details screen" /></div></div>
             <div class="spot-text">
-                <span class="spot-name">Job details</span>
                 <h3>Everything about the visit, on one screen.</h3>
                 <p>The crew opens a job and has the customer, the place and the history in front of them.</p>
                 <ul><li><svg><use href="#i-check"/></svg><span>Address, phone, email, job type and time</span></li><li><svg><use href="#i-check"/></svg><span>Status set to open, completed or cancelled</span></li><li><svg><use href="#i-check"/></svg><span>Notes stamped with who added them and when</span></li><li><svg><use href="#i-check"/></svg><span>Email, photo, video and invoice from one bar</span></li></ul>
@@ -613,28 +609,25 @@ p { text-wrap: pretty; }
         <article class="spot flip">
             <div class="spot-visual c2"><div class="device"><img src="screens/main-job-timer.png" alt="Job timer screen" /></div></div>
             <div class="spot-text">
-                <span class="spot-name">Job timer</span>
                 <h3>Every stage of a visit, timed.</h3>
                 <p>One tap per stage builds an accurate record of the day, without anyone filling in a timesheet.</p>
-                <ul><li><svg><use href="#i-check"/></svg><span>Start travel, job arrival, begin job and job completed</span></li><li><svg><use href="#i-check"/></svg><span>A break button that pauses the clock</span></li><li><svg><use href="#i-check"/></svg><span>Elapsed time shown against the job</span></li></ul>
+                <ul><li><svg><use href="#i-check"/></svg><span>Travel, arrival, start and finish taps</span></li><li><svg><use href="#i-check"/></svg><span>A break button that pauses the clock</span></li><li><svg><use href="#i-check"/></svg><span>Elapsed time shown against the job</span></li></ul>
             </div>
         </article>
         <article class="spot ">
             <div class="spot-visual c3 pair"><div class="device"><img src="screens/main-invoice.png" alt="Invoice and signature screen" /></div><div class="device"><img src="screens/main-signature.png" alt="Invoice and signature screen" /></div></div>
             <div class="spot-text">
-                <span class="spot-name">Invoice and signature</span>
                 <h3>Billed and signed before leaving the driveway.</h3>
                 <p>The invoice is generated from the job, and the customer signs on the same phone.</p>
-                <ul><li><svg><use href="#i-check"/></svg><span>Invoice built from the job's line items</span></li><li><svg><use href="#i-check"/></svg><span>Sign, email, text, print or take payment from one toolbar</span></li><li><svg><use href="#i-check"/></svg><span>Signature captured on screen, with an optional name</span></li></ul>
+                <ul><li><svg><use href="#i-check"/></svg><span>Invoice built from the job's line items</span></li><li><svg><use href="#i-check"/></svg><span>Sign, send, print or charge from one bar</span></li><li><svg><use href="#i-check"/></svg><span>On-screen signature, name optional</span></li></ul>
             </div>
         </article>
         <article class="spot flip">
             <div class="spot-visual c4"><div class="device"><img src="screens/main-payment-portal.png" alt="Online payment screen" /></div></div>
             <div class="spot-text">
-                <span class="spot-name">Online payment</span>
                 <h3>Customers pay from a link.</h3>
                 <p>Open charges go out as a payment page carrying the service company's own name and logo.</p>
-                <ul><li><svg><use href="#i-check"/></svg><span>Recent charges listed with date, status and amount</span></li><li><svg><use href="#i-check"/></svg><span>Customers tick what they want to pay</span></li><li><svg><use href="#i-check"/></svg><span>Payment completed by credit card</span></li></ul>
+                <ul><li><svg><use href="#i-check"/></svg><span>Charges with date, status and amount</span></li><li><svg><use href="#i-check"/></svg><span>Customers tick what they want to pay</span></li><li><svg><use href="#i-check"/></svg><span>Payment completed by credit card</span></li></ul>
             </div>
         </article>
     </div>
